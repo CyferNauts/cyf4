@@ -1,0 +1,190 @@
+/* Gooey cursor container */
+*{
+  cursor: none !important;
+}
+#cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: difference;
+  filter: url(#goo);
+}
+
+/* Gooey cursor dots */
+#cursor > span {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: #ffffff;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  will-change: transform;
+}
+
+
+
+
+
+.App {
+  text-align: left;
+  
+
+}
+
+
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+  margin: 0%;
+}
+
+/* Custom cursor effects */
+* {
+  cursor: default;
+}
+
+a, button {
+  cursor: pointer;
+}
+
+/* Focus styles for accessibility */
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid #000000;
+  outline-offset: 2px;
+}
+
+/* Loading animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-content,
+.floating-card,
+.feature-card,
+.stat-item {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.floating-card:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.floating-card:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.floating-card:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.feature-card:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.feature-card:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.feature-card:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.feature-card:nth-child(4) {
+  animation-delay: 0.8s;
+}
+
+.stat-item:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.stat-item:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.stat-item:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.stat-item:nth-child(4) {
+  animation-delay: 0.8s;
+}
+
+/* Glass morphism effect for modern look */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Hover effects for interactive elements */
+.interactive-element {
+  transition: all 0.3s ease;
+}
+
+.interactive-element:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Custom selection color */
+::selection {
+  background: rgba(99, 102, 241, 0.3);
+  color: #ffffff;
+}
+
+::-moz-selection {
+  background: rgba(99, 102, 241, 0.3);
+  color: #ffffff;
+}
+
+/* Responsive utilities */
+@media (max-width: 768px) {
+  .hide-mobile {
+    display: none !important;
+  }
+}
+
+@media (min-width: 769px) {
+  .hide-desktop {
+    display: none !important;
+  }
+}
+
+/* Utility classes */
+.text-gradient {
+  background: linear-gradient(45deg, #6366f1, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.bg-gradient {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+}
+
+.border-gradient {
+  border: 2px solid;
+  border-image: linear-gradient(45deg, #6366f1, #8b5cf6) 1;
+}
+
+/* Custom scroll snap for sections */
+.snap-container {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  
+}
+
+.snap-section {
+  scroll-snap-align: start;
+  
+}
