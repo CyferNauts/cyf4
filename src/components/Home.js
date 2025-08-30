@@ -31,6 +31,7 @@ const Home = () => {
             <p className="fwdf">2025</p>
           </div>
             <h1 className="hero-title gradient-text">CYFERNODE</h1>
+
             <div className="hero-subtitle">
             <h2 className="four">4.0</h2>
             <div className="theme">

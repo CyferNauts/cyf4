@@ -1,8 +1,10 @@
 import React, { useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
+import SpacerSection from './components/SpacerSection';
 import AboutUs from './components/AboutUs';
-import CompetitionsEventsBreakdown from './components/CompetitionsEventsBreakdown';
+import MoreAboutUs from './components/MoreAboutUs';
+
 import './App.css';
 import { TweenMax } from "gsap"; // gsap 2.x compatible import
 
@@ -137,8 +139,9 @@ function App() {
       {/* Your app sections */}
       <Navbar />
       <Home />
+      <SpacerSection />
       <AboutUs />
-      <CompetitionsEventsBreakdown />
+      <MoreAboutUs />
     </div>
   );
 }

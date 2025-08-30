@@ -1,0 +1,109 @@
+*{
+      
+}
+.spacer-section {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background: #000000;
+  overflow:hidden;
+  
+}
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Syne:wght@400..800&display=swap');
+
+/* Tape Base */
+.strip {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 150px;
+  position: absolute;
+  width: 250%;
+  left: -75%;
+  padding: 20px 0;
+  font-family: "Krona One", sans-serif;
+  font-size: 3rem;
+  font-weight: 900;
+  white-space: nowrap;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+  z-index: 10;
+  padding: 2rem;
+  border: 3px solid transparent;
+  border-radius: 12px;
+  background: 
+    linear-gradient(#111, #111) padding-box,
+    linear-gradient(135deg, #fff, #999, #fff) border-box;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.4);
+  
+}
+
+/* Colors */
+.green {
+  background: linear-gradient(145deg, #00f0ff, #00c8e0 40%, #00eaff 70%, #0099aa);
+  color: #000;
+  border-radius: 12px;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  box-shadow: inset 0 2px 6px rgba(255, 255, 255, 0.4),
+              inset 0 -3px 8px rgba(0, 0, 0, 0.3),
+              0 3px 12px rgba(0, 220, 255, 0.4);
+}
+
+.white {
+  background: linear-gradient(145deg, #fff, #ddd 40%, #fefefe 70%, #aaa);
+  color: #000;
+  border-radius: 12px;
+  border: 2px solid rgba(255, 255, 255, 0.9);
+  box-shadow: inset 0 2px 6px rgba(255, 255, 255, 0.6),
+              inset 0 -3px 8px rgba(0, 0, 0, 0.2),
+              0 3px 12px rgba(200, 200, 200, 0.4);
+}
+
+.black {
+  background: linear-gradient(145deg, #222, #000 40%, #111 70%, #333);
+  color: #fff;
+  border-radius: 12px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  box-shadow: inset 0 2px 6px rgba(255, 255, 255, 0.2),
+              inset 0 -3px 8px rgba(0, 0, 0, 0.8),
+              0 3px 12px rgba(0, 0, 0, 0.7);
+}
+
+
+/* Rotations */
+.rotate-left {
+  transform: rotate(-8deg);
+}
+
+.rotate-right {
+  transform: rotate(8deg);
+}
+
+/* Marquee effect */
+.marquee {
+  display: flex;
+  width: max-content; /* shrink-wrap to text */
+  animation: marquee 300s linear infinite;
+}
+
+.marquee span {
+  margin-right: 2rem;
+  
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+span{
+      font-family: "Syne", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800; /* this is ExtraBold */
+  font-style: normal;
+}

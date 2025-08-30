@@ -1,6 +1,7 @@
 /* Gooey cursor container */
 *{
   cursor: none !important;
+  
 }
 #cursor {
   position: fixed;
@@ -38,6 +39,7 @@
 html {
   scroll-behavior: smooth;
   margin: 0%;
+
 }
 
 /* Custom cursor effects */
