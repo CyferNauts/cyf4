@@ -23,8 +23,8 @@
 }
 
 /* Logo */
-.logo {
-  font-size: 1.25rem;
+.logocyfernode {
+  font-size: 1.2rem;
   font-weight: 700;
   color: #ffffff;
   text-decoration: none;
@@ -163,7 +163,7 @@
 }
 
 /* Responsive */
-@media (max-width: 768px) {
+@media (max-width: 884px) {
   .nav-links,
   .navbar-right {
     display: none;
@@ -171,6 +171,8 @@
   .menu-btn {
     display: flex;
   }
+  
+
 }
 
 

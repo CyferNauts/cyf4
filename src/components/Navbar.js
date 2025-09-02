@@ -15,7 +15,7 @@ export default function Navbar() {
     <header className="navbar">
       <div className="navbar-container">
         {/* Logo */}
-        <a href="#" className="logo">CYFERNODE</a>
+        <a href="#" className="logocyfernode">CYFERNODE</a>
 
         {/* Desktop Navigation */}
         <nav className="nav-links">
