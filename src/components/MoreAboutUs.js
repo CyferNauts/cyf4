@@ -82,7 +82,7 @@ const MoreAboutUs = () => {
       <section className="features">
       <div className="features-header">
         <div className="features-title">
-          <h1>DEVANSH Is a very Hot guy</h1>
+          <h1>Example</h1>
         </div>
         <p className="features-desc">
           lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem

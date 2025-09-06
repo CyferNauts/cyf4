@@ -37,7 +37,7 @@ const Home = () => {
             <div className="theme">
            
              
-                <h3 className="theme-title">CRAFTING TOMORROW</h3>
+                <h3 className="theme-title">COEXISTENCE</h3>
                 <p className="theme-description">
                  Explore the intersection of technology and creativity.
                 </p>
