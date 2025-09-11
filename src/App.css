@@ -162,6 +162,9 @@ a:focus-visible {
     max-width: 100vw;
     overflow-x: hidden;
   }
+  #cursor {
+    display: none !important;
+  }
 }
 
 @media (min-width: 769px) {

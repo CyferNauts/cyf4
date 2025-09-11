@@ -28,12 +28,20 @@
   font-weight: 700;
   color: #ffffff;
   text-decoration: none;
-  transition: color 0.2s ease;
+  /* transition: color 0.2s ease-out, background 0.2s ease-out; */
 }
 
-.logo:hover {
-  color: #2563eb; /* modern blue */
+.logocyfernode:hover {
+  /* color: #2563eb; modern blue */
+  /* color: #25cdeb; */
+  background: linear-gradient(45deg, #2563eb, #25cdeb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  transition: color 0.2s, background 0.2s;
 }
+
 
 /* Desktop links */
 .nav-links {

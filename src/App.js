@@ -4,6 +4,8 @@ import Home from './components/Home';
 import SpacerSection from './components/SpacerSection';
 import AboutUs from './components/AboutUs';
 import MoreAboutUs from './components/MoreAboutUs';
+import Links from './components/Links';
+import Events from './components/Events';
 
 import './App.css';
 import { TweenMax } from "gsap"; // gsap 2.x compatible import
@@ -138,10 +140,11 @@ function App() {
 
       {/* Your app sections */}
       <Navbar />
-      <Home />
-
-      <AboutUs />
+      {/* <Home /> */}
+      <Events />
+      {/* <AboutUs /> */}
       <MoreAboutUs />
+      <Links/>
     </div>
   );
 }
