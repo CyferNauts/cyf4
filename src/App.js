@@ -140,9 +140,9 @@ function App() {
 
       {/* Your app sections */}
       <Navbar />
-      {/* <Home /> */}
-      <Events />
-      {/* <AboutUs /> */}
+      <Home />
+      {/* <Events /> */}
+      <AboutUs />
       <MoreAboutUs />
       <Links/>
     </div>
