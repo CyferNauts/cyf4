@@ -27,7 +27,7 @@ const Home = () => {
         <div className="hero-container">
           <div className="hero-content">
           <div className="tops">
-            <img className="schoollogo" src="https://media.discordapp.net/attachments/1403761173752451203/1409843541143715941/image.png?ex=68aeda9d&is=68ad891d&hm=235d8dd2132a2935eeffe3ca4e83b7ab22431d36d7096f72fb937eef37d58eb2&=&format=webp&quality=lossless&width=1860&height=365" alt="logo" />
+            <img className="schoollogo" src="https://cyfernode.netlify.app/sfs.jpg" alt="logo" />
             <p className="fwdf">2025</p>
           </div>
             <h1 className="hero-title gradient-text">CYFERNODE</h1>
@@ -37,9 +37,9 @@ const Home = () => {
             <div className="theme">
            
              
-                <h3 className="theme-title">CRAFTING TOMORROW</h3>
+                <h3 className="theme-title">COEXISTENCE</h3>
                 <p className="theme-description">
-                 Explore the intersection of technology and creativity.
+                 Explore the harmony where humans and machines unite.
                 </p>
             </div>
             
@@ -47,9 +47,7 @@ const Home = () => {
 
    
             <div className="hero-description">
-              Blends offline and online formats, giving more students a chance
-              to join in. Whether you're into tech, creativity, or
-              communication, Cyfernode is your stage to show up and stand out.
+              The Annual Inter-School Tech Symposium organized by CyferNauts, the digital society of Summer Fields School, DlF Phase-1, Gurugram.
             </div>
             
 
