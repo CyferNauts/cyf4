@@ -2,14 +2,19 @@ import React, { useState } from "react"
 import "./Navbar.css"
 
 const navigationLinks = [
-  { href: "#", label: "Home" },
-  { href: "#", label: "Events" },
-  { href: "#", label: "Team" },
-  { href: "#", label: "Gallery" }
+  { id: 'home', label: "Home" },
+  { id: 'events', label: "Events" },
+  { id: 'team', label: "Team" },
+  { id: 'gallery', label: "Gallery" }
 ]
 
-export default function Navbar() {
+export default function Navbar({ setActiveTab }) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+
+  const handleNavClick = (id) => {
+    setActiveTab(id);
+    setIsMobileMenuOpen(false);
+  }
 
   return (
     <header className="navbar">
@@ -19,8 +24,8 @@ export default function Navbar() {
 
         {/* Desktop Navigation */}
         <nav className="nav-links">
-          {navigationLinks.map((link, i) => (
-            <a key={i} href={link.href}>{link.label}</a>
+          {navigationLinks.map((link) => (
+            <a key={link.id} href="#" onClick={() => handleNavClick(link.id)}>{link.label}</a>
           ))}
         </nav>
 
@@ -48,8 +53,8 @@ export default function Navbar() {
       {/* Mobile Navigation */}
       {isMobileMenuOpen && (
         <div className="mobile-menu">
-          {navigationLinks.map((link, i) => (
-            <a key={i} href={link.href} onClick={() => setIsMobileMenuOpen(false)}>
+          {navigationLinks.map((link) => (
+            <a key={link.id} href="#" onClick={() => handleNavClick(link.id)}>
               {link.label}
             </a>
           ))}

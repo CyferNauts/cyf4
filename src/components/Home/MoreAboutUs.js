@@ -22,22 +22,22 @@ const carouselImages = [
 
 // Slider images array - reduced to 16 images for better performance
 const allImages = [
-  "/images/DSC_0100.JPG",
-  "/images/DSC_0101.JPG",
-  "/images/DSC_0102.JPG",
-  "/images/DSC_0103.JPG",
-  "/images/DSC_0104.JPG",
-  "/images/DSC_0105.JPG",
-  "/images/DSC_0106.JPG",
-  "/images/DSC_0108.JPG",
-  "/images/DSC_0109.JPG",
-  "/images/DSC_0110.JPG",
-  "/images/DSC_0111.JPG",
-  "/images/DSC_0126.JPG",
-  "/images/DSC_0130.JPG",
-  "/images/DSC_0131.JPG",
-  "/images/DSC_0132.JPG",
-  "/images/DSC_0133.JPG",
+  "/Cyfernode0.3Photos-lowres/DSC_0100.JPG",
+  "/Cyfernode0.3Photos-lowres/DSC_0101.JPG",
+  "/Cyfernode0.3Photos-lowres/DSC_0102.JPG",
+  "/Cyfernode0.3Photos-lowres/DSC_0103.JPG",
+  "/Cyfernode0.3Photos-lowres/DSC_0104.JPG",
+  "/Cyfernode0.3Photos-lowres/DSC_0105.JPG",
+  "/Cyfernode0.3Photos-lowres/DSC_0106.JPG",
+  "/Cyfernode0.3Photos-lowres/DSC_0108.JPG",
+  "/Cyfernode0.3Photos-lowres/DSC_0109.JPG",
+  "/Cyfernode0.3Photos-lowres/DSC_0110.JPG",
+  "/Cyfernode0.3Photos-lowres/DSC_0111.JPG",
+  "/Cyfernode0.3Photos-lowres/DSC_0126.JPG",
+  "/Cyfernode0.3Photos-lowres/DSC_0130.JPG",
+  "/Cyfernode0.3Photos-lowres/DSC_0131.JPG",
+  "/Cyfernode0.3Photos-lowres/DSC_0132.JPG",
+  "/Cyfernode0.3Photos-lowres/DSC_0133.JPG",
 ];
 
 // Shuffle the array to randomize
@@ -120,36 +120,36 @@ const MoreAboutUs = () => {
         {/* Card 2 - Empty */}
         <div className="card center-card behen">
 
-<div className="bhai gallerywala">
-  <div className="slider">
-    <div className="slide-track">
-      {sliderImages.slice(0, 4).map((img, i) => (
-        <div className="slide" key={i}>
-          <img src={img} alt="" />
-        </div>
-      ))}
-      {sliderImages.slice(0, 4).map((img, i) => (
-        <div className="slide" key={i + 4}>
-          <img src={img} alt="" />
-        </div>
-      ))}
+  <div className="bhai gallerywala">
+    <div className="slider">
+      <div className="slide-track">
+        {sliderImages.slice(0, 4).map((img, i) => (
+          <div className="slide" key={i}>
+            <img src={img} alt="" />
+          </div>
+        ))}
+        {sliderImages.slice(0, 4).map((img, i) => (
+          <div className="slide" key={i + 4}>
+            <img src={img} alt="" />
+          </div>
+        ))}
+      </div>
+    </div>
+    <div className="slider">
+      <div className="slide-track">
+        {sliderImages.slice(4, 8).map((img, i) => (
+          <div className="slide" key={i}>
+            <img src={img} alt="" />
+          </div>
+        ))}
+        {sliderImages.slice(4, 8).map((img, i) => (
+          <div className="slide" key={i + 4}>
+            <img src={img} alt="" />
+          </div>
+        ))}
+      </div>
     </div>
   </div>
-  <div className="slider">
-    <div className="slide-track">
-      {sliderImages.slice(4, 8).map((img, i) => (
-        <div className="slide" key={i}>
-          <img src={img} alt="" />
-        </div>
-      ))}
-      {sliderImages.slice(4, 8).map((img, i) => (
-        <div className="slide" key={i + 4}>
-          <img src={img} alt="" />
-        </div>
-      ))}
-    </div>
-  </div>
-</div>
 <div className="bhai">
   <p className="Registernowkatext">
     Register Now 

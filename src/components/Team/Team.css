@@ -1,0 +1,30 @@
+.team {
+  padding: 20px;
+  text-align: center;
+}
+
+.team-members {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.team-member-card {
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 8px;
+  width: 180px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.team-member-img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+
+.team-arrow {
+  margin-top: 20px;
+}

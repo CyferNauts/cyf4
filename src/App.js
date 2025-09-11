@@ -1,21 +1,32 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
+import Preloader from './components/Preloader';
 import Navbar from './components/Navbar';
-import Home from './components/Home';
-import SpacerSection from './components/SpacerSection';
-import AboutUs from './components/AboutUs';
-import MoreAboutUs from './components/MoreAboutUs';
+import Home from './components/Home/Home';
+import SpacerSection from './components/Home/SpacerSection';
+import AboutUs from './components/Home/AboutUs';
+import MoreAboutUs from './components/Home/MoreAboutUs';
+import Events from './components/Events/Events';
+import Team from './components/Team/Team';
+import Gallery from './components/Gallery/Gallery';
 
 import './App.css';
 import { TweenMax } from "gsap"; // gsap 2.x compatible import
 
 function App() {
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [activeTab, setActiveTab] = useState('home');
+  const tabRef = useRef(null);
   useEffect(() => {
     const amount = 20;
     const sineDots = Math.floor(amount * 0.3);
     const width = 26;
     const idleTimeout = 150;
 
+    // Fix for cursor element possibly not existing
     const cursor = document.getElementById("cursor");
+    if (!cursor) {
+      return;
+    }
     let mousePosition = { x: 0, y: 0 };
     let dots = [];
     let timeoutID;
@@ -116,6 +127,20 @@ function App() {
     init();
   }, []);
 
+  useEffect(() => {
+    if (tabRef.current && isLoaded) {
+      TweenMax.fromTo(tabRef.current, { x: 100, opacity: 0 }, { x: 0, opacity: 1, duration: 0.5 });
+    }
+  }, [activeTab, isLoaded]);
+
+  const handleLoaded = () => {
+    setIsLoaded(true);
+  };
+
+  if (!isLoaded) {
+    return <Preloader onLoaded={handleLoaded} />;
+  }
+
   return (
     <div className="App">
       {/* Gooey filter */}
@@ -137,11 +162,19 @@ function App() {
       <div id="cursor"></div>
 
       {/* Your app sections */}
-      <Navbar />
-      <Home />
-
-      <AboutUs />
-      <MoreAboutUs />
+      <Navbar setActiveTab={setActiveTab} />
+      <div ref={tabRef}>
+        {activeTab === 'home' && (
+          <>
+            <Home />
+            <AboutUs />
+            <MoreAboutUs />
+          </>
+        )}
+        {activeTab === 'events' && <Events />}
+        {activeTab === 'team' && <Team />}
+        {activeTab === 'gallery' && <Gallery />}
+      </div>
     </div>
   );
 }
