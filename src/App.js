@@ -1,11 +1,10 @@
 import React, { useEffect, useState, useRef } from 'react';
 import Preloader from './components/Preloader';
 import Navbar from './components/Navbar';
-import Home from './components/Home';
-import SpacerSection from './components/SpacerSection';
-import AboutUs from './components/AboutUs';
-import MoreAboutUs from './components/MoreAboutUs';
-
+import Home from './components/Home/Home';
+import SpacerSection from './components/Home/SpacerSection';
+import AboutUs from './components/Home/AboutUs';
+import MoreAboutUs from './components/Home/MoreAboutUs';
 import './App.css';
 import { TweenMax } from "gsap"; // gsap 2.x compatible import
 
