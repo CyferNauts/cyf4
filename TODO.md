@@ -1,43 +1,32 @@
-# TODO List for Tab-Based Navigation Implementation
+# Event Explorer UI Implementation TODO
 
-## Step 1: Create Folder Structure
-- [x] Create src/components/Home/ directory
-- [x] Create src/components/Events/ directory
-- [x] Create src/components/Team/ directory
-- [x] Create src/components/Gallery/ directory
+## 1. Setup Dependencies
+- [ ] Check if Framer Motion is installed; install if not (`npm install framer-motion`)
+- [ ] Check TailwindCSS config for Syne font; add if needed (update tailwind.config.js and src/index.css)
 
-## Step 2: Move Existing Components to Home Folder
-- [x] Move Home.js to src/components/Home/
-- [x] Move Home.css to src/components/Home/
-- [x] Move AboutUs.js to src/components/Home/
-- [x] Move AboutUs.css to src/components/Home/
-- [x] Move MoreAboutUs.js to src/components/Home/
-- [x] Move MoreAboutUs.css to src/components/Home/
-- [x] Move SpacerSection.js to src/components/Home/
-- [x] Move SpacerSection.css to src/components/Home/
-- [x] Move video files (*.mp4) to src/components/Home/
-- [x] Move Teamletters/ folder to src/components/Home/
+## 2. Create Reusable Components
+- [ ] Create src/components/Events/Sidebar.js: Festival logo/name, grouped events by category, highlight active, smooth switch
+- [ ] Create src/components/Events/EventDetail.js: Structured event details with sections, previous/next arrows
+- [ ] Create src/components/Events/RoundSection.js: Display rounds with bold headings and details
+- [ ] Create src/components/Events/JudgingTable.js: Table/grid for judging criteria with name and weight %
+- [ ] Create src/components/Events/ContactsList.js: List of coordinators with optional phone/handle
 
-## Step 3: Create New Components
-- [x] Create Events/Events.js with boilerplate code
-- [ ] Create Events/Events.css (if needed)
-- [x] Create Team/Team.js with boilerplate code using Teamletters images
-- [ ] Create Team/Team.css (if needed)
-- [x] Create Gallery/Gallery.js with boilerplate code using Cyfernode0.3Photos images
-- [ ] Create Gallery/Gallery.css (if needed)
+## 3. Refactor Main Events Component
+- [ ] Update src/components/Events/Events.js: Main container with state for active event, grouped events, previous/next logic, responsive layout
 
-## Step 4: Update App.js
-- [x] Add activeTab state (default 'home')
-- [x] Update imports to new folder structure
-- [x] Add conditional rendering for tabs
-- [x] Add GSAP animation for tab transitions
+## 4. Implement Features
+- [ ] Add event grouping by category in Sidebar
+- [ ] Add previous/next arrows to cycle through events in EventDetail
+- [ ] Implement responsive sidebar collapse into dropdown or off-canvas on mobile
+- [ ] Add Framer Motion animations for transitions (fade in/out, slide in for content)
 
-## Step 5: Update Navbar.js
-- [x] Add click handlers for navigation links
-- [x] Pass setActiveTab function as prop from App.js
+## 5. Styling and Theming
+- [ ] Apply Syne font family throughout
+- [ ] Implement clean minimal dark theme with high contrast using TailwindCSS
+- [ ] Ensure all sections are styled clearly with spacing, headings in uppercase
 
-## Step 6: Testing and Optimization
-- [ ] Test navigation functionality
-- [ ] Test sliding animations
-- [ ] Ensure responsive design
-- [ ] Optimize performance if needed
+## 6. Testing and Optimization
+- [ ] Test dynamic mapping from events.json
+- [ ] Verify responsiveness on mobile
+- [ ] Optimize for readability and maintainability
+- [ ] Run the app and check for any errors

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import "./MoreAboutUs.css";
 
 const carouselImages = [
@@ -20,8 +20,61 @@ const carouselImages = [
 
 ];
 
-// Slider images array - reduced to 16 images for better performance
+// Slider images array - all images from Cyfernode0.3Photos-lowres
 const allImages = [
+  "/Cyfernode0.3Photos-lowres/DSC_0030.JPG",
+  "/Cyfernode0.3Photos-lowres/DSC_0031.JPG",
+  "/Cyfernode0.3Photos-lowres/DSC_0032.JPG",
+  "/Cyfernode0.3Photos-lowres/DSC_0033.JPG",
+  "/Cyfernode0.3Photos-lowres/DSC_0034.JPG",
+  "/Cyfernode0.3Photos-lowres/DSC_0035.JPG",
+  "/Cyfernode0.3Photos-lowres/DSC_0036.JPG",
+  "/Cyfernode0.3Photos-lowres/DSC_0038.JPG",
+  "/Cyfernode0.3Photos-lowres/DSC_0039.JPG",
+  "/Cyfernode0.3Photos-lowres/DSC_0040.JPG",
+  "/Cyfernode0.3Photos-lowres/DSC_0041.JPG",
+  "/Cyfernode0.3Photos-lowres/DSC_0042.JPG",
+  "/Cyfernode0.3Photos-lowres/DSC_0043.JPG",
+  "/Cyfernode0.3Photos-lowres/DSC_0044.JPG",
+  "/Cyfernode0.3Photos-lowres/DSC_0045.JPG",
+  "/Cyfernode0.3Photos-lowres/DSC_0046.JPG",
+  "/Cyfernode0.3Photos-lowres/DSC_0049.JPG",
+  "/Cyfernode0.3Photos-lowres/DSC_0050.JPG",
+  "/Cyfernode0.3Photos-lowres/DSC_0052.JPG",
+  "/Cyfernode0.3Photos-lowres/DSC_0053.JPG",
+  "/Cyfernode0.3Photos-lowres/DSC_0054.JPG",
+  "/Cyfernode0.3Photos-lowres/DSC_0055.JPG",
+  "/Cyfernode0.3Photos-lowres/DSC_0060.JPG",
+  "/Cyfernode0.3Photos-lowres/DSC_0061.JPG",
+  "/Cyfernode0.3Photos-lowres/DSC_0062.JPG",
+  "/Cyfernode0.3Photos-lowres/DSC_0063.JPG",
+  "/Cyfernode0.3Photos-lowres/DSC_0064.JPG",
+  "/Cyfernode0.3Photos-lowres/DSC_0071.JPG",
+  "/Cyfernode0.3Photos-lowres/DSC_0072.JPG",
+  "/Cyfernode0.3Photos-lowres/DSC_0073.JPG",
+  "/Cyfernode0.3Photos-lowres/DSC_0074.JPG",
+  "/Cyfernode0.3Photos-lowres/DSC_0075.JPG",
+  "/Cyfernode0.3Photos-lowres/DSC_0076.JPG",
+  "/Cyfernode0.3Photos-lowres/DSC_0077.JPG",
+  "/Cyfernode0.3Photos-lowres/DSC_0078.JPG",
+  "/Cyfernode0.3Photos-lowres/DSC_0079.JPG",
+  "/Cyfernode0.3Photos-lowres/DSC_0081.JPG",
+  "/Cyfernode0.3Photos-lowres/DSC_0082.JPG",
+  "/Cyfernode0.3Photos-lowres/DSC_0083.JPG",
+  "/Cyfernode0.3Photos-lowres/DSC_0084.JPG",
+  "/Cyfernode0.3Photos-lowres/DSC_0085.JPG",
+  "/Cyfernode0.3Photos-lowres/DSC_0086.JPG",
+  "/Cyfernode0.3Photos-lowres/DSC_0087.JPG",
+  "/Cyfernode0.3Photos-lowres/DSC_0088.JPG",
+  "/Cyfernode0.3Photos-lowres/DSC_0089.JPG",
+  "/Cyfernode0.3Photos-lowres/DSC_0090.JPG",
+  "/Cyfernode0.3Photos-lowres/DSC_0091.JPG",
+  "/Cyfernode0.3Photos-lowres/DSC_0093.JPG",
+  "/Cyfernode0.3Photos-lowres/DSC_0094.JPG",
+  "/Cyfernode0.3Photos-lowres/DSC_0095.JPG",
+  "/Cyfernode0.3Photos-lowres/DSC_0096.JPG",
+  "/Cyfernode0.3Photos-lowres/DSC_0097.JPG",
+  "/Cyfernode0.3Photos-lowres/DSC_0099.JPG",
   "/Cyfernode0.3Photos-lowres/DSC_0100.JPG",
   "/Cyfernode0.3Photos-lowres/DSC_0101.JPG",
   "/Cyfernode0.3Photos-lowres/DSC_0102.JPG",
@@ -32,12 +85,47 @@ const allImages = [
   "/Cyfernode0.3Photos-lowres/DSC_0108.JPG",
   "/Cyfernode0.3Photos-lowres/DSC_0109.JPG",
   "/Cyfernode0.3Photos-lowres/DSC_0110.JPG",
-  "/Cyfernode0.3Photos-lowres/DSC_0111.JPG",
-  "/Cyfernode0.3Photos-lowres/DSC_0126.JPG",
   "/Cyfernode0.3Photos-lowres/DSC_0130.JPG",
   "/Cyfernode0.3Photos-lowres/DSC_0131.JPG",
   "/Cyfernode0.3Photos-lowres/DSC_0132.JPG",
   "/Cyfernode0.3Photos-lowres/DSC_0133.JPG",
+  "/Cyfernode0.3Photos-lowres/DSC_0161.JPG",
+  "/Cyfernode0.3Photos-lowres/DSC_0163.JPG",
+  "/Cyfernode0.3Photos-lowres/DSC_0165.JPG",
+  "/Cyfernode0.3Photos-lowres/DSC_0173.JPG",
+  "/Cyfernode0.3Photos-lowres/DSC_0176.JPG",
+  "/Cyfernode0.3Photos-lowres/DSC_0181.JPG",
+  "/Cyfernode0.3Photos-lowres/DSC_0184.JPG",
+  "/Cyfernode0.3Photos-lowres/DSC_0186.JPG",
+  "/Cyfernode0.3Photos-lowres/DSC_0187.JPG",
+  "/Cyfernode0.3Photos-lowres/DSC_0188.JPG",
+  "/Cyfernode0.3Photos-lowres/DSC_0191.JPG",
+  "/Cyfernode0.3Photos-lowres/DSC_0192.JPG",
+  "/Cyfernode0.3Photos-lowres/DSC_0193.JPG",
+  "/Cyfernode0.3Photos-lowres/DSC_0194.JPG",
+  "/Cyfernode0.3Photos-lowres/DSC_0195.JPG",
+  "/Cyfernode0.3Photos-lowres/DSC_0196.JPG",
+  "/Cyfernode0.3Photos-lowres/DSC_0197.JPG",
+  "/Cyfernode0.3Photos-lowres/DSC_0198.JPG",
+  "/Cyfernode0.3Photos-lowres/DSC_0200.JPG",
+  "/Cyfernode0.3Photos-lowres/DSC_0201.JPG",
+  "/Cyfernode0.3Photos-lowres/DSC_0202.JPG",
+  "/Cyfernode0.3Photos-lowres/DSC_0204.JPG",
+  "/Cyfernode0.3Photos-lowres/DSC_0205.JPG",
+  "/Cyfernode0.3Photos-lowres/DSC_0206.JPG",
+  "/Cyfernode0.3Photos-lowres/DSC_0207.JPG",
+  "/Cyfernode0.3Photos-lowres/DSC_0208.JPG",
+  "/Cyfernode0.3Photos-lowres/DSC_0210.JPG",
+  "/Cyfernode0.3Photos-lowres/DSC_0212.JPG",
+  "/Cyfernode0.3Photos-lowres/DSC_0213.JPG",
+  "/Cyfernode0.3Photos-lowres/DSC_0214.JPG",
+  "/Cyfernode0.3Photos-lowres/DSC_0215.JPG",
+  "/Cyfernode0.3Photos-lowres/DSC_0216.JPG",
+  "/Cyfernode0.3Photos-lowres/DSC_0217.JPG",
+  "/Cyfernode0.3Photos-lowres/DSC_0218.JPG",
+  "/Cyfernode0.3Photos-lowres/DSC_0220.JPG",
+  "/Cyfernode0.3Photos-lowres/DSC_0221.JPG",
+  "/Cyfernode0.3Photos-lowres/DSC_0223.JPG",
 ];
 
 // Shuffle the array to randomize
@@ -49,10 +137,15 @@ const shuffleArray = (array) => {
   return array;
 };
 
-const sliderImages = shuffleArray([...allImages]);
+const sliderImages = shuffleArray([...allImages, ...allImages, ...allImages]);
 
 const MoreAboutUs = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isDragging, setIsDragging] = useState(false);
+  const [dragStart, setDragStart] = useState(0);
+  const [currentTranslate, setCurrentTranslate] = useState(0);
+  const slideTrackRef1 = useRef(null);
+  const slideTrackRef2 = useRef(null);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -60,6 +153,56 @@ const MoreAboutUs = () => {
     }, 4000); // 4s interval
     return () => clearInterval(interval);
   }, []);
+
+  useEffect(() => {
+    if (isDragging) {
+      const handleMouseMove = (e) => {
+        const delta = e.clientX - dragStart;
+        const newTranslate = currentTranslate + delta;
+        const maxTranslate = -(120 * 16);
+        const clamped = Math.max(maxTranslate, Math.min(0, newTranslate));
+        if (slideTrackRef1.current) {
+          slideTrackRef1.current.style.transform = `translateX(${clamped}px)`;
+        }
+        if (slideTrackRef2.current) {
+          slideTrackRef2.current.style.transform = `translateX(${clamped}px)`;
+        }
+      };
+
+      const handleMouseUp = () => {
+        setIsDragging(false);
+        const clamped = parseFloat(slideTrackRef1.current?.style.transform?.replace('translateX(', '').replace('px)', '') || 0);
+        setCurrentTranslate(clamped);
+        if (slideTrackRef1.current) {
+          slideTrackRef1.current.style.animationPlayState = 'running';
+          slideTrackRef1.current.style.transform = '';
+        }
+        if (slideTrackRef2.current) {
+          slideTrackRef2.current.style.animationPlayState = 'running';
+          slideTrackRef2.current.style.transform = '';
+        }
+      };
+
+      document.addEventListener('mousemove', handleMouseMove);
+      document.addEventListener('mouseup', handleMouseUp);
+
+      return () => {
+        document.removeEventListener('mousemove', handleMouseMove);
+        document.removeEventListener('mouseup', handleMouseUp);
+      };
+    }
+  }, [isDragging, dragStart, currentTranslate]);
+
+  const handleMouseDown = (e) => {
+    setIsDragging(true);
+    setDragStart(e.clientX);
+    if (slideTrackRef1.current) {
+      slideTrackRef1.current.style.animationPlayState = 'paused';
+    }
+    if (slideTrackRef2.current) {
+      slideTrackRef2.current.style.animationPlayState = 'paused';
+    }
+  };
 
   return (
     <div>
@@ -120,30 +263,30 @@ const MoreAboutUs = () => {
         {/* Card 2 - Empty */}
         <div className="card center-card behen">
 
-  <div className="bhai gallerywala">
+  <div className="bhai gallerywala" onMouseDown={handleMouseDown} style={{ cursor: isDragging ? 'grabbing' : 'grab' }}>
     <div className="slider">
-      <div className="slide-track">
-        {sliderImages.slice(0, 4).map((img, i) => (
+      <div className="slide-track" ref={slideTrackRef1}>
+        {sliderImages.slice(0, 8).map((img, i) => (
           <div className="slide" key={i}>
             <img src={img} alt="" />
           </div>
         ))}
-        {sliderImages.slice(0, 4).map((img, i) => (
-          <div className="slide" key={i + 4}>
+        {sliderImages.slice(0, 8).map((img, i) => (
+          <div className="slide" key={i + 8}>
             <img src={img} alt="" />
           </div>
         ))}
       </div>
     </div>
     <div className="slider">
-      <div className="slide-track">
-        {sliderImages.slice(4, 8).map((img, i) => (
+      <div className="slide-track" ref={slideTrackRef2}>
+        {sliderImages.slice(8, 16).map((img, i) => (
           <div className="slide" key={i}>
             <img src={img} alt="" />
           </div>
         ))}
-        {sliderImages.slice(4, 8).map((img, i) => (
-          <div className="slide" key={i + 4}>
+        {sliderImages.slice(8, 16).map((img, i) => (
+          <div className="slide" key={i + 8}>
             <img src={img} alt="" />
           </div>
         ))}

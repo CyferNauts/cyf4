@@ -1,0 +1,171 @@
+.event-line-up {
+  padding: 20px;
+  margin: 20px 0;
+  background-color: #000000;
+  border-radius: 12px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-self:center;
+  position: relative;
+  transition: background-color 0.5s ease;
+}
+
+.event-line-up.dark-background {
+  background-color: #111111;
+}
+
+.event-line-up h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  
+}
+
+.slideshow-wrapper {
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.slideshow {
+  display: flex;
+  transition: transform 1s cubic-bezier(0.4, 0, 0.2, 1);
+  gap: 10px; /* smaller gap for tight look */
+  position: relative;
+}
+
+.slide {
+  flex: 0 0 80%; /* 80% width for peeking */
+  height: 300px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: transform 1s cubic-bezier(0.4, 0, 0.2, 1), opacity 1s cubic-bezier(0.4, 0, 0.2, 1), filter 1s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform, opacity, filter;
+}
+
+.slide.active {
+  transform: scale(1);
+  opacity: 1;
+  filter: none;
+  z-index: 2;
+}
+
+.slide.inactive {
+  transform: scale(0.9);
+  opacity: 0.7;
+  filter: grayscale(100%);
+  z-index: 1;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.3);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 50%;
+  user-select: none;
+  transition: background-color 0.3s ease;
+  z-index: 3;
+}
+
+.arrow:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.left-arrow {
+  left: 10px;
+}
+
+.right-arrow {
+  right: 10px;
+}
+
+.slide h3 {
+  font-family: "Syne", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.slide p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: center;
+  margin: 0;
+}
+
+.info-button {
+  margin-top: 15px;
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  color: #000;
+  font-family: "Syne", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 10px 24px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.info-button:hover {
+  background: rgba(255, 255, 255, 1);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+.eventlineup-heading{
+  font-size: 100px;
+  width: 90%;
+  text-align: center;
+    font-family: "Syne", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  
+  font-style: normal;
+  line-height: 100px;
+  
+text-align: center;
+  padding-top:30px;
+  color: rgba(255, 255, 255, 0.896);
+  font-size: 100px;
+  
+}
+.eventlineup-des{
+      font-family: "Syne", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 13px;
+  margin-bottom: 20px;
+  font-size: 20px;
+  text-align: center;
+  width: 90%;
+  border-bottom: 1px #3b3b3b solid;
+  color: rgba(255, 255, 255, 0.575);
+}
+
+
+
+.event-line-up{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

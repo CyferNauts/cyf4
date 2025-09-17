@@ -8,8 +8,21 @@ const navigationLinks = [
   { id: 'gallery', label: "Gallery" }
 ]
 
+const events = [
+  { title: "Code Unlocked" },
+  { title: "Think. Build. Create." },
+  { title: "The Digital Playground" },
+  { title: "Stories in Motion" },
+  { title: "Lens on Life" },
+  { title: "Design for Impact" },
+  { title: "Voices of Change" },
+  { title: "Human Dimensions" },
+  { title: "AidBots" },
+]
+
 export default function Navbar({ setActiveTab }) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [isEventsDropdownOpen, setIsEventsDropdownOpen] = useState(false)
 
   const handleNavClick = (id) => {
     setActiveTab(id);
@@ -25,7 +38,27 @@ export default function Navbar({ setActiveTab }) {
         {/* Desktop Navigation */}
         <nav className="nav-links">
           {navigationLinks.map((link) => (
-            <a key={link.id} href="#" onClick={() => handleNavClick(link.id)}>{link.label}</a>
+            link.id === 'events' ? (
+              <div
+                key={link.id}
+                className="dropdown"
+                onMouseEnter={() => setIsEventsDropdownOpen(true)}
+                onMouseLeave={() => setIsEventsDropdownOpen(false)}
+              >
+                <a href="#" onClick={() => handleNavClick(link.id)}>{link.label}</a>
+                {isEventsDropdownOpen && (
+                  <div className="dropdown-content">
+                    {events.map((event, index) => (
+                      <a key={index} href="#" onClick={() => { setActiveTab('events'); setIsEventsDropdownOpen(false); }}>
+                        {event.title}
+                      </a>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ) : (
+              <a key={link.id} href="#" onClick={() => handleNavClick(link.id)}>{link.label}</a>
+            )
           ))}
         </nav>
 
@@ -58,6 +91,15 @@ export default function Navbar({ setActiveTab }) {
               {link.label}
             </a>
           ))}
+          {/* Events in mobile menu */}
+          <div className="mobile-events">
+            <h4>Events</h4>
+            {events.map((event, index) => (
+              <a key={index} href="#" onClick={() => { setActiveTab('events'); setIsMobileMenuOpen(false); }}>
+                {event.title}
+              </a>
+            ))}
+          </div>
           
           <a href="#" className="btn primary">Get Started</a>
         </div>

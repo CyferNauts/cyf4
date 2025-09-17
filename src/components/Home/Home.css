@@ -313,6 +313,8 @@
 
 .schoollogo{
   width: 300px;
+  mix-blend-mode: screen;
+  filter: brightness(1.2);
 }
 .fwdf{
   font-family: "Krona One", sans-serif;

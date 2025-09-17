@@ -1,0 +1,127 @@
+.footer {
+  background: linear-gradient(135deg, #000000, #1a1a1a);
+  color: #ffffff;
+  padding: 80px 60px;
+  font-family: 'Montserrat', sans-serif;
+  border-top: 1px solid #333333;
+  box-shadow: 0 -2px 10px rgba(255, 255, 255, 0.05);
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease-in-out;
+}
+
+.footer.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer-branding {
+  flex: 1 1 250px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.footer-logo {
+  max-width: 160px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+}
+
+.footer-title {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #ffffff;
+  letter-spacing: 1.2px;
+}
+
+.footer-copyright {
+  font-size: 0.95rem;
+  color: #bbbbbb;
+}
+
+/* Links layout */
+.footer-links {
+  flex: 3 1 650px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.footer-section {
+  min-width: 180px;
+}
+
+.footer-section h3 {
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+  color: #cccccc;
+  border-bottom: 2px solid #555555;
+  padding-bottom: 5px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+  color: #dddddd;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+  color: #888888;
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .footer-links {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-logo {
+    max-width: 120px;
+  }
+  .footer-title {
+    font-size: 1.5rem;
+  }
+  .footer-section h3 {
+    font-size: 1rem;
+  }
+  .footer-section ul li a {
+    font-size: 0.85rem;
+  }
+}
+
+
+.footer-logo{
+  mix-blend-mode: exclusion;
+  width: 400px;
+}

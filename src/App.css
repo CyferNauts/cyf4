@@ -12,6 +12,7 @@
   z-index: 9999;
   mix-blend-mode: difference;
   filter: url(#goo);
+  display: none;
 }
 
 /* Gooey cursor dots */

@@ -1,15 +1,16 @@
+/* ============================= */
 /* Base Navbar */
+/* ============================= */
 .navbar {
-
-  background:linear-gradient(180deg, rgb(0, 0, 0), rgb(0, 0, 0) );
+  background: #000; /* clean official black */
   position: sticky;
   top: 0;
   z-index: 50;
   height: 64px;
-  font-family: 'Inter', sans-serif;
-    font-family: "Krona One", sans-serif;
+  font-family: "Krona One", sans-serif;
   font-weight: 400;
   font-style: normal;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25); /* sleek shadow */
 }
 
 .navbar-container {
@@ -22,88 +23,90 @@
   justify-content: space-between;
 }
 
+/* ============================= */
 /* Logo */
+/* ============================= */
 .logocyfernode {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: 700;
-  color: #ffffff;
+  color: #fff;
   text-decoration: none;
-  /* transition: color 0.2s ease-out, background 0.2s ease-out; */
+  transition: all 0.3s ease;
 }
 
 .logocyfernode:hover {
-  /* color: #2563eb; modern blue */
-  /* color: #25cdeb; */
   background: linear-gradient(45deg, #2563eb, #25cdeb);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   color: transparent;
-  transition: color 0.2s, background 0.2s;
 }
 
-
+/* ============================= */
 /* Desktop links */
+/* ============================= */
 .nav-links {
   display: flex;
   gap: 1.5rem;
-  font-family: "Krona One", sans-serif;
-  font-weight: 400;
-  font-style: normal;
 }
 
 .nav-links a {
-    font-family: "Krona One", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #555;
+  color: #d0d0d0;
   text-decoration: none;
   font-weight: 500;
-  transition: color 0.2s ease;
-  background: linear-gradient(45deg, #2563eb, #25cdeb);
-  background-position: bottom left;
-  background-size: 0% 4px;
-  background-repeat: no-repeat;
-  transition: background-size 300ms ease-in-out;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: -4px;
+  background: #25cdeb;
+  transition: width 0.3s ease;
 }
 
 .nav-links a:hover {
-  background-size: 100% 4px;
   color: #25cdeb;
 }
 
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* ============================= */
 /* Right buttons */
+/* ============================= */
 .navbar-right {
   display: flex;
-  gap: 0.90rem;
-  width:fit-content;
-
-
+  gap: 0.9rem;
+  width: fit-content;
 }
 
 .btn {
   padding: 0.45rem 0.9rem;
   font-size: 0.9rem;
-  border-radius: 8px;
+  border-radius: 6px;
   text-decoration: none;
   font-weight: 500;
-  transition: all 0.2s ease;
-    font-family: "Krona One", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+  transition: all 0.25s ease;
 }
 
 .btn.ghost {
-  border: 1px solid rgba(0,0,0,0.2);
-  color: #333;
+  border: 1px solid #25cdeb;
+  color: #25cdeb;
+  background: transparent;
 }
 
 .btn.ghost:hover {
-  background: rgba(0,0,0,0.05);
+  background: rgba(37, 205, 235, 0.1);
 }
 
 .btn.primary {
-  background: #111;
+  background: #25cdeb;
   color: #fff;
 }
 
@@ -111,7 +114,9 @@
   background: #2563eb;
 }
 
+/* ============================= */
 /* Mobile toggle */
+/* ============================= */
 .menu-btn {
   display: none;
   flex-direction: column;
@@ -119,15 +124,12 @@
   border: none;
   background: none;
   cursor: pointer;
-    font-family: "Krona One", sans-serif;
-  font-weight: 400;
-  font-style: normal;
 }
 
 .menu-btn span {
   width: 22px;
   height: 2px;
-  background: #333;
+  background: #fff;
   transition: all 0.3s ease;
 }
 
@@ -141,30 +143,101 @@
   transform: translateY(-7px) rotate(-45deg);
 }
 
+/* ============================= */
 /* Mobile nav */
+/* ============================= */
 .mobile-menu {
   display: flex;
   flex-direction: column;
-  background: #fff;
-  border-top: 1px solid rgba(0,0,0,0.08);
+  background: #0a0a0a;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding: 1rem;
   animation: slideDown 0.3s ease forwards;
 }
 
 .mobile-menu a {
   padding: 0.75rem 0;
-  color: #444;
+  color: #ccc;
   text-decoration: none;
   font-weight: 500;
-  border-bottom: 1px solid rgba(0,0,0,0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   transition: color 0.2s ease;
 }
 
 .mobile-menu a:hover {
-  color: #111;
+  color: #25cdeb;
 }
 
-/* Slide animation */
+/* ============================= */
+/* Mobile Events Dropdown */
+/* ============================= */
+.mobile-events {
+  margin-top: 1rem;
+}
+
+.mobile-events h4 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #25cdeb;
+}
+
+.mobile-events a {
+  padding: 0.5rem 0;
+  color: #ccc;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.mobile-events a:hover {
+  color: #25cdeb;
+}
+
+/* ============================= */
+/* Dropdown styles */
+/* ============================= */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown > a {
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: block;
+  position: absolute;
+  background-color: #222222;
+  width: 200px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+  z-index: 100;
+  top: 90%;
+  left: -10px;
+  border-radius: 6px;
+  overflow: hidden;
+  animation: fadeUp 0.25s ease forwards;
+}
+
+.dropdown-content a {
+  color: #d0d0d0;
+  padding: 10px 16px;
+  text-decoration: none;
+  display: block;
+  font-weight: 500;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.2s ease;
+}
+
+.dropdown-content a:hover {
+  background-color: #2563eb;
+  color: #fff;
+}
+
+/* ============================= */
+/* Animations */
+/* ============================= */
 @keyframes slideDown {
   from {
     opacity: 0;
@@ -176,7 +249,36 @@
   }
 }
 
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Scroll popup animation */
+@keyframes popUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.footer-animate {
+  animation: popUp 0.6s ease forwards;
+}
+
+/* ============================= */
 /* Responsive */
+/* ============================= */
 @media (max-width: 884px) {
   .nav-links,
   .navbar-right {
@@ -185,18 +287,8 @@
   .menu-btn {
     display: flex;
   }
-  
+
   .navbar {
     width: 100%;
   }
-}
-
-
-/* From Uiverse.io by Gaurav-WebDev */ 
-.btn-txt{
-  width: fit-content;
-  height: 10px;
-    font-family: "Krona One", sans-serif;
-  font-weight: 400;
-  font-style: normal;
 }

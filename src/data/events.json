@@ -1,0 +1,350 @@
+{
+  "festName": "Coexistence – Where Technology Serves Humanity",
+  "theme": "Humanity and Tech",
+  "events": [
+    {
+      "eventName": "Code Unlocked",
+      "eventCategory": "Programming",
+      "mode": "Hybrid",
+      "description": "A cryptic programming challenge designed to test problem-solving, logic, and technical prowess. Participants will face puzzles that demand both coding skills and sharp analytical thinking. The event format consists of two rounds: an online elimination round followed by offline finals in the CS Lab. Each stage of the challenge reveals new hidden coding puzzles across the OS, with the ultimate goal of unlocking the digital vault and safely transferring AI core files.",
+      "prompt": "Participants must face challenges that combine logical reasoning, cryptic puzzles, and coding to unlock the digital vault.",
+      "participants": {
+        "max": 2
+      },
+      "eligibility": "IX-XII",
+      "guidelines": [
+        "Only Python is allowed for submissions.",
+        "Organizers’ PCs provided—no personal devices or storage.",
+        "Internet, AI tools, and external resources strictly prohibited.",
+        "Plagiarism or unfair means lead to immediate disqualification.",
+        "Time limits and on-spot instructions must be strictly followed."
+      ],
+      "rounds": [
+        {
+          "name": "ROUND 1 prelims online",
+          "format": "Online elimination; 30-minute programming quiz on a secure platform. Cameras must stay on; rule violations mean immediate disqualification.",
+          "advancement": "Top 5 teams qualify for finals."
+        },
+        {
+          "name": "ROUND 2 final offline",
+          "format": "Held in CS Lab. Teams will solve layered coding challenges, unlocking stages in the digital vault, blending logic, programming, and pressure. Completion within 90-120 minutes required."
+        }
+      ],
+      "final_mission": "Teams must complete all challenges within the given 90-120 minutes to fully unlock the vault and transfer the AI's core files to safety.",
+      "judgingCriteria": {
+        "Problem-Solving": 25,
+        "TechnicalAccuracy": 25,
+        "NoOfProblemsSolved": 25,
+        "TimeEfficiency": 15,
+        "CreativityInApproach": 10
+      },
+      "contacts": [
+        {"name": "Devansh Dhingra (XII)", "phone": "76781 45607", "handle": "aviator247"},
+        {"name": "Anshuman Rastogi (XII)"}
+      ]
+    },
+    {
+      "eventName": "Think. Build. Create.",
+      "eventCategory": "Creative (AI Innovative Project)",
+      "mode": "Hybrid",
+      "description": "A two-stage hackathon focused on pitching and prototyping AI-powered platforms that solve real human challenges. Participants submit a pitch and later present live, including an advert video, branding materials, optional prototype, and respond to a surprise Reality Check Round.",
+      "prompt": "Imagine a content platform whose core features make online creation and connection freeing, meaningful, and human-centric. Your brand should inspire belonging and creative expression beyond algorithmic sameness.",
+      "participants": {
+        "max": 4
+      },
+      "eligibility": "IX-XII",
+      "rounds": [
+        {
+          "name": "ROUND 1 prelims online",
+          "format": "Submit mandatory 100-word write-up, concept visuals, mockups or branding. Extra creatives provide bonus points. Deadline: 7th Nov 2025. Late entries rejected."
+        },
+        {
+          "name": "ROUND 2 final offline",
+          "format": "Present offline; bring devices/internet if needed (not provided by organizers). Presentation deck required with branding and UI designs. Prototype earns extra points. Advertisement video mandatory. Reality Check Round: teams respond to a surprise scenario to test their core feature’s effectiveness under pressure."
+        }
+      ],
+      "guidelines": [
+        "Teams must submit a 100-word write-up outlining their platform.",
+        "Add visuals, branding, or UI to enhance submissions.",
+        "Prototypes are optional but score bonus points.",
+        "All entries must be original and timely.",
+        "Advertisement video is mandatory in finals."
+      ],
+      "judgingCriteria": {
+        "OverallCreativity": 10,
+        "OriginalityOfIdea": 10,
+        "AppFeasibility": 15,
+        "ProjectRelevance": 10,
+        "OverallDesign": 10,
+        "PresentationClarity": 10,
+        "PrototypeUI": 15,
+        "RealityCheckRound": 20
+      },
+      "contacts": [
+        {"name": "Bhavesh (XI)", "phone": "96670 17285", "handle": "bashoranges"},
+        {"name": "Sampada (X)", "phone": "98688 92931", "handle": "sampadaaaaaa"}
+      ]
+    },
+    {
+      "eventName": "The Digital Playground",
+      "eventCategory": "Gaming",
+      "mode": "Online",
+      "description": "SPIKE SAGA 2025 – Ultimate gaming showdown with strategy, team coordination, and adrenaline. Features tournaments and live commentary. Casual and competitive players welcomed, with a knockout tournament format mirroring pro events.",
+      "participants": {
+        "max": 5,
+        "coachOrSubstitute": 1
+      },
+      "eligibility": "IX-XII",
+      "guidelines": [
+        "First stage features screening game, followed by main event.",
+        "Games announced before competition.",
+        "Custom match format for 51 participants.",
+        "Event conducted online.",
+        "Discord server is official info hub.",
+        "Cheats, hacks, and inappropriate usernames lead to disqualification.",
+        "Knockout stage: only winners advance."
+      ],
+      "rounds": [
+        {
+          "name": "ONLINE",
+          "format": "51 players compete in custom match. Focus is on coordination, team skill, and strategy. Knockout format."
+        }
+      ],
+      "contacts": [
+        {"name": "Ayera (XII)"},
+        {"name": "Yugank (X)"},
+        {"name": "Devansh", "phone": "76781 45607", "handle": "aviator247"},
+        {"name": "Sampada", "phone": "98688 92931", "handle": "bashoranges"}
+      ]
+    },
+    {
+      "eventName": "Stories in Motion",
+      "eventCategory": "Movie Making",
+      "mode": "Hybrid",
+      "description": "Two-round short film competition exploring people-technology relationships. Films must highlight empathy, impact, or responsibility and include a unique creative twist. Fully AI-generated work prohibited, but AI-based effects are allowed.",
+      "prompt": "In a future where emotions become downloadable software, humanity outsources feelings and cyborgs see emotions as fairy tales.",
+      "participants": {
+        "min": 3,
+        "max": 4
+      },
+      "eligibility": "IX-XII",
+      "guidelines": [
+        "Strict adherence to time limits: 3-5 minutes.",
+        "Entries violating time will be penalized.",
+        "No fully AI-generated films; only AI-based effects allowed.",
+        "Follow organizer’s file format."
+      ],
+      "rounds": [
+        {
+          "name": "ROUND 1 prelims online",
+          "format": "Submit 3-5 minute short film on the topic. Top teams progress to offline round."
+        },
+        {
+          "name": "ROUND 2 final offline",
+          "format": "Teams present final film, highlighting creativity, originality, and storytelling. Judging based on criteria."
+        }
+      ],
+      "judgingCriteria": {
+        "StoryOriginality": 20,
+        "RelevanceToTopic": 15,
+        "PerformanceActing": 25,
+        "UniqueTwist": 15,
+        "TimeManagement": 5,
+        "Creativity": 20
+      },
+      "contacts": [
+        {"name": "Bravish (XI)", "phone": "76781 45607", "handle": "aviator247"},
+        {"name": "Vinamrata (X)"}
+      ]
+    },
+    {
+      "eventName": "Lens on Life",
+      "eventCategory": "Photography",
+      "mode": "Online",
+      "description": "Photography challenge: submit a connected photo series that explores the intersection of humanity and technology. Entries must consist of 5-8 images and an explanatory write-up.",
+      "participants": {
+        "max": 2
+      },
+      "eligibility": "IX-XII",
+      "prompt": "Storytelling through a connected photo series reflecting humanity’s evolution with technology over the next decade.",
+      "guidelines": [
+        "Only basic editing (cropping, brightness/contrast, color correction) allowed.",
+        "No AI-generated or heavily manipulated images.",
+        "Plagiarism prohibited.",
+        "Only one entry per team.",
+        "Entries must be submitted before deadline in portal shared by organizers.",
+        "Entry must have a 150-200 word supporting write-up."
+      ],
+      "rounds": [
+        {
+          "name": "ONLINE",
+          "format": "Submit series of 5-8 original photos plus a 150-200 word explanatory write-up. Stock, AI-generated, or plagiarized images strictly prohibited."
+        }
+      ],
+      "judgingCriteria": {
+        "CreativityOriginality": 25,
+        "RelevanceToTheme": 20,
+        "StorytellingFlow": 25,
+        "PhotographySkill": 20,
+        "OverallImpact": 10
+      },
+      "contacts": [
+        {"name": "Manas (XI)", "phone": "76781 45607", "handle": "aviator247"},
+        {"name": "Kumaran S (XI)", "phone": "98688 92931", "handle": "bashoranges"}
+      ]
+    },
+    {
+      "eventName": "Design for Impact",
+      "eventCategory": "Designing",
+      "mode": "Online",
+      "description": "A creative challenge to design digital posters that spark conversations about the role of tech in shaping a more empathetic future. Posters must be original, themed, and submitted in .jpg and .psd format.",
+      "participants": {
+        "max": 2
+      },
+      "eligibility": "IX-X",
+      "prompt": "How can technology help us bridge emotional distances, support empathy, and build authentic connections?",
+      "guidelines": [
+        "Acceptable formats: JPG and editable PSD.",
+        "Use only provided images—no stock or external graphics.",
+        "Any editing tool allowed (Photoshop, Illustrator, Canva, Figma, etc.).",
+        "Original artwork only. Plagiarism barred.",
+        "Submit via Drive folder in Editor mode.",
+        "Strict submission deadline; late entries are rejected."
+      ],
+      "deliverables": [
+        "Digital poster in .jpg format.",
+        "Editable source file (.psd).",
+        "Submission via Google Drive, folder named as per School Name."
+      ],
+      "judgingCriteria": {
+        "CreativityOriginality": 30,
+        "CompositionDesign": 25,
+        "AdherenceToTheme": 25,
+        "TechnicalSkill": 20
+      },
+      "contacts": [
+        {"name": "Ashutosh Kumar (XII)"},
+        {"name": "Yashvardhan (IX)"}
+      ]
+    },
+    {
+      "eventName": "Voices of Change",
+      "eventCategory": "Tech Talk",
+      "mode": "Offline",
+      "description": "A live, offline event challenging participants to deliver persuasive TEDx-style talks on surprise topics connecting technology and humanity. Preparation time: 1 hour; speech duration: 3 minutes. Talks must be delivered strictly in English.",
+      "participants": {
+        "max": 1
+      },
+      "eligibility": "XI-XII",
+      "prompt": "Surprise topics under the umbrella of Humanity and Technology: Responsibilities, Impacts, and Empathy.",
+      "guidelines": [
+        "1 hour preparation after topic reveal.",
+        "Internet/books/offline notes allowed for research.",
+        "Plagiarism or reading directly from sources penalized.",
+        "Speech time: 3 minutes (overage penalized).",
+        "No crude/inappropriate language (leads to disqualification).",
+        "Props allowed, PowerPoints discouraged."
+      ],
+      "judgingCriteria": {
+        "CreativityOriginality": 20,
+        "RelevanceToTheme": 20,
+        "ContentQualityDepth": 20,
+        "PresentationDelivery": 25,
+        "OverallImpact": 15
+      },
+      "contacts": [
+        {"name": "Eva Dev (XII)"},
+        {"name": "Pranjal Sharma (XII)"},
+        {"name": "Manas", "phone": "76781 45607", "handle": "aviator247"},
+        {"name": "Kumaran", "phone": "98688 92931", "handle": "bashoranges"}
+      ]
+    },
+    {
+      "eventName": "Human Dimensions",
+      "eventCategory": "3D Modelling",
+      "mode": "Online",
+      "description": "Participants create creative and functional 3D models visualizing technology’s human impact. Models should reflect empathy, innovation, and practical problem solving, submitted with a concept note explaining their vision.",
+      "participants": {
+        "min": 1,
+        "max": 2
+      },
+      "eligibility": "IX-XII",
+      "prompt": "Show how technology uplifts, connects, and empowers: e.g., immersive platforms help underprivileged students, smart tools aid artists.",
+      "challenge": "Build a 3D model showing how technology improves lives, strengthens communities, or creates a better future with empathy.",
+      "deliverables": [
+        "Rendered images or short video.",
+        "Actual 3D model in .fbx, .blend, .obj, .stl formats.",
+        "Concept note explaining idea, purpose, and theme reflection."
+      ],
+      "guidelines": [
+        "Only original work—no pre-made assets, AI-generated content, or plagiarism.",
+        "Follow theme (Humanity Technology).",
+        "Include all textures/materials. Missing textures penalized."
+      ],
+      "rounds": [
+        {
+          "name": "ONLINE",
+          "format": "Upload work to Drive; share viewing link via official form."
+        }
+      ],
+      "judgingCriteria": {
+        "CreativityOriginality": 25,
+        "ManCentricRelevance": 25,
+        "TechnicalExecution": 20,
+        "Practicality": 15,
+        "FutureVision": 15
+      },
+      "contacts": [
+        {"name": "Aazim (X)"},
+        {"name": "Nakul (XI)"},
+        {"name": "Manas", "phone": "76781 45607", "handle": "aviator247"},
+        {"name": "Kumaran", "phone": "98688 92931", "handle": "bashoranges"}
+      ]
+    },
+    {
+      "eventName": "AidBots",
+      "eventCategory": "Robotics",
+      "mode": "Offline",
+      "description": "Participants design innovative robots for disaster management or healthcare and assistive support. Working prototypes preferred, software-only allowed but less favored. Focus on safe, ethical, practical humanitarian tech.",
+      "participants": {
+        "max": 2
+      },
+      "eligibility": "IX-XII",
+      "categories": [
+        "Disaster Management Robots: aid in rescue, relief, crisis situations.",
+        "Healthcare & Assistive Robots: support, empower differently abled individuals."
+      ],
+      "prompt": "Technology for Humanity: Building Robots that Rescue, Heal, and Empower.",
+      "deliverables": [
+        "PPT, code files, live demo/prototype."
+      ],
+      "guidelines": [
+        "Choose either Disaster Management or Healthcare/Assistive robots.",
+        "Robots must be self-designed (no pre-built kits; LEGO/VEX barred).",
+        "Live demonstration required (5 minutes).",
+        "Unsafe or copied designs penalized.",
+        "All solutions must be safe, ethical, and practical.",
+        "Strict adherence to deadlines."
+      ],
+      "rounds": [
+        {
+          "name": "OFFLINE",
+          "format": "Live presentation during fest. 5 minutes per team."
+        }
+      ],
+      "judgingCriteria": {
+        "InnovationCreativity": 20,
+        "FunctionalityWorking": 30,
+        "RelevanceToTheme": 15,
+        "PracticalityImpact": 20,
+        "Presentation": 15
+      },
+      "contacts": [
+        {"name": "Namish (IX)"},
+        {"name": "Yuvraj (IX)"},
+        {"name": "Manas", "phone": "76781 45607", "handle": "aviator247"},
+        {"name": "Kumaran", "phone": "98688 92931", "handle": "bashoranges"}
+      ]
+    }
+  ]
+}
