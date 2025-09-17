@@ -56,7 +56,7 @@
   gap: 1rem;
   max-width: 1200px;
   width: 100%;
-  
+
 
 }
 
@@ -142,7 +142,7 @@
 }
 
 .floating-card {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(10, 10, 10, 0.8);
   padding: 1.5rem;
   border-radius: 16px;
   backdrop-filter: blur(10px);
@@ -155,8 +155,8 @@
 
 .four{
   height: 100px;
-  background-color: white;
-  color: black;
+  background-color: blue;
+  color: white;
   width: 250PX;
   border-radius: 0px;
   font-size: 5rem;
@@ -263,7 +263,7 @@
 .btn-txt {
   z-index: 500;
   font-weight: 200;
- 
+
 }
 
 .type1::after {
@@ -281,7 +281,7 @@
 }
 
 .button:hover {
-  
+
   color: #000000;
 
 }
@@ -408,14 +408,14 @@
   padding-left: 20px;
   border-left: 2px solid #ffffff;
   font-size: 20px;
-  
+
 }
 .schoollogo{
   padding-right: 20px;
   width: 60%;
- 
-  
-  
+
+
+
 }
 
 }
@@ -493,8 +493,8 @@ padding: 0;
   width: fit-content;
   padding: 0 5px 0 5px;
   height: fit-content;
-  
-  
+
+
 }
 
 .theme-description{
@@ -541,7 +541,7 @@ padding: 0;
 .fadeoutdiv{
   position: absolute;
   z-index: 5;
-  
+
   height: 100%;
   width: 100%;
 
@@ -569,8 +569,8 @@ padding: 0;
   opacity: 0.2;
 }
 .overlay{
- 
-background-color: rgba(255, 0, 0, 0.363);
+
+background-color: rgba(0, 0, 0, 0.363);
   display: flex;
   justify-content: center;
   align-items: end;
@@ -619,7 +619,7 @@ background-color: rgba(255, 0, 0, 0.363);
   }
 .hero-title{
   font-size:9vw;
-  background-color: red;
+  background-color: #000000;
 }
 .four{
   width: 30%;
@@ -628,7 +628,7 @@ background-color: rgba(255, 0, 0, 0.363);
   width: 70%;
 }
 .hero-description{
-  
+
   width: 100vw;
   height:fit-content;
   display: flex;
@@ -649,7 +649,7 @@ background-color: rgba(255, 0, 0, 0.363);
 
 @media only screen and (max-width: 600px) {
 .hero-description{
-  
+
   width: 80vw;
   height:fit-content;
   display: flex;
@@ -663,7 +663,3 @@ background-color: rgba(255, 0, 0, 0.363);
   padding: 2vh 0 3vh 0;
 }
 }
-
-
-
-
