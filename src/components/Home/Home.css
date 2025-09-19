@@ -142,7 +142,7 @@
 }
 
 .floating-card {
-  background: rgba(10, 10, 10, 0.8);
+  background: rgb(0, 0, 0);
   padding: 1.5rem;
   border-radius: 16px;
   backdrop-filter: blur(10px);
@@ -155,8 +155,9 @@
 
 .four{
   height: 100px;
-  background-color: blue;
-  color: white;
+  background-color: rgb(255, 255, 255);
+  
+  color: rgb(0, 0, 0);
   width: 250PX;
   border-radius: 0px;
   font-size: 5rem;
@@ -165,6 +166,7 @@
   font-style: normal;
   line-height: 105px;
   border-radius: 10px;
+  
 
 }
 .hero-subtitle{
@@ -258,6 +260,8 @@
   transition: all 0.5s ease-in-out;
   z-index: 2;
   padding: 10px 20px 10px 20px;
+        font-weight: 780;
+  font-family: "Syne", sans-serif;
 }
 
 .btn-txt {
@@ -566,11 +570,12 @@ padding: 0;
   height: 100%;
   object-fit: cover;
   z-index: -5;
-  opacity: 0.2;
+  opacity: 1;
+  filter:brightness(0.4);
 }
 .overlay{
 
-background-color: rgba(0, 0, 0, 0.363);
+background-color: rgb(0, 0, 0);
   display: flex;
   justify-content: center;
   align-items: end;
@@ -663,3 +668,16 @@ background-color: rgba(0, 0, 0, 0.363);
   padding: 2vh 0 3vh 0;
 }
 }
+
+
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Syne:wght@400..800&display=swap');
+.type1 {
+
+  font-family: "Syne", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+}
+
+
+
