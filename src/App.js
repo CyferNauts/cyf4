@@ -11,6 +11,7 @@ import CustomCursor from './components/CustomCursor';
 import EventLineUp from './components/EventLineUp';
 import Team from './components/Team/Team';
 import Events from './components/Events/Events';
+import Links from './components/Links';
 import './App.css';
 import { TweenMax } from "gsap"; // gsap 2.x compatible import
 
@@ -56,6 +57,7 @@ function App() {
       {activeTab !== 'team' && activeTab !== 'events' && (
         <>
           <Home />
+          <Links />
           <EventLineUp />
           <AboutUs />
           <MoreAboutUs />
