@@ -53,6 +53,7 @@ const Events = () => {
     <nav className="sidebar-nav">
       <div className="sidebar-header">
         <h2 className="fest-title">{eventsData.festName}</h2>
+        <p className="fest-theme">{eventsData.theme}</p>
       </div>
       <ul>
         {events.map((event, index) => (
@@ -60,15 +61,11 @@ const Events = () => {
             key={event.eventName}
             className={`event-card ${activeIndex === index ? "active" : ""}`}
             onClick={() => handleEventClick(index)}
-            whileHover={{ scale: 1.03, y: -2 }}
-            transition={{ type: "spring", stiffness: 300, damping: 20 }}
+            whileHover={{ opacity: 0.95 }}
+            transition={{ duration: 0.2 }}
             layout
           >
             <span className="event-card-title">{event.eventName}</span>
-            <div className="event-card-tags">
-              {event.mode && <span className="tag-pill">{event.mode}</span>}
-              {event.participants?.max && <span className="tag-pill">Max {event.participants.max}</span>}
-            </div>
           </motion.li>
         ))}
       </ul>
@@ -142,6 +139,14 @@ const Events = () => {
                   <section className="detail-section">
                     <h3>Description</h3>
                     <p>{activeEvent.description}</p>
+                  </section>
+                )}
+
+                {(activeEvent.mode || activeEvent.participants?.max) && (
+                  <section className="detail-section">
+                    <h3>Event Details</h3>
+                    {activeEvent.mode && <p>Mode: {activeEvent.mode}</p>}
+                    {activeEvent.participants?.max && <p>Max Participants: {activeEvent.participants.max}</p>}
                   </section>
                 )}
 

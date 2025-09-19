@@ -1,22 +1,15 @@
-# TODO: Revamp Judging Criteria Section
+# TODO: Redesign Events Page Sidebar
 
-## Step 1: Update Events.js ✅
-- Add a thin divider or subtle gradient bar above the "Judging Criteria" heading.
-- Enhance the judging criteria cards with framer-motion for smooth hover animations (shadow or gradient shift, no scaling).
-- Add tooltips or "?" icons with fade-in explanations for each criterion.
-- Ensure cards have glassy blurred dark backgrounds and soft colored border glows.
-
-## Step 2: Update Events.css ✅
-- Add styles for glassy blurred backgrounds (rgba(30,30,40,0.8)) with border-radius and drop shadows.
-- Implement neon colored border glows (blue, teal, violet) on hover and active states.
-- Update typography: criterion title (18-22px, soft semibold, white/light grey), percent (very bold, neon accent, ~2x title size).
-- Add styles for tooltips with smooth fade-in and matching color palette.
-- Add thin divider or subtle gradient bar above Judging Criteria heading.
-- Ensure no clipping or overflow on hover/glow effects.
-- Make grid layout responsive with generous spacing.
-
-## Step 3: Testing and Verification ✅
-- Test UI in different screen sizes for responsiveness.
-- Verify hover animations and tooltip functionality.
-- Confirm no layout glitches, clipping, or overflow issues.
-- Ensure overall dark theme consistency (#191922 background).
+## Tasks
+- [x] Edit Events.js: Remove event-card-tags from sidebar to keep only event titles
+- [x] Edit Events.js: Add "Event Details" section in detail panel for mode and max participants
+- [x] Edit Events.css: Change sidebar background to vertical gradient #0f0f0f to #1a1a1a
+- [x] Edit Events.css: Reduce sidebar width to 280px
+- [x] Edit Events.css: Update event cards to flat text buttons (remove padding, glassmorphism, rounded borders)
+- [x] Edit Events.css: Change typography to Inter with 14-15px font size, muted gray inactive, white active
+- [x] Edit Events.css: Implement active state with subtle dark gradient and neon-accent line on left
+- [x] Edit Events.css: Implement hover state with smooth dark gradient highlight and soft glow
+- [x] Edit Events.css: Ensure mobile sidebar styles match desktop
+- [x] Make buttons bigger and maintain harmony with description panel text
+- [x] Make background and everything very dark and sleek and modern
+- [x] Test changes on desktop and mobile for responsiveness and functionality
