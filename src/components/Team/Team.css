@@ -5,7 +5,7 @@
 
 :root {
   --bg-dark: #000000;
-  --card-bg: rgba(255, 255, 255, 0.05);
+  --card-bg: rgb(0, 0, 0);
   --card-border: rgba(255, 255, 255, 0.15);
   --accent: #00aaff;
   --text-light: #ffffff;
@@ -17,7 +17,7 @@
   --radius-lg: 20px;
   --radius-md: 14px;
   --radius-sm: 8px;
-  --shadow-glow: 0 0 20px rgba(0, 170, 255, 0.35);
+  --shadow-glow: 0 0 20px rgba(0, 170, 255, 0);
   --shadow-subtle: 0 6px 25px rgba(0, 0, 0, 0.6);
 }
 
@@ -150,7 +150,7 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(120deg, rgba(0, 170, 255, 0.15), rgba(255, 0, 150, 0.15));
+  background: linear-gradient(120deg, rgba(0, 170, 255, 0.15), rgba(2, 204, 255, 0.15));
   opacity: 0;
   transition: opacity var(--transition-medium);
   z-index: -1;
@@ -198,7 +198,7 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(0,0,0,0.6), transparent 40%);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent 40%);
   opacity: 0.6;
 }
 
@@ -309,12 +309,12 @@ body {
    ANIMATED GRADIENT BORDERS
 =================================*/
 .team-card {
-  border-image: linear-gradient(120deg, rgba(0,170,255,0.4), rgba(255,0,150,0.4)) 1;
+  border-image: linear-gradient(120deg, rgba(0,170,255,0.4), rgba(0, 179, 255, 0.4)) 1;
   border-width: 1px;
 }
 
 .team-card:hover {
-  border-image: linear-gradient(120deg, rgba(0,170,255,0.9), rgba(255,0,150,0.9)) 1;
+  border-image: linear-gradient(120deg, rgba(0,170,255,0.9), rgba(0, 187, 255, 0.9)) 1;
 }
 
 /* ================================
@@ -370,11 +370,7 @@ body {
 }
 
 /* border glow loop */
-@keyframes borderGlow {
-  0% { box-shadow: 0 0 10px rgba(0,170,255,0.4);}
-  50% { box-shadow: 0 0 25px rgba(255,0,150,0.6);}
-  100% { box-shadow: 0 0 10px rgba(0,170,255,0.4);}
-}
+
 
 /* ================================
    SCROLL REVEAL (FADE + UP)
@@ -399,8 +395,8 @@ body {
 =================================*/
 :root {
   --bg-dark: #000000;
-  --card-bg: rgba(0, 20, 40, 0.55);
-  --card-border: rgba(0, 150, 255, 0.4);
+  --card-bg: rgba(48, 52, 57, 0.55);
+  --card-border: rgba(173, 221, 255, 0.158);
   --accent: #00aaff;
   --text-light: #ffffff;
   --text-muted: #aaaaaa;
@@ -439,7 +435,7 @@ body {
 .team-img {
   position: relative;
   overflow: hidden;
-  border-bottom: 1px solid rgba(0,150,255,0.4);
+  border-bottom: 1px solid rgba(0, 49, 84, 0.4);
 }
 
 .team-img img {
@@ -460,15 +456,15 @@ body {
   position: absolute;
   top: 16px;
   left: 16px;
-  background: rgba(0, 150, 255, 0.2);
-  border: 1px solid rgba(0, 150, 255, 0.6);
+  background: rgb(0, 149, 255);
+  border: 1px solid rgba(0, 31, 53, 0.6);
   padding: 6px 14px;
   border-radius: 0; /* removed radius */
   font-size: 0.9rem;
   font-weight: 700;
   color: #fff;
   backdrop-filter: blur(8px);
-  box-shadow: 0 0 12px rgba(0,170,255,0.6);
+
 }
 
 /* ================================
@@ -499,6 +495,7 @@ body {
 }
 
 .team-socials a {
+  
   color: #66cfff;
   font-size: 1.9rem;
   transition: color var(--transition-fast), transform var(--transition-fast), text-shadow var(--transition-fast);
@@ -555,3 +552,109 @@ body {
 @media (max-width: 768px) {
   .lead-grid, .core-grid { grid-template-columns: 1fr; }
 }
+
+
+
+
+
+
+.links-section {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  padding: 0.7rem;
+  border-radius: 12px; /* slight curve */
+  background: rgba(18, 18, 18, 0.55); /* glass effect */
+  backdrop-filter: blur(16px) saturate(160%);
+  -webkit-backdrop-filter: blur(16px) saturate(160%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  z-index: 999;
+}
+
+/* Icon base */
+.link-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 42px;
+  width: 42px;
+  border-radius: 10px; /* subtle rounded square */
+  background: linear-gradient(145deg, rgba(20, 20, 20, 0.7), rgba(10, 10, 10, 0.6));
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  color: #e5e5e5; /* muted white */
+  transition: all 0.28s ease;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.link-icon:hover {
+  transform: scale(1.12);
+  background: linear-gradient(145deg, rgba(30, 30, 30, 0.75), rgba(15, 15, 15, 0.65));
+  color: #ffffff;
+}
+
+/* Tablet view: row centered */
+@media (max-width: 1024px) and (min-width: 600px) {
+  .links-section {
+    flex-direction: row;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    justify-content: center;
+    border-radius: 0;
+    padding: 0.6rem 0.8rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+  }
+}
+
+/* Phone view: row bottom-right */
+@media (max-width: 599px) {
+  .links-section {
+    flex-direction: row;
+    bottom: 0.7rem;
+    right: 0.7rem;
+    left: auto;
+    justify-content: flex-end;
+    gap: 0.5rem;
+    border-radius: 12px;
+    padding: 0.4rem 0.5rem;
+  }
+
+  .link-icon {
+    height: 36px;
+    width: 36px;
+    font-size: 16px;
+  }
+
+  .link-icon:hover {
+    transform: none; /* no hover scaling on mobile */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
