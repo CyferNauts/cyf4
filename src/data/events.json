@@ -153,7 +153,7 @@
         "Creativity": 20
       },
       "contacts": [
-        {"name": "Bravish (XI)", "phone": "76781 45607", "handle": "aviator247"},
+        {"name": "Bravish (XI)"},
         {"name": "Vinamrata (X)"}
       ]
     },
@@ -254,9 +254,7 @@
       },
       "contacts": [
         {"name": "Eva Dev (XII)"},
-        {"name": "Pranjal Sharma (XII)"},
-        {"name": "Manas", "phone": "76781 45607", "handle": "aviator247"},
-        {"name": "Kumaran", "phone": "98688 92931", "handle": "bashoranges"}
+        {"name": "Pranjal Sharma (XII)"}
       ]
     },
     {
@@ -296,9 +294,7 @@
       },
       "contacts": [
         {"name": "Aazim (X)"},
-        {"name": "Nakul (XI)"},
-        {"name": "Manas", "phone": "76781 45607", "handle": "aviator247"},
-        {"name": "Kumaran", "phone": "98688 92931", "handle": "bashoranges"}
+        {"name": "Nakul (XI)"}
       ]
     },
     {
@@ -341,9 +337,7 @@
       },
       "contacts": [
         {"name": "Namish (IX)"},
-        {"name": "Yuvraj (IX)"},
-        {"name": "Manas", "phone": "76781 45607", "handle": "aviator247"},
-        {"name": "Kumaran", "phone": "98688 92931", "handle": "bashoranges"}
+        {"name": "Yuvraj (IX)"}
       ]
     }
   ]
