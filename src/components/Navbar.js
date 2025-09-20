@@ -74,7 +74,6 @@ export default function Navbar({ setActiveTab }) {
   <span className="btn-txt">Register</span>
 </button>
 
-{/* Only render Register if showModal is true */}
 {showModal && <Register trigger={showModal} setTrigger={setShowModal} />}
   
 

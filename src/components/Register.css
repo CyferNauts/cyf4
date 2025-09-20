@@ -1,6 +1,6 @@
-/* ============================= */
-/* Open Modal Button */
-/* ============================= */
+
+
+
 .open-modal-btn {
   padding: 0.55rem 1.1rem;
   border-radius: 6px;
@@ -18,40 +18,36 @@
   transform: scale(1.05);
 }
 
-/* ============================= */
-/* Modal Overlay */
-/* ============================= */
+
+
+
 .modal-overlay {
   position: fixed;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.85); /* darker overlay to match navbar vibe */
+  background-color: rgba(0, 0, 0, 0.85); 
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 1000;
 }
 
-/* ============================= */
-/* Modal Box */
-/* ============================= */
+
 .modal-content {
-  background: #0a0a0a; /* dark background */
+  background: #0a0a0a; 
   border-radius: 12px;
   padding: 2rem;
   width: 80%;
   max-width: 900px;
   max-height: 80vh;
   overflow-y: auto;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5); /* stronger shadow like navbar */
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5); 
   animation: slideDown 0.3s ease forwards;
   position: relative;
   color: #d0d0d0;
   font-family: "Krona One", sans-serif;
 }
 
-/* ============================= */
-/* Close Button */
-/* ============================= */
+
 .close-btn {
   position: absolute;
   top: 15px;
@@ -68,9 +64,7 @@
   transform: scale(1.1);
 }
 
-/* ============================= */
-/* Modal Title */
-/* ============================= */
+
 .modal-title {
   font-size: 1.8rem;
   font-weight: 700;
@@ -78,22 +72,17 @@
   color: #fff;
 }
 
-/* ============================= */
-/* Event List Grid */
-/* ============================= */
 .event-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1rem;
 }
 
-/* ============================= */
-/* Event Card */
-/* ============================= */
+
 .event-card {
   border-radius: 8px;
   padding: 1rem;
-  background: #121212; /* dark card background */
+  background: #121212; 
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
   transition: transform 0.25s ease, background 0.25s ease;
 }
@@ -102,9 +91,6 @@
   background: #1a1a1a;
 }
 
-/* ============================= */
-/* Event Name */
-/* ============================= */
 .event-name {
   margin: 0 0 0.5rem;
   font-size: 1.1rem;
@@ -112,9 +98,7 @@
   color: #25cdeb;
 }
 
-/* ============================= */
-/* Register Button */
-/* ============================= */
+
 .register-btn {
   margin-top: 0.75rem;
   padding: 0.45rem 0.9rem;
@@ -133,9 +117,7 @@
   transform: scale(1.05);
 }
 
-/* ============================= */
-/* Slide Down Animation (reuse from navbar) */
-/* ============================= */
+
 @keyframes slideDown {
   from {
     opacity: 0;

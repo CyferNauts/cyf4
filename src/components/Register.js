@@ -3,12 +3,12 @@ import eventsData from "../data/events.json";
 import "./Register.css";
 
 export default function Register({ trigger, setTrigger }) {
-  if (!trigger) return null; // don't render if modal is closed
+  if (!trigger) return null; 
 
   return (
     <div className="modal-overlay">
       <div className="modal-content">
-        {/* Close button */}
+        {}
         <button
           className="close-btn"
           onClick={() => setTrigger(false)}
