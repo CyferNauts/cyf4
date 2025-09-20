@@ -77,8 +77,8 @@ const Events = () => {
       <Background />
       <div className="events-container">
         {/* Mobile Sidebar Toggle */}
-        <button className="mobile-sidebar-toggle" onClick={() => setIsSidebarOpen(true)}>
-          <FaBars />
+        <button className={`mobile-sidebar-toggle ${isSidebarOpen ? 'sidebar-open' : ''}`} onClick={() => setIsSidebarOpen(!isSidebarOpen)}>
+          {isSidebarOpen ? <FaTimes /> : <FaBars />}
         </button>
 
         {/* Mobile Sidebar Overlay */}
@@ -97,9 +97,6 @@ const Events = () => {
                 exit={{ x: "-100%" }}
                 transition={{ type: "spring", stiffness: 350, damping: 35 }}
               >
-                <button className="sidebar-close-btn" onClick={() => setIsSidebarOpen(false)}>
-                  <FaTimes />
-                </button>
                 {sidebarContent}
               </motion.aside>
             </motion.div>

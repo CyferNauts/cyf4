@@ -23,6 +23,7 @@ const events = [
 export default function Navbar({ setActiveTab }) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [isEventsDropdownOpen, setIsEventsDropdownOpen] = useState(false)
+  const [isMobileEventsOpen, setIsMobileEventsOpen] = useState(false)
 
   const handleNavClick = (id) => {
     setActiveTab(id);
@@ -30,80 +31,104 @@ export default function Navbar({ setActiveTab }) {
   }
 
   return (
-    <header className="navbar">
-      <div className="navbar-container">
-        {/* Logo */}
-        <a href="#" className="logocyfernode">CYFERNODE</a>
+    <>
+      <header className="navbar">
+        <div className="navbar-container">
+          {/* Logo */}
+          <a href="#" className="logocyfernode">CYFERNODE</a>
 
-        {/* Desktop Navigation */}
-        <nav className="nav-links">
-          {navigationLinks.map((link) => (
-            link.id === 'events' ? (
-              <div
-                key={link.id}
-                className="dropdown"
-                onMouseEnter={() => setIsEventsDropdownOpen(true)}
-                onMouseLeave={() => setIsEventsDropdownOpen(false)}
-              >
-                <a href="#" onClick={() => handleNavClick(link.id)}>{link.label}</a>
-                {isEventsDropdownOpen && (
-                  <div className="dropdown-content">
-                    {events.map((event, index) => (
-                      <a key={index} href="#" onClick={() => { setActiveTab('events'); setIsEventsDropdownOpen(false); }}>
-                        {event.title}
-                      </a>
-                    ))}
-                  </div>
-                )}
-              </div>
-            ) : (
-              <a key={link.id} href="#" onClick={() => handleNavClick(link.id)}>{link.label}</a>
-            )
-          ))}
-        </nav>
+          {/* Desktop Navigation */}
+          <nav className="nav-links">
+            {navigationLinks.map((link) => (
+              link.id === 'events' ? (
+                <div
+                  key={link.id}
+                  className="dropdown"
+                  onMouseEnter={() => setIsEventsDropdownOpen(true)}
+                  onMouseLeave={() => setIsEventsDropdownOpen(false)}
+                >
+                  <a href="#" onClick={() => handleNavClick(link.id)}>{link.label}</a>
+                  {isEventsDropdownOpen && (
+                    <div className="dropdown-content">
+                      {events.map((event, index) => (
+                        <a key={index} href="#" onClick={() => { setActiveTab('events'); setIsEventsDropdownOpen(false); }}>
+                          {event.title}
+                        </a>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ) : (
+                <a key={link.id} href="#" onClick={() => handleNavClick(link.id)}>{link.label}</a>
+              )
+            ))}
+          </nav>
 
-        {/* Right buttons */}
-        <div className="navbar-right">
+          {/* Right buttons */}
+          <div className="navbar-right">
+            <button className="button type1 registerbtn">
+              <span className="btn-txt">Register</span>
+            </button>
+          </div>
 
-  <button className="button type1 registerbtn">
-    <span className="btn-txt">Register</span>
-  </button>
-
-
+          {/* Mobile menu toggle */}
+          <button
+            className={`menu-btn ${isMobileMenuOpen ? "open" : ""}`}
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label="Toggle menu"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
         </div>
+      </header>
 
-        {/* Mobile menu toggle */}
-        <button
-          className={`menu-btn ${isMobileMenuOpen ? "open" : ""}`}
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </div>
-
-      {/* Mobile Navigation */}
-      {isMobileMenuOpen && (
+      {/* Mobile Navigation Overlay */}
+      <div className={`mobile-menu-overlay ${isMobileMenuOpen ? "open" : ""}`}>
         <div className="mobile-menu">
-          {navigationLinks.map((link) => (
-            <a key={link.id} href="#" onClick={() => handleNavClick(link.id)}>
-              {link.label}
-            </a>
-          ))}
-          {/* Events in mobile menu */}
-          <div className="mobile-events">
-            <h4>Events</h4>
-            {events.map((event, index) => (
-              <a key={index} href="#" onClick={() => { setActiveTab('events'); setIsMobileMenuOpen(false); }}>
-                {event.title}
+          <div className="mobile-menu-header">
+            <a href="#" className="logocyfernode mobile-logo">CYFERNODE</a>
+            <button
+              className="close-btn"
+              onClick={() => setIsMobileMenuOpen(false)}
+              aria-label="Close menu"
+            >
+              ✕
+            </button>
+          </div>
+          <nav className="mobile-nav">
+            {navigationLinks.map((link) => (
+              <a key={link.id} href="#" onClick={() => handleNavClick(link.id)}>
+                {link.label}
               </a>
             ))}
+          </nav>
+          {/* Events in mobile menu */}
+          <div className="mobile-events">
+            <button
+              className={`mobile-events-toggle ${isMobileEventsOpen ? 'open' : ''}`}
+              onClick={() => setIsMobileEventsOpen(!isMobileEventsOpen)}
+              aria-expanded={isMobileEventsOpen}
+              aria-controls="mobile-events-list"
+            >
+              Events
+              <span className="toggle-arrow">{isMobileEventsOpen ? '▲' : '▼'}</span>
+            </button>
+            {isMobileEventsOpen && (
+              <div id="mobile-events-list" className="mobile-events-list">
+                {events.map((event, index) => (
+                  <a key={index} href="#" onClick={() => { setActiveTab('events'); setIsMobileMenuOpen(false); setIsMobileEventsOpen(false); }}>
+                    {event.title}
+                  </a>
+                ))}
+              </div>
+            )}
           </div>
-          
-          <a href="#" className="btn primary">Get Started</a>
+
+
         </div>
-      )}
-    </header>
+      </div>
+    </>
   )
 }

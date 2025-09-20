@@ -54,21 +54,21 @@ const AboutUs = () => {
           </div>
         </div>
 
-<div className="featureswow">
+      <div className="featureswow">
       <div className="featuresaboutus">
-        <h2>Scale to <span className="highlight">hundreds of GPUs</span> in seconds</h2>
-        <p>Never worry about hitting rate limits again. We autoscale containers for your functions instantly.</p>
-        <button className="view-docs-btn">View Docs</button>
+        <h2>Discover Our Events</h2>
+        <p>Join us in exciting events that bring our community together. From workshops to hackathons, there's something for everyone.</p>
+        <button className="view-docs-btn">View Events</button>
       </div>
       <div className="featuresaboutus">
-        <h2>Deploy <span className="highlight">anywhere</span> with ease</h2>
-        <p>Our platform supports deployment across multiple cloud providers and on-premises infrastructure.</p>
-        <button className="view-docs-btn">View Docs</button>
+        <h2>Watch Our Teaser</h2>
+        <p>Get a glimpse of our vision and mission through our engaging teaser video.</p>
+        <button className="view-docs-btn">Watch Now</button>
       </div>
       <div className="featuresaboutus">
-        <h2>Monitor and <span className="highlight">optimize</span> performance</h2>
-        <p>Get real-time insights into your applications with our comprehensive monitoring tools.</p>
-        <button className="view-docs-btn">View Docs</button>
+        <h2>Meet Our Team</h2>
+        <p>Our diverse team of experts is dedicated to innovation and excellence.</p>
+        <button className="view-docs-btn">Our Team</button>
       </div>
       </div>
       </div>

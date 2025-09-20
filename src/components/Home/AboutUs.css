@@ -1,4 +1,3 @@
-
 /* Import fonts */
 @import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
@@ -160,65 +159,75 @@ h1 {
   align-self: start;
 }
 
-/* Mobile responsive adjustments */
-@media (max-width: 768px) {
-  .aboutus_wala_hai_ye {
-    display: none;
-    margin: 0;
-  }
-  .about-us-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  align-items: start;
+/* Sub-navbar */
+.sub-navbarcontainer {
   position: relative;
-  z-index: 1;
-  padding: 80px 20px 20px 020px;
   width: 100%;
-  text-align: center;
-  line-height: 40px;
-  height: 100%;
-}
 }
 
+.sub-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 40px;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  position: relative;
+  z-index: 10;
+}
 
+.sub-navbar p {
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  margin: 0;
+}
 
+.midsubnavel {
+  font-family: "Krona One", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #7ee5ff;
+}
 
+.sub-navbar-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
 
-
-
-
-
-/* Container */
+/* Enhanced Features Section */
 .featureswow {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #000; 
-  padding: 4rem 1.5rem;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  padding: 2rem 2rem 2rem 0rem;
   text-align: left;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  margin: 10vh 0 10vh 0;
 }
 
-/* Inner content */
 .featuresaboutus {
   max-width: 600px;
+  margin-bottom: 3rem;
 }
 
-/* Heading */
 .featuresaboutus h2 {
-  font-size: clamp(1.6rem, 2.2vw, 2.2rem); /* smaller, sleek */
+  font-size: clamp(1.6rem, 2.2vw, 2.2rem);
   font-weight: 600;
   color: #fff;
   margin-bottom: 0.75rem;
   line-height: 1.25;
 }
 
-/* Highlight */
 .featuresaboutus .highlight {
   color: #8cddf1;
 }
 
-/* Paragraph */
 .featuresaboutus p {
   font-size: clamp(0.95rem, 1.1vw, 1.05rem);
   color: #ffffff;
@@ -226,7 +235,6 @@ h1 {
   line-height: 1.5;
 }
 
-/* Button */
 .view-docs-btn {
   border: 1px solid #8ccef1;
   background: transparent;
@@ -245,73 +253,351 @@ h1 {
   transform: translateY(-2px);
 }
 
-/* Responsiveness */
-@media (max-width: 768px) {
+/* Large Tablets and Small Desktop (1024px - 1416px) */
+@media only screen and (min-width: 1024px) and (max-width: 1416px) {
+  .about-us {
+    height: fit-content;
+  }
+
+  .spline-overlayaboutus {
+    display: none;
+  }
+
+  .about-us-content {
+    width: 100%;
+    padding: 100px 50px 50px 100px;
+    align-items: flex-start;
+    text-align: left;
+  }
+
   .featureswow {
-    padding: 3rem 1.25rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 2rem 0;
+  }
+
+  .featuresaboutus {
+    text-align: left;
+    margin-bottom: 2rem;
+  }
+}
+
+/* Tablet Portrait (768px - 1023px) */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .about-us {
+    height: fit-content;
+    flex-direction: column;
+  }
+
+  .spline-overlayaboutus {
+    display: none;
+  }
+
+  .about-us-content {
+    width: 100%;
+    padding: 60px 30px 30px 30px;
+    align-items: center;
     text-align: center;
   }
 
+  .toppartlilbro {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .des {
+    border-left: none;
+    border-top: 1px solid #ffffff;
+    padding-left: 0;
+    padding-top: 30px;
+    margin-left: 0;
+    text-align: center;
+    align-items: center;
+  }
+
+  .tagline {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .about-us-text {
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    padding: 0;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .featureswow {
+    align-items: center;
+    text-align: center;
+    padding: 2rem 1rem;
+    gap: 2rem;
+  }
+
+  .featuresaboutus {
+    text-align: center;
+    max-width: 500px;
+    margin-bottom: 0;
+  }
+
   .featuresaboutus h2 {
-    font-size: 1.5rem;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .featuresaboutus p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .view-docs-btn {
+    padding: 0.6rem 1.4rem;
+    font-size: 1rem;
+  }
+}
+
+/* Mobile Landscape (481px - 767px) */
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+  .about-us {
+    height: fit-content;
+    flex-direction: column;
+  }
+
+  .spline-overlayaboutus {
+    display: none;
+  }
+
+  .about-us-content {
+    width: 100%;
+    padding: 40px 20px 20px 20px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .toppartlilbro {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 25px;
+  }
+
+  .des {
+    border-left: none;
+    border-top: 1px solid #ffffff;
+    padding-left: 0;
+    padding-top: 25px;
+    margin-left: 0;
+    text-align: center;
+    align-items: center;
+  }
+
+  .tagline {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .about-us-text {
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+    padding: 0;
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  .featureswow {
+    align-items: center;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    gap: 1.5rem;
+  }
+
+  .featuresaboutus {
+    text-align: center;
+    max-width: 400px;
+    margin-bottom: 0;
+  }
+
+  .featuresaboutus h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.8rem;
   }
 
   .featuresaboutus p {
     font-size: 0.95rem;
+    margin-bottom: 1.2rem;
   }
 
   .view-docs-btn {
-    padding: 0.5rem 1.1rem;
+    padding: 0.55rem 1.3rem;
+    font-size: 0.95rem;
+  }
+}
+
+/* Mobile Portrait (320px - 480px) */
+@media only screen and (max-width: 480px) {
+  .about-us {
+    height: fit-content;
+    flex-direction: column;
+  }
+
+  .spline-overlayaboutus {
+    display: none;
+  }
+
+  .about-us-content {
+    width: 100%;
+    padding: 30px 15px 15px 15px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .toppartlilbro {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .des {
+    border-left: none;
+    border-top: 1px solid #ffffff;
+    padding-left: 0;
+    padding-top: 20px;
+    margin-left: 0;
+    text-align: center;
+    align-items: center;
+  }
+
+  .tagline {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .about-us-text {
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+    padding: 0;
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  .featureswow {
+    align-items: center;
+    text-align: center;
+    padding: 1rem 0.5rem;
+    gap: 1.5rem;
+  }
+
+  .featuresaboutus {
+    text-align: center;
+    max-width: 100%;
+    margin-bottom: 0;
+    padding: 0 0.5rem;
+  }
+
+  .featuresaboutus h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.7rem;
+  }
+
+  .featuresaboutus p {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+  }
+
+  .view-docs-btn {
+    padding: 0.5rem 1.2rem;
     font-size: 0.9rem;
   }
 }
 
+/* Small Mobile (320px - 374px) */
+@media only screen and (max-width: 374px) {
+  .about-us-content {
+    padding: 25px 10px 10px 10px;
+  }
 
-.featureswow{
-  
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content:space-between;
-  
-  width: 100%;
-  padding: 2rem 2rem 2rem 0rem;
-  text-align: center;
-  color: #fff;
-  font-family: 'Montserrat', sans-serif;
-  MARGIN: 10VH 0 10VH 0;
+  .toppartlilbro {
+    gap: 15px;
+  }
+
+  .des {
+    padding-top: 15px;
+  }
+
+  .tagline {
+    max-width: 250px;
+  }
+
+  .about-us-text {
+    font-size: 13px;
+    line-height: 1.3;
+  }
+
+  .featureswow {
+    padding: 0.5rem 0.25rem;
+    gap: 1rem;
+  }
+
+  .featuresaboutus {
+    padding: 0 0.25rem;
+  }
+
+  .featuresaboutus h2 {
+    font-size: 1.3rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .featuresaboutus p {
+    font-size: 0.85rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .view-docs-btn {
+    padding: 0.45rem 1rem;
+    font-size: 0.85rem;
+  }
 }
 
-
-
-
-
-
-
-
-
-@media only screen and (max-width: 1417px) {
-.aboutus_wala_hai_ye{
-  display: none;
+/* Hide midsubnavel on small screens */
+@media only screen and (max-width: 767px) {
+  .midsubnavel {
+    display: none;
+  }
 }
-.about-us-content{
 
-  width: 100%;
-  padding: 150px 50px 0px 150px;
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .featuresaboutus {
+    padding: 1.5rem 1rem;
+  }
 
-  height: fit-content;
-}
-.featureswow{
-  
-  display: flex;
-  justify-content: start;
-  align-items: start;
+  .view-docs-btn {
+    min-height: 44px;
+    min-width: 44px;
+    padding: 0.6rem 1.4rem;
+  }
 
+  .view-docs-btn:active {
+    transform: translateY(-1px);
+  }
 }
-.sub-navbarcontainer{
- 
-}
-.about-us{
-  height:fit-content;
-}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .sub-navbar-img {
+    border-radius: 25px;
+  }
+
+  .tagline {
+    image-rendering: -webkit-optimize-contrast;
+  }
 }

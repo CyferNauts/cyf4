@@ -20,7 +20,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
+
 }
 
 .features-title h1 {
@@ -82,13 +82,13 @@
   height: 100%;
   object-fit:fill;
   border-radius: 10px;
-  
+
 }
 
 .exchange-box, .api-box, .account-box {
   margin-bottom: 1.5rem;
   flex-grow: 1;
-  
+
 }
 
 .exchange-row {
@@ -419,6 +419,17 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
 /* Carousel wrapper with 16:9 aspect ratio */
 .carousel {
   position: relative;
@@ -460,14 +471,14 @@
   font-style: normal;
   text-align: left;
   font-size: 9rem;
-  
+
   color: white;
   background-color: rgba(255, 0, 0, 0);
      font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   font-weight: 700;
   font-style: normal;
- 
+
 
 }
 .card-text p{
@@ -506,7 +517,13 @@
 
 
 
-/* From Uiverse.io by adamgiebl */ 
+
+
+
+
+
+
+/* From Uiverse.io by adamgiebl */
 .cssbuttons-io-button {
   background: #2268ff;
   color: white;
@@ -593,20 +610,20 @@
   height: 40px;
   border: 5px #141414 solid;
   border-radius: 50px;
-  
- 
+
+
 }
 
 
 .welcomedsfdsfdsfdsfdsfds{
   background-color: #13bcff00;
   height:100%;
-  
+
 }
 .center-card{
   padding: 0;
   margin:0;
-  
+
 }
 
 .teamkelogokiphotoschotiwali{
@@ -619,21 +636,21 @@
 
 .pic1sdsss{
   transform: translateX(10px);
-  
+
 }
 .pic2sdsss{
   transform: translateX(-10px);
-  
+
 }
 
 .pic3sdsss{
- 
+
   transform: translateX(-30px);
 }
 
 .pic4sdsss{
 
-  
+
   transform: translateX(-50px);
 }
 
@@ -891,6 +908,11 @@ height: fit-content;
 
 
 
+
+
+
+
+
 .registernowkeliyebutton {
   cursor: pointer;
   font-weight: 700;
@@ -989,9 +1011,8 @@ filter: invert();
   justify-content: center;
   align-items: center;
   text-align: left;
-  
-}
 
+}
 
 
 
@@ -1040,4 +1061,12 @@ border-bottom: #ffffff54 1px solid;
 .card{
   height:350px;
   width:fit-content;
+}
+
+/* Hide midsubnavel on small screens */
+@media only screen and (max-width: 767px) {
+  .midsubnavel,
+  .dsgdfgdg {
+    display: none;
+  }
 }

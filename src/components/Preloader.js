@@ -103,9 +103,13 @@ const Preloader = ({ onLoaded }) => {
   return (
     <div className={`preloader ${isLoaded ? 'fade-out' : ''}`}>
       <div className="preloader-content">
-        <div className="logo-container">
-          <img src="Group 21.png" alt="Logo" className="preloader-logo" />
-          <div className="logo-fill"></div>
+        <div className="wrapper">
+          <div className="circle"></div>
+          <div className="circle"></div>
+          <div className="circle"></div>
+          <div className="shadow"></div>
+          <div className="shadow"></div>
+          <div className="shadow"></div>
         </div>
         <div className="progress-container">
           <div className="progress-bar">
