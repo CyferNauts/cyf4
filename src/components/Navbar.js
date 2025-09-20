@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import "./Navbar.css"
+import Register from "./Register"
 
 const navigationLinks = [
   { id: 'home', label: "Home" },
@@ -21,6 +22,8 @@ const events = [
 ]
 
 export default function Navbar({ setActiveTab }) {
+    const [showModal, setShowModal] = useState(false);
+  
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [isEventsDropdownOpen, setIsEventsDropdownOpen] = useState(false)
 
@@ -64,10 +67,16 @@ export default function Navbar({ setActiveTab }) {
 
         {/* Right buttons */}
         <div className="navbar-right">
+<button 
+  className="button type1 registerbtn" 
+  onClick={() => setShowModal(true)}
+>
+  <span className="btn-txt">Register</span>
+</button>
 
-  <button className="button type1 registerbtn">
-    <span className="btn-txt">Register</span>
-  </button>
+{/* Only render Register if showModal is true */}
+{showModal && <Register trigger={showModal} setTrigger={setShowModal} />}
+  
 
 
         </div>
