@@ -317,8 +317,15 @@
   box-shadow: 0 5px 16px rgba(126, 139, 255, 0.4);
 }
 
-/* Responsive tweaks */
+/* Hide MoreAboutUs section on smaller screens */
 @media (max-width: 768px) {
+  .features {
+    display: none !important;
+  }
+}
+
+/* Responsive tweaks for larger screens */
+@media (min-width: 769px) {
   .card {
     max-width: 100%;
     min-height: 250px;

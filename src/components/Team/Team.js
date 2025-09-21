@@ -28,9 +28,11 @@ const Team = () => {
 
 const TeamCard = ({ member }) => {
   const [imageError, setImageError] = useState(false);
+  const isPresident = member.role === "President";
+  const isDirector = member.role === "Director";
 
   return (
-    <div className="team-card">
+    <div className={`team-card ${isPresident ? 'president' : ''} ${isDirector ? 'director' : ''}`}>
       <div className="team-img">
         {!imageError ? (
           <img

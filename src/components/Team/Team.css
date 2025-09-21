@@ -18,6 +18,8 @@
   --accent-secondary: #333333;
   --accent-red: #ff0000;
   --accent-red-dark: #cc0000;
+  --accent-blue: #87ceeb;
+  --accent-blue-dark: #4682b4;
   --border-subtle: rgba(255, 255, 255, 0.1);
   --border-medium: rgba(255, 255, 255, 0.15);
   --border-red: rgba(255, 0, 0, 0.3);
@@ -291,6 +293,41 @@ body {
 .team-card.president .tooltip-container a:hover {
   background: var(--accent-red);
   border-color: var(--accent-red);
+  color: white;
+}
+
+/* ============ DIRECTOR CARD THEME ============ */
+.team-card.director {
+  border-color: rgba(135, 206, 235, 0.3);
+  background: linear-gradient(145deg, var(--bg-card), rgba(0, 10, 20, 0.1));
+}
+
+.team-card.director::before {
+  background: var(--accent-blue);
+}
+
+.team-card.director:hover {
+  border-color: var(--accent-blue);
+  box-shadow: var(--shadow-strong), 0 0 30px rgba(135, 206, 235, 0.2);
+}
+
+.team-card.director .team-role {
+  background: var(--accent-blue);
+  color: white;
+}
+
+.team-card.director:hover .team-role {
+  background: var(--accent-blue-dark);
+  color: white;
+}
+
+.team-card.director .team-socials {
+  background: rgba(0, 10, 20, 0.9);
+}
+
+.team-card.director .tooltip-container a:hover {
+  background: var(--accent-blue);
+  border-color: var(--accent-blue);
   color: white;
 }
 .tooltip {

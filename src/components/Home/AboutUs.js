@@ -72,7 +72,7 @@ const AboutUs = () => {
         <button className="view-docs-btn">Our Team</button>
       </div>
       </div>
-      <Team />
+
       </div>
     </div>
     </div>

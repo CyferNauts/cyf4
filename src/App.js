@@ -11,6 +11,7 @@ import CustomCursor from './components/CustomCursor';
 import EventLineUp from './components/EventLineUp';
 import Team from './components/Team/Team';
 import Events from './components/Events/Events';
+import Timeline from './components/Timeline/Timeline';
 import Links from './components/Links';
 import './App.css';
 import { TweenMax } from "gsap"; // gsap 2.x compatible import
@@ -54,7 +55,7 @@ function App() {
       {/* Your app sections */}
       <CustomCursor />
       <Navbar setActiveTab={setActiveTab} />
-      {activeTab !== 'team' && activeTab !== 'events' && (
+      {activeTab !== 'team' && activeTab !== 'events' && activeTab !== 'timeline' && (
         <>
           <Home />
           <Links />
@@ -66,6 +67,7 @@ function App() {
       )}
       {activeTab === 'team' && <Team />}
       {activeTab === 'events' && <Events />}
+      {activeTab === 'timeline' && <Timeline />}
       {activeTab !== 'events' && <Footer />}
     </div>
   );

@@ -147,6 +147,13 @@ const Events = () => {
                   </section>
                 )}
 
+                <section className="detail-section">
+                  <h3>Registration</h3>
+                  <button className="register-btn">
+                    Register for {activeEvent.eventName}
+                  </button>
+                </section>
+
                 {activeEvent.rounds?.length > 0 && (
                   <section className="detail-section">
                     <h3>Rounds</h3>

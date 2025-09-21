@@ -6,6 +6,7 @@ const navigationLinks = [
   { id: 'home', label: "Home" },
   { id: 'events', label: "Events" },
   { id: 'team', label: "Team" },
+  { id: 'timeline', label: "Timeline" },
   { id: 'gallery', label: "Gallery" }
 ]
 

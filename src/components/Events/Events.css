@@ -651,6 +651,13 @@ body {
   .content-grid {
     grid-template-columns: 1fr;
   }
+
+  .register-btn {
+    width: 100%;
+    min-width: auto;
+    padding: 0.875rem 1.5rem;
+    font-size: 0.9rem;
+  }
 }
 
 /* ============ PERFORMANCE OPTIMIZATIONS ============ */
@@ -674,6 +681,52 @@ body {
 .mobile-sidebar-toggle:focus {
   outline: 2px solid var(--accent-primary);
   outline-offset: 2px;
+}
+
+/* ============ REGISTRATION BUTTON ============ */
+.register-btn {
+  background: var(--accent-blue);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: var(--transition-medium);
+  position: relative;
+  overflow: hidden;
+  border-radius: 0;
+  min-width: 200px;
+  text-align: center;
+  display: inline-block;
+}
+
+.register-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: var(--transition-medium);
+}
+
+.register-btn:hover {
+  background: white;
+  transform: translateY(-2px);
+  color: black;
+}
+
+.register-btn:hover::before {
+  left: 100%;
+}
+
+.register-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 15px rgba(58, 130, 247, 0.3);
 }
 
 /* ============ HIGH CONTRAST MODE ============ */
