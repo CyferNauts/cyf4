@@ -1,0 +1,135 @@
+{
+  "core": [
+    {
+      "id": 1,
+      "name": "Devansh Dhingra",
+      "role": "President",
+      "skills": ["AI/ML", "Programming", "DSA"],
+      "img": "https://media.discordapp.net/attachments/1403761173752451203/1419336990096101607/image.png?ex=68d16414&is=68d01294&hm=206f1edf1b2eeab521cb9526f867fe98338707ef372b910544cb8700de6e7349&=&format=webp&quality=lossless&width=439&height=438",
+      "socials": {
+        "github": "https://github.com/Devansh224",
+        "linkedin": "",
+        "twitter": "",
+        "whatsapp": "",
+        "instagram": "",
+        "discord": "https://discord.com/users/893324961794637866"
+      }
+    },
+    {
+      "id": 2,
+      "name": "Bhavesh Rout",
+      "role": "Director",
+      "skills": ["Web Dev", "Design", "AI/ML", "UI/UX"],
+      "img": "https://media.discordapp.net/attachments/1403761173752451203/1419337127950286940/Firefly_20250921004602.png?ex=68d16435&is=68d012b5&hm=346f3ff5ab270b495f41e4fa9cf4d83cc5abf7c2d5d7a2963cf2fb73033af46a&=&format=webp&quality=lossless&width=930&height=930",
+      "socials": {
+        "github": "https://github.com/",
+        "linkedin": "https://linkedin.com/",
+        "twitter": "https://twitter.com/",
+        "whatsapp": "https://wa.me/1234567890",
+        "instagram": "https://instagram.com/bhavesh",
+        "discord": "https://discordapp.com/users/bhavesh#5678"
+      }
+    },
+    {
+      "id": 3,
+      "name": "HI",
+      "role": "Frontend Developer",
+      "skills": ["React", "Tailwind", "GSAP"],
+      "img": "https://i.pinimg.com/736x/8d/9f/14/8d9f14d26c4c44dbad90bbd9e3f1a7a4.jpg",
+      "socials": {
+        "github": "https://github.com/",
+        "linkedin": "https://linkedin.com/",
+        "twitter": "https://twitter.com/",
+        "whatsapp": "https://wa.me/1234567890",
+        "instagram": "https://instagram.com/aarav",
+        "discord": "https://discordapp.com/users/aarav#9012"
+      }
+    },
+    {
+      "id": 4,
+      "name": "Maya",
+      "role": "Backend Engineer",
+      "skills": ["Node.js", "Express", "MongoDB"],
+      "img": "https://i.pinimg.com/736x/2b/61/72/2b61728ac2681b7ac28b77bd1a0e8f87.jpg",
+      "socials": {
+        "github": "https://github.com/",
+        "linkedin": "https://linkedin.com/",
+        "twitter": "https://twitter.com/",
+        "whatsapp": "https://wa.me/1234567890",
+        "instagram": "https://instagram.com/maya",
+        "discord": "https://discordapp.com/users/maya#3456"
+      }
+    },
+    {
+      "id": 5,
+      "name": "Karan",
+      "role": "Security Analyst",
+      "skills": ["Ethical Hacking", "PenTesting"],
+      "img": "https://i.pinimg.com/736x/ae/cc/20/aecc20e6f17d9d27f10d410bfa96df67.jpg",
+      "socials": {
+        "github": "https://github.com/",
+        "linkedin": "https://linkedin.com/",
+        "twitter": "https://twitter.com/",
+        "whatsapp": "https://wa.me/1234567890",
+        "instagram": "https://instagram.com/karan",
+        "discord": "https://discordapp.com/users/karan#7890"
+      }
+    },
+    {
+      "id": 6,
+      "name": "Elena",
+      "role": "Product Manager",
+      "skills": ["Agile", "Scrum", "Leadership"],
+      "img": "https://i.pinimg.com/736x/8e/12/ab/8e12ab5b192ba09df9f9d83f716fcb11.jpg",
+      "socials": {
+        "github": "https://github.com/",
+        "linkedin": "https://linkedin.com/",
+        "twitter": "https://twitter.com/",
+        "whatsapp": "https://wa.me/1234567890",
+        "instagram": "https://instagram.com/elena",
+        "discord": "https://discordapp.com/users/elena#2345"
+      }
+    },
+    {
+      "id": 7,
+      "name": "Rahul",
+      "role": "Data Scientist",
+      "skills": ["Python", "TensorFlow", "NLP"],
+      "img": "https://i.pinimg.com/736x/cd/cf/7e/cdcf7e6e94a8bfc3db3f9a934f5f4120.jpg",
+      "socials": {
+        "github": "https://github.com/",
+        "linkedin": "https://linkedin.com/",
+        "twitter": "https://twitter.com/",
+        "whatsapp": "https://wa.me/1234567890",
+        "instagram": "https://instagram.com/rahul",
+        "discord": "https://discordapp.com/users/rahul#6789"
+      }
+    },
+    {
+      "id": 8,
+      "name": "Lead Member One",
+      "role": "Lead Role One",
+      "skills": ["Leadership", "Strategy"],
+      "img": "https://via.placeholder.com/150",
+      "socials": {
+        "github": "https://github.com/leadone",
+        "linkedin": "https://linkedin.com/in/leadone",
+        "twitter": "https://twitter.com/leadone",
+        "whatsapp": "",
+        "instagram": "",
+        "discord": ""
+      }
+    },
+    {
+      "id": 9,
+      "name": "Lead Member Two",
+      "role": "Lead Role Two",
+      "skills": ["Management", "Planning"],
+      "img": "https://via.placeholder.com/150",
+      "socials": {
+        "github": "https://github.com/leadtwo",
+        "linkedin": "https://linkedin.com/in/leadtwo",
+        "twitter": "https://twitter.com/leadtwo",
+        "whatsapp": "",
+        "instagram": "",
+        "discord": ""}}]}

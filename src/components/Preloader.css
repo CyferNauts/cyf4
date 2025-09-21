@@ -164,8 +164,8 @@
 
 .progress-container {
   width: 200px;
-  margin: 20px auto 0;
-  display: block; /* Show progress bar under main loader */
+  margin: 0 auto;
+  display: none; /* Hide progress container */
 }
 
 .progress-bar {

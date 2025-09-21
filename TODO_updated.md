@@ -3,11 +3,11 @@
 ## Plan Implementation Steps:
 
 ### 1. Update Team.css - Remove Glow Effects & Implement Dark Gradient Theme
-- [ ] Remove all glow-related CSS variables and effects
-- [ ] Implement dark gradient backgrounds for cards
-- [ ] Add soft shadows and rounded corners
-- [ ] Replace glow animations with subtle scale/fade/slide animations
-- [ ] Update typography styling for bold names and lighter skills
+- [x] Remove all glow-related CSS variables and effects
+- [x] Implement dark gradient backgrounds for cards
+- [x] Add soft shadows and rounded corners
+- [x] Replace glow animations with subtle scale/fade/slide animations
+- [x] Update typography styling for bold names and lighter skills
 
 ### 2. Modify SocialIcons.js - Show Only Logos on Hover
 - [ ] Remove platform names from tooltips

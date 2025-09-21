@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import Spline from "@splinetool/react-spline";
 import "./AboutUs.css";
 import VanillaTilt from "vanilla-tilt";
+import Team from "../Team/Team";
 
 import dayum from "./PinDown.io_@eplerkirill_1756479385.mp4";
 import tagline from "./Tagline.svg";
@@ -71,6 +72,7 @@ const AboutUs = () => {
         <button className="view-docs-btn">Our Team</button>
       </div>
       </div>
+      <Team />
       </div>
     </div>
     </div>
