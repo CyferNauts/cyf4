@@ -1,8 +1,8 @@
- import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./EventLineUp.css";
-
+// https://i.pinimg.com/1200x/db/e2/b6/dbe2b6eeb24a7718c0397f901138cf0d.jpg
 const events = [
-  { title: "Code Unlocked", description: "Algorithmic problem solving with human-focused challenge.", color: "#FF6B6B", image: "https://i.pinimg.com/1200x/db/e2/b6/dbe2b6eeb24a7718c0397f901138cf0d.jpg" },
+  { title: "Code Unlocked", description: "Algorithmic problem solving with human-focused challenge.", color: "#FF6B6B", image: "https://i.pinimg.com/736x/5d/c6/db/5dc6db4cc96ae17513dad05ec9ff62ee.jpg" },
   { title: "Think. Build. Create.", description: "AI innovation solving real human challenges.", color: "#4ECDC4", image: "https://i.pinimg.com/1200x/06/c1/03/06c10303dffb586d5bac86f119dc781b.jpg" },
   { title: "The Digital Playground", description: "Skill-based online gaming competition.", color: "#FFD93D", image: "https://i.pinimg.com/1200x/5c/45/a6/5c45a6b23447a2ad2755c0768fd9de46.jpg" },
   { title: "Stories in Motion", description: "Short films with tech and humanity message.", color: "#6A5ACD", image: "https://i.pinimg.com/736x/eb/36/3f/eb363f9c05cdd3653c23da0980524092.jpg" },
@@ -134,7 +134,7 @@ export default function EventLineUp() {
             <div
               key={index}
               className={`slide ${index === current ? "active" : "inactive"}${index === current && isHovered ? " hovered" : ""}`}
-              style={{ backgroundImage: `url(${event.image})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat', backgroundPosition: 'center' }}
+              style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.57), rgba(0, 0, 0, 0.7)), url(${event.image})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat', backgroundPosition: 'center' }}
               onMouseEnter={index === current ? handleMouseEnter : undefined}
               onMouseLeave={index === current ? handleMouseLeave : undefined}
             >

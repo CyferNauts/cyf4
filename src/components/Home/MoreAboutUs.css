@@ -539,7 +539,7 @@
   font-optical-sizing: auto;
   font-weight: 700;
   font-style: normal;
-  font-size: 55px;
+  font-size: 50px;
   text-align: left;
   line-height: 50px;
   color: rgba(255, 255, 255, 0.525);
@@ -919,7 +919,7 @@ height: fit-content;
 
 
 .teampejanekeliyebtn{
-  width: 50%;
+  width: 70%;
   height: 60px;
   background-color: transparent;
   border: white 1px solid;
@@ -930,9 +930,9 @@ filter: invert();
 
 
 .teampejanekeliyebtn span{
-  width: 50%;
+  width: auto;
   height: 60px;
-  line-height: 15px;
+  line-height: normal;
   font-size: 20px;
   display: flex;
   justify-content: center;
@@ -940,9 +940,11 @@ filter: invert();
   text-align: left;
   background-color: transparent;
   color: white;
+  white-space: nowrap;
+  /* padding-right: 10px; */
 }
 
-.teampejanekeliyebtn span{
+/* .teampejanekeliyebtn span{
   width: 50%;
   height: 60px;
   line-height: 15px;
@@ -952,7 +954,7 @@ filter: invert();
   align-items: center;
   text-align: left;
 
-}
+} */
 
 
 
