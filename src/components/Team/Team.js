@@ -16,7 +16,7 @@ const Team = () => {
 
   return (
     <section className="team-page">
-      <h2 className="team-section-title">Core Team</h2>
+      <h2 className="team-section-title">Team CyferNauts</h2>
       <div className="core-grid">
         {core.map((member) => (
           <TeamCard key={member.id} member={member} />

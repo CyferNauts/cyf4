@@ -4,13 +4,17 @@
       "id": 1,
       "name": "Devansh Dhingra",
       "role": "President",
-      "skills": ["AI/ML", "Programming", "DSA"],
-      "img": "https://media.discordapp.net/attachments/1403761173752451203/1419336990096101607/image.png?ex=68d16414&is=68d01294&hm=206f1edf1b2eeab521cb9526f867fe98338707ef372b910544cb8700de6e7349&=&format=webp&quality=lossless&width=439&height=438",
+      "skills": [
+        "Programming",
+        "Data Science",
+        "Web Dev"
+      ],
+      "img": "https://cyfernode.netlify.app/team/imtheprez.jpg",
       "socials": {
         "github": "https://github.com/Devansh224",
         "linkedin": "",
         "twitter": "",
-        "whatsapp": "",
+        "whatsapp": "https://wa.me/+917678145607",
         "instagram": "",
         "discord": "https://discord.com/users/893324961794637866"
       }
@@ -19,117 +23,350 @@
       "id": 2,
       "name": "Bhavesh Rout",
       "role": "Director",
-      "skills": ["Web Dev", "Design", "AI/ML", "UI/UX"],
-      "img": "https://media.discordapp.net/attachments/1403761173752451203/1419337127950286940/Firefly_20250921004602.png?ex=68d16435&is=68d012b5&hm=346f3ff5ab270b495f41e4fa9cf4d83cc5abf7c2d5d7a2963cf2fb73033af46a&=&format=webp&quality=lossless&width=930&height=930",
+      "skills": [
+        "Web Dev",
+        "Design",
+        "AI/ML",
+        "UI/UX"
+      ],
+      "img": "https://cyfernode.netlify.app/team/goateddirector.jpg",
       "socials": {
-        "github": "https://github.com/",
-        "linkedin": "https://linkedin.com/",
-        "twitter": "https://twitter.com/",
-        "whatsapp": "https://wa.me/1234567890",
-        "instagram": "https://instagram.com/bhavesh",
-        "discord": "https://discordapp.com/users/bhavesh#5678"
+        "github": "https://github.com/bhavesh676767",
+        "linkedin": "",
+        "twitter": "",
+        "whatsapp": "",
+        "instagram": "https://www.instagram.com/bhaveshballpen/",
+        "discord": "https://discord.com/users/988763812272422952"
       }
     },
     {
       "id": 3,
-      "name": "HI",
-      "role": "Frontend Developer",
-      "skills": ["React", "Tailwind", "GSAP"],
-      "img": "https://i.pinimg.com/736x/8d/9f/14/8d9f14d26c4c44dbad90bbd9e3f1a7a4.jpg",
+      "name": "Anshuman Rastogi",
+      "role": "Member",
+      "skills": [
+        "Programming",
+        "AI/ML",
+        "Web Dev"
+      ],
+      "img": "https://cyfernode.netlify.app/team/ansimylove.jpg",
       "socials": {
-        "github": "https://github.com/",
-        "linkedin": "https://linkedin.com/",
-        "twitter": "https://twitter.com/",
-        "whatsapp": "https://wa.me/1234567890",
-        "instagram": "https://instagram.com/aarav",
-        "discord": "https://discordapp.com/users/aarav#9012"
+        "github": "https://github.com/Anshuman-rastogi",
+        "linkedin": "",
+        "twitter": "",
+        "whatsapp": "",
+        "instagram": "https://www.instagram.com/tuffy4570/",
+        "discord": "https://discord.com/users/1160978158955274384"
       }
     },
     {
       "id": 4,
-      "name": "Maya",
-      "role": "Backend Engineer",
-      "skills": ["Node.js", "Express", "MongoDB"],
-      "img": "https://i.pinimg.com/736x/2b/61/72/2b61728ac2681b7ac28b77bd1a0e8f87.jpg",
+      "name": "Mohammed Aazim",
+      "role": "Member",
+      "skills": [
+        "3D Artist",
+        "Gaming",
+        "Animation"
+      ],
+      "img": "https://cyfernode.netlify.app/team/aazim.jpg",
       "socials": {
-        "github": "https://github.com/",
-        "linkedin": "https://linkedin.com/",
-        "twitter": "https://twitter.com/",
-        "whatsapp": "https://wa.me/1234567890",
-        "instagram": "https://instagram.com/maya",
-        "discord": "https://discordapp.com/users/maya#3456"
+        "github": "",
+        "linkedin": "",
+        "twitter": "",
+        "whatsapp": "",
+        "instagram": "https://www.instagram.com/mohd._aazim_",
+        "discord": "https://discord.com/users/728962785677017118"
       }
     },
     {
       "id": 5,
-      "name": "Karan",
-      "role": "Security Analyst",
-      "skills": ["Ethical Hacking", "PenTesting"],
-      "img": "https://i.pinimg.com/736x/ae/cc/20/aecc20e6f17d9d27f10d410bfa96df67.jpg",
+      "name": "Eva Dev",
+      "role": "Member",
+      "skills": [
+        "Public Speaking",
+        "Music",
+        "Academic Writing"
+      ],
+      "img": "https://cyfernode.netlify.app/team/eva.jpg",
       "socials": {
-        "github": "https://github.com/",
-        "linkedin": "https://linkedin.com/",
-        "twitter": "https://twitter.com/",
-        "whatsapp": "https://wa.me/1234567890",
-        "instagram": "https://instagram.com/karan",
-        "discord": "https://discordapp.com/users/karan#7890"
+        "github": "",
+        "linkedin": "",
+        "twitter": "",
+        "whatsapp": "",
+        "instagram": "https://www.instagram.com/_starx4va_/",
+        "discord": "https://discord.com/users/1289624528326098989"
       }
     },
     {
       "id": 6,
-      "name": "Elena",
-      "role": "Product Manager",
-      "skills": ["Agile", "Scrum", "Leadership"],
-      "img": "https://i.pinimg.com/736x/8e/12/ab/8e12ab5b192ba09df9f9d83f716fcb11.jpg",
+      "name": "Ashutosh Kumar",
+      "role": "Member",
+      "skills": [
+        "Cybersecurity",
+        "Programming",
+        "UI/UX Design"
+      ],
+      "img": "https://cyfernode.netlify.app/team/ashutosh.jpg",
       "socials": {
-        "github": "https://github.com/",
-        "linkedin": "https://linkedin.com/",
-        "twitter": "https://twitter.com/",
-        "whatsapp": "https://wa.me/1234567890",
-        "instagram": "https://instagram.com/elena",
-        "discord": "https://discordapp.com/users/elena#2345"
+        "github": "",
+        "linkedin": "",
+        "twitter": "",
+        "whatsapp": "https://wa.me/+918882854288",
+        "instagram": "https://www.instagram.com/itss_me_digital_ashu/",
+        "discord": "https://discord.com/users/890192992462319616"
       }
     },
     {
       "id": 7,
-      "name": "Rahul",
-      "role": "Data Scientist",
-      "skills": ["Python", "TensorFlow", "NLP"],
-      "img": "https://i.pinimg.com/736x/cd/cf/7e/cdcf7e6e94a8bfc3db3f9a934f5f4120.jpg",
+      "name": "Vinamrata Chawla",
+      "role": "Member",
+      "skills": [
+        "Public speaking",
+        "Poetry Writing",
+        "Communication"
+      ],
+      "img": "https://cyfernode.netlify.app/team/vinamrata.jpg",
       "socials": {
-        "github": "https://github.com/",
-        "linkedin": "https://linkedin.com/",
-        "twitter": "https://twitter.com/",
-        "whatsapp": "https://wa.me/1234567890",
-        "instagram": "https://instagram.com/rahul",
-        "discord": "https://discordapp.com/users/rahul#6789"
+        "github": "",
+        "linkedin": "",
+        "twitter": "",
+        "whatsapp": "",
+        "instagram": "https://www.instagram.com/vinamrataaa__",
+        "discord": "https://discordapp.com/users/_.vinamratachawla._"
       }
     },
     {
       "id": 8,
-      "name": "Lead Member One",
-      "role": "Lead Role One",
-      "skills": ["Leadership", "Strategy"],
-      "img": "https://via.placeholder.com/150",
+      "name": "Bravish Seth",
+      "role": "Member",
+      "skills": [
+        "Acting",
+        "Orating",
+        "Declamation",
+        "Speeches"
+      ],
+      "img": "https://cyfernode.netlify.app/team/sethbravish.jpg",
       "socials": {
-        "github": "https://github.com/leadone",
-        "linkedin": "https://linkedin.com/in/leadone",
-        "twitter": "https://twitter.com/leadone",
+        "github": "",
+        "linkedin": "",
+        "twitter": "",
         "whatsapp": "",
-        "instagram": "",
-        "discord": ""
+        "instagram": "https://www.instagram.com/bravish_sethh",
+        "discord": "https://discord.com/users/1301919953603133543"
       }
     },
     {
       "id": 9,
-      "name": "Lead Member Two",
-      "role": "Lead Role Two",
-      "skills": ["Management", "Planning"],
-      "img": "https://via.placeholder.com/150",
+      "name": "Nakul Tomar",
+      "role": "Member",
+      "skills": [
+        "Animation",
+        "Cinematography",
+        "3D Artist"
+      ],
+      "img": "https://cyfernode.netlify.app/team/nakul.jpg",
       "socials": {
-        "github": "https://github.com/leadtwo",
-        "linkedin": "https://linkedin.com/in/leadtwo",
-        "twitter": "https://twitter.com/leadtwo",
+        "github": "",
+        "linkedin": "",
+        "twitter": "",
+        "whatsapp": "",
+        "instagram": "https://www.instagram.com/nakultomar_00/",
+        "discord": "https://discordapp.com/users/770255406193967155"
+      }
+    },
+    {
+      "id": 10,
+      "name": "Namish Dawar",
+      "role": "Member",
+      "skills": [
+        "AI/ML",
+        "Robotics",
+        "Mechanics"
+      ],
+      "img": "https://cyfernode.netlify.app/team/namish.jpg",
+      "socials": {
+        "github": "https://github.com/dawarnamish28-cell",
+        "linkedin": "",
+        "twitter": "",
+        "whatsapp": "",
+        "instagram": "https://www.instagram.com/namish_dawar",
+        "discord": "https://discordapp.com/users/1289176984529797151"
+      }
+    },
+    {
+      "id": 11,
+      "name": "Ayera Chhatwal",
+      "role": "Member",
+      "skills": [
+        "Gaming",
+        "Video Editing",
+        "Teamwork"
+      ],
+      "img": "https://cyfernode.netlify.app/team/ayera.jpg",
+      "socials": {
+        "github": "",
+        "linkedin": "",
+        "twitter": "",
+        "whatsapp": "",
+        "instagram": "https://www.instagram.com/ghillatolia_",
+        "discord": "https://discordapp.com/users/1355890171307888801"
+      }
+    },
+    {
+      "id": 12,
+      "name": "Pranjal Sharma",
+      "role": "Member",
+      "skills": [
+        "Public Speaking",
+        "Strategy & Execution",
+        "Artistry"
+      ],
+      "img": "https://cyfernode.netlify.app/team/pranjal.jpg",
+      "socials": {
+        "github": "",
+        "linkedin": "",
+        "twitter": "",
         "whatsapp": "",
         "instagram": "",
-        "discord": ""}}]}
+        "discord": "https://discord.com/users/@pranjal_sfs_09965"
+      }
+    },
+    {
+      "id": 13,
+      "name": "Sampada Bhatia",
+      "role": "Member",
+      "skills": [
+        "Public speaking",
+        "Gaming",
+        "Digitally Fluent"
+      ],
+      "img": "https://cyfernode.netlify.app/team/sampada.jpg",
+      "socials": {
+        "github": "",
+        "linkedin": "",
+        "twitter": "",
+        "whatsapp": "",
+        "instagram": "https://www.instagram.com/_sampada.aaaa_?igsh=MWZ3b2k3OGZvc3puZw==",
+        "discord": "https://discord.com/users/_sampadaaaaaaa"
+      }
+    },
+    {
+      "id": 14,
+      "name": "Manas",
+      "role": "Member",
+      "skills": [
+        "Video Editing",
+        "Poster Making",
+        "Public Speaking",
+        "Basic Coding",
+        "Music"
+      ],
+      "img": "https://cyfernode.netlify.app/team/manas.jpg",
+      "socials": {
+        "github": "",
+        "linkedin": "",
+        "twitter": "",
+        "whatsapp": "https://wa.me/qr/53SKQPTXNHS6L1",
+        "instagram": "https://www.instagram.com/manasmads1",
+        "discord": "https://discord.com/users/1419366129964421285"
+      }
+    },
+    {
+      "id": 15,
+      "name": "Yuvraj Singh",
+      "role": "Member",
+      "skills": [
+        "Robotics",
+        "Physics",
+        "Programming",
+        "Animation"
+      ],
+      "img": "https://cyfernode.netlify.app/team/yuvraj.jpg",
+      "socials": {
+        "github": "https://github.com/yuvrajcoder19",
+        "linkedin": "",
+        "twitter": "",
+        "whatsapp": "https://wa.me/+919667216400",
+        "instagram": "",
+        "discord": "https://discordapp.com/users/1218141917997432916"
+      }
+    },
+    {
+      "id": 16,
+      "name": "Yashvardhan Singh",
+      "role": "Member",
+      "skills": [
+        "Gaming",
+        "Math",
+        "Robotics"
+      ],
+      "img": "https://cyfernode.netlify.app/team/yashvardhan.jpg",
+      "socials": {
+        "github": "",
+        "linkedin": "",
+        "twitter": "",
+        "whatsapp": "",
+        "instagram": "",
+        "discord": "https://discord.com/users/1418616323369467986"
+      }
+    },
+    {
+      "id": 17,
+      "name": "Yugank Kumar",
+      "role": "Member",
+      "skills": [
+        "Gaming",
+        "Designing",
+        "Sports"
+      ],
+      "img": "https://cyfernode.netlify.app/team/yugank.jpg",
+      "socials": {
+        "github": "",
+        "linkedin": "",
+        "twitter": "",
+        "whatsapp": "",
+        "instagram": "https://www.instagram.com/kumar_yugank001",
+        "discord": "https://discord.com/users/1127869119216222249"
+      }
+    },
+    {
+      "id": 18,
+      "name": "Navneet",
+      "role": "Member",
+      "skills": [
+        "Photography",
+        "Fitness",
+        "Gearhead",
+        "Melophile"
+      ],
+      "img": "https://cyfernode.netlify.app/team/navneet.jpg",
+      "socials": {
+        "github": "",
+        "linkedin": "",
+        "twitter": "https://x.com/nxvneeet?s=21",
+        "whatsapp": "",
+        "instagram": "https://www.instagram.com/nxvneeet?igsh=MWdkcjJoZmk1ZDVoNA%3D%3D&utm_source=qr",
+        "discord": "https://discord.com/users/871012247084892170"
+      }
+    },
+    {
+      "id": 19,
+      "name": "Kumaran",
+      "role": "Member",
+      "skills": [
+        "Math & Science",
+        "Stratergic thinking",
+        "Instruments",
+        "Mechanic"
+      ],
+      "img": "https://cyfernode.netlify.app/team/kumaran.jpg",
+      "socials": {
+        "github": "",
+        "linkedin": "",
+        "twitter": "",
+        "whatsapp": "",
+        "instagram": "",
+        "discord": "https://discord.com/users/892620527443771433"
+      }
+    }
+  ]
+}
