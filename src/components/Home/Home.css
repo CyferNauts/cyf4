@@ -721,7 +721,6 @@ background-color: rgb(0, 0, 0);
 }
 
 
-
 @media only screen and (max-width: 600px) {
   .hero-container{
     display: flex;
@@ -768,6 +767,7 @@ background-color: rgb(0, 0, 0);
 @media only screen and (max-width: 771px) {
 .theme-description{
   font-size: 15px;
+  /* display: none; */
 }
 .theme-title{
   padding: 2px 10px 2px 0px;

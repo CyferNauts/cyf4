@@ -16,9 +16,14 @@ const Background = () => (
   </div>
 );
 
-const Events = () => {
+const Events = ({ initialIndex = 0 }) => {
   const events = eventsData.events || [];
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(initialIndex);
+
+  useEffect(() => {
+    setActiveIndex(initialIndex);
+  }, [initialIndex]);
+
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   const activeEvent = events[activeIndex] || {};

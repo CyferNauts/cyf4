@@ -29,7 +29,7 @@ const Home = () => {
         <div className="hero-container">
           <div className="hero-content">
             <div className="tops">
-              <img className="schoollogo" src="https://cyfernode.netlify.app/sfs.jpg" alt="logo" />
+              <img className="schoollogo" src="https://cyfernode.netlify.app/sfs.png" alt="logo" />
               <p className="fwdf">2025</p>
             </div>
             <h1 className="hero-title gradient-text">CYFERNODE</h1>

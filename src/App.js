@@ -19,6 +19,8 @@ import { TweenMax } from "gsap"; // gsap 2.x compatible import
 function App() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [activeTab, setActiveTab] = useState('home');
+  const [selectedEventIndex, setSelectedEventIndex] = useState(0);
+
   const tabRef = useRef(null);
 
   useEffect(() => {
@@ -54,7 +56,7 @@ function App() {
 
       {/* Your app sections */}
       <CustomCursor />
-      <Navbar setActiveTab={setActiveTab} />
+      <Navbar setActiveTab={setActiveTab} setSelectedEventIndex={setSelectedEventIndex} />
       {activeTab !== 'team' && activeTab !== 'events' && activeTab !== 'timeline' && (
         <>
           <Home />
@@ -66,7 +68,7 @@ function App() {
         </>
       )}
       {activeTab === 'team' && <Team />}
-      {activeTab === 'events' && <Events />}
+      {activeTab === "events" && <Events initialIndex={selectedEventIndex} />}
       {activeTab === 'timeline' && <Timeline />}
       {activeTab !== 'events' && <Footer />}
     </div>

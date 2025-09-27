@@ -11,20 +11,21 @@ const navigationLinks = [
 ]
 
 const events = [
-  { title: "Code Unlocked" },
-  { title: "Think. Build. Create." },
-  { title: "The Digital Playground" },
-  { title: "Stories in Motion" },
-  { title: "Lens on Life" },
-  { title: "Design for Impact" },
-  { title: "Voices of Change" },
-  { title: "Human Dimensions" },
-  { title: "AidBots" },
-]
+  { id: "code-unlocked", title: "Code Unlocked" },
+  { id: "think-build-create", title: "Think. Build. Create." },
+  { id: "digital-playground", title: "The Digital Playground" },
+  { id: "stories-in-motion", title: "Stories in Motion" },
+  { id: "lens-on-life", title: "Lens on Life" },
+  { id: "design-for-impact", title: "Design for Impact" },
+  { id: "voices-of-change", title: "Voices of Change" },
+  { id: "human-dimensions", title: "Human Dimensions" },
+  { id: "aidbots", title: "AidBots" },
+];
 
-export default function Navbar({ setActiveTab }) {
-    const [showModal, setShowModal] = useState(false);
-  
+
+export default function Navbar({ setActiveTab, setSelectedEventIndex }) {
+  const [showModal, setShowModal] = useState(false);
+
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [isEventsDropdownOpen, setIsEventsDropdownOpen] = useState(false)
   const [isMobileEventsOpen, setIsMobileEventsOpen] = useState(false)
@@ -55,10 +56,21 @@ export default function Navbar({ setActiveTab }) {
                   {isEventsDropdownOpen && (
                     <div className="dropdown-content">
                       {events.map((event, index) => (
-                        <a key={index} href="#" onClick={() => { setActiveTab('events'); setIsEventsDropdownOpen(false); }}>
-                          {event.title}
-                        </a>
-                      ))}
+<a
+  key={event.eventName}
+  href="#"
+  className="dropdown-link"   // add back your styling hook
+  onClick={(e) => {
+    e.preventDefault();
+    setSelectedEventIndex(index);
+    setActiveTab("events");
+  }}
+>
+  {event.title}
+</a>
+
+))}
+
                     </div>
                   )}
                 </div>
@@ -68,15 +80,15 @@ export default function Navbar({ setActiveTab }) {
             ))}
           </nav>
 
-        {/* Right buttons */}
-        <div className="navbar-right">
+          {/* Right buttons */}
+          <div className="navbar-right">
 
-  <button className="button type1 registerbtn">
-    <span className="btn-txt">Register</span>
-  </button>
+            <button className="button type1 registerbtn">
+              <span className="btn-txt">Register</span>
+            </button>
 
 
-        </div>
+          </div>
 
           {/* Mobile menu toggle */}
           <button
@@ -124,11 +136,19 @@ export default function Navbar({ setActiveTab }) {
             </button>
             {isMobileEventsOpen && (
               <div id="mobile-events-list" className="mobile-events-list">
-                {events.map((event, index) => (
-                  <a key={index} href="#" onClick={() => { setActiveTab('events'); setIsMobileMenuOpen(false); setIsMobileEventsOpen(false); }}>
+                {events.map((event) => (
+                  <a
+                    key={event.id}
+                    href="#"
+                    onClick={() => {
+                      setActiveTab(event.id);
+                      setIsEventsDropdownOpen(false);
+                    }}
+                  >
                     {event.title}
                   </a>
                 ))}
+
               </div>
             )}
           </div>
