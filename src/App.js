@@ -61,7 +61,10 @@ function App() {
         <>
           <Home />
           <Links />
-          <EventLineUp />
+          <EventLineUp   onInfoClick={(index) => {
+    setSelectedEventIndex(index);  // pass to Events.js
+    setActiveTab("events");        // open Events page
+  }}/>
           <AboutUs />
           <MoreAboutUs />
           <MoreAboutUsTeaser />

@@ -13,7 +13,7 @@ const events = [
   { title: "AidBots", description: "Robots supporting education and inclusivity.", color: "#1E90FF", image: "https://i.pinimg.com/1200x/44/d3/14/44d314c021dd33630aba32fe93265065.jpg" },
 ];
 
-export default function EventLineUp() {
+export default function EventLineUp({onInfoClick}) {
   const [current, setCurrent] = useState(0);
   const [direction, setDirection] = useState(1);
   const [isHovered, setIsHovered] = useState(false);
@@ -140,7 +140,12 @@ export default function EventLineUp() {
             >
               <h3>{event.title}</h3>
               <p>{event.description}</p>
-              <button className="info-button">info →</button>
+                          <button
+              className="info-button"
+              onClick={() => onInfoClick(index)} // send event index
+            >
+              info →
+            </button>
             </div>
           ))}
         </div>

@@ -144,34 +144,67 @@ const Events = ({ initialIndex = 0 }) => {
                   </section>
                 )}
 
+                {activeEvent.prompt && (
+                  <section className="detail-section">
+                    <h3>Prompt</h3>
+                    <p>{activeEvent.prompt}</p>
+                  </section>
+                )}
+
                 {(activeEvent.mode || activeEvent.participants?.max) && (
                   <section className="detail-section">
                     <h3>Event Details</h3>
                     {activeEvent.mode && <p>Mode: {activeEvent.mode}</p>}
-                    {activeEvent.participants?.max && <p>Max Participants: {activeEvent.participants.max}</p>}
+                    {activeEvent.eligibility && <p>Eligibility: {activeEvent.eligibility}</p>}
+                    {activeEvent.participants?.max && <p>Max. Participants: {activeEvent.participants.max}       {activeEvent.participants.note && (
+        <span className="participant-note"> ({activeEvent.participants.note})</span>
+      )}</p>}
                   </section>
                 )}
 
                 <section className="detail-section">
                   <h3>Registration</h3>
-                  <button className="register-btn">
-                    Register for {activeEvent.eventName}
-                  </button>
-                </section>
+<a
+  href={`/register/${activeEvent.eventName.replace(/\s+/g, '-').toLowerCase()}`}
+  className="register-btn"
+>
+  Register for {activeEvent.eventName}
+</a>
 
-                {activeEvent.rounds?.length > 0 && (
-                  <section className="detail-section">
-                    <h3>Rounds</h3>
-                    <div className="content-grid">
-                      {activeEvent.rounds.map((r, i) => (
-                        <div key={i} className="info-card">
-                          <h4>{r.name}</h4>
-                          <p>{r.format}</p>
-                        </div>
-                      ))}
-                    </div>
-                  </section>
-                )}
+                </section>
+          {activeEvent.guidelines && (
+  <section className="detail-section">
+    <h3>Guidelines</h3>
+    <ul>
+      {activeEvent.guidelines.map((item, index) => (
+        <li key={index}>{item}</li>
+      ))}
+    </ul>
+  </section>
+)}
+
+{activeEvent.rounds?.length > 0 && (
+  <section className="detail-section">
+    <h3>Rounds</h3>
+    <div className="content-grid">
+      {activeEvent.rounds.map((r, i) => (
+        <div key={i} className="info-card">
+          <h4>{r.name}</h4>
+          {Array.isArray(r.format) ? (
+            <ul>
+              {r.format.map((point, idx) => (
+                <li key={idx}>{point}</li>
+              ))}
+            </ul>
+          ) : (
+            <p>{r.format}</p>
+          )}
+          {r.advancement && <p><strong>Advancement:</strong> {r.advancement}</p>}
+        </div>
+      ))}
+    </div>
+  </section>
+)}
                 
                 {activeEvent.judgingCriteria && (
                   <section className="detail-section">
@@ -190,11 +223,17 @@ const Events = ({ initialIndex = 0 }) => {
                  {activeEvent.contacts?.length > 0 && (
                   <section className="detail-section">
                     <h3>Contacts</h3>
-                    <ul className="contacts-list">
-                      {activeEvent.contacts.map((c, i) => (
-                        <li key={i}>{c.name} {c.phone && `(${c.phone})`}</li>
-                      ))}
-                    </ul>
+<ul className="contacts-list">
+  {activeEvent.contacts.map((c, i) => (
+    <li key={i} className="contact-item">
+      <strong>{c.name}</strong>
+      {c.phone && <span className="contact-phone"> — {c.phone}</span>}
+      {c.handle && <span className="contact-handle"> (@{c.handle})</span>}
+    </li>
+  ))}
+</ul>
+
+
                   </section>
                 )}
               </div>

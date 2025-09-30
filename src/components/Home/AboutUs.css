@@ -142,13 +142,19 @@ h1 {
   color: #000000;
 }
 
+/* no use, so fucking this off */
 .featureswow {
+  display: none !important;
+}
+
+
+/* .featureswow {
   height: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-}
+} */
 
 /* Section height helper */
 .aboutus_wala_hai_ye {

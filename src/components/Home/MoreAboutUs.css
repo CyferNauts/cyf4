@@ -1,6 +1,9 @@
 /* Import fonts */
 @import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+.vulahuladula {
+  background-color: #000000;
 
+}
 .features {
   padding: 2rem;
   max-width: 1200px;

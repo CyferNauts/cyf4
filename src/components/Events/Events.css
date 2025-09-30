@@ -265,6 +265,11 @@ body {
   text-transform: uppercase;
 }
 
+.detail-section ul {
+  list-style-type: disc; 
+  padding-left: 1.5rem;
+}
+
 .detail-nav-buttons {
   display: flex;
   gap: 0.75rem;
@@ -328,6 +333,11 @@ body {
   overflow: visible;
 }
 
+.participant-note {
+  font-family: var(--font-family);
+  font-size: 0.9rem;
+}
+
 .detail-section:last-child {
   margin-bottom: 0;
 }
@@ -361,16 +371,28 @@ body {
   font-weight: 400;
 }
 
+
 .contacts-list {
-  list-style: none;
-  padding: 0;
+  list-style-type: disc; 
+  padding-left: 1.5rem;  /* space before bullets */
+  margin-top: 1rem;
 }
 
-.contacts-list li {
-  color: var(--text-primary);
+.contact-item {
   padding: 0.5rem 0;
+  color: var(--text-primary);
   font-weight: 500;
+  line-height: 1.6;
 }
+
+.contact-phone,
+.contact-handle {
+  font-weight: 400;
+  color: var(--text-primary);
+  font-family: var(--font-family);
+}
+
+
 
 /* ============ CONTENT GRIDS ============ */
 .content-grid {

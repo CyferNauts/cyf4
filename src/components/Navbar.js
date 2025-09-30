@@ -6,8 +6,8 @@ const navigationLinks = [
   { id: 'home', label: "Home" },
   { id: 'events', label: "Events" },
   { id: 'team', label: "Team" },
-  { id: 'timeline', label: "Timeline" },
-  { id: 'gallery', label: "Gallery" }
+  { id: 'timeline', label: "Timeline" }
+  // { id: 'gallery', label: "Gallery" }
 ]
 
 const events = [
@@ -40,7 +40,7 @@ export default function Navbar({ setActiveTab, setSelectedEventIndex }) {
       <header className="navbar">
         <div className="navbar-container">
           {/* Logo */}
-          <a href="#" className="logocyfernode">CYFERNODE</a>
+          <a href="#" className="logocyfernode" onClick={() => handleNavClick('home')}>CYFERNODE</a>
 
           {/* Desktop Navigation */}
           <nav className="nav-links">

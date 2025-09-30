@@ -221,7 +221,7 @@ const MoreAboutUs = () => {
   };
 
   return (
-    <div>
+    <div className="vulahuladula">
 
 
 
