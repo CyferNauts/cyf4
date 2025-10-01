@@ -15,7 +15,7 @@ export default function Register({ trigger, setTrigger }) {
         </button>
 
         <h2 className="modal-title">
-          {eventsData.festName} – {eventsData.theme}
+          Events
         </h2>
 
         <div className="revent-grid">
