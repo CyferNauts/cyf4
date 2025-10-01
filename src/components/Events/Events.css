@@ -501,6 +501,7 @@ body {
   
   .events-root {
     padding: 2rem 1.5rem;
+    margin-top: 60px;
   }
   
   .events-container {
@@ -555,7 +556,7 @@ body {
 
   /* Mobile Sidebar */
   .mobile-sidebar-toggle {
-    display: grid;
+    display: none;
     place-items: center;
     position: fixed;
     top: 2rem;

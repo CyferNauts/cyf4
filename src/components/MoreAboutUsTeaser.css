@@ -1,0 +1,117 @@
+.teaser-container {
+  width: 100%;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 0;
+  overflow: hidden;
+}
+
+/* Main box */
+.teaser-box {
+  width: 75%;
+  max-width: 950px;
+  aspect-ratio: 16 / 9;
+  border-radius: 20px;
+  background: rgba(15,15,15,0.85);
+  backdrop-filter: blur(12px);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Animated glow background */
+.teaser-glow {
+  position: absolute;
+  inset: -50%;
+  background: conic-gradient(
+    from 0deg,
+#000000, #03a3ff, #3b3b3b, #000000
+  );
+  animation: spin 8s linear infinite;
+  filter: blur(80px);
+  opacity: 0.25;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Animated border sweep */
+.teaser-border {
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  border: 2px solid transparent;
+  background: linear-gradient(120deg, #000000, #1f1f1f, #3b3b3b) border-box;
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) padding-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  animation: borderGlow 4s ease-in-out infinite alternate;
+}
+
+@keyframes borderGlow {
+  0% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+/* Content */
+.teaser-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  /* animation: floatUp 3s ease-in-out infinite; */
+}
+
+
+.teaser-heading {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #ffffff; /* start pure white */
+  letter-spacing: 3px;
+  margin: 0;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.6),
+               0 0 10px rgba(37,205,235,0.25); /* offset + blue glow */
+  animation: colorShift 1s ease-in-out infinite alternate;
+}
+
+/* Smooth transition between white and offset-white */
+@keyframes colorShift {
+  0% {
+    color: #ffffff; /* crisp white */
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.6),
+                 0 0 10px rgba(37,205,235,0.25);
+  }
+  100% {
+    color: #e7f0f5; /* slightly dimmer offset white */
+    text-shadow: 3px 3px 8px rgba(0,0,0,0.7),
+                 0 0 14px rgba(37,205,235,0.35);
+  }
+}
+
+
+.teaser-sub {
+  margin-top: 0.8rem;
+  font-size: 1.1rem;
+  color: #e0e0e0; /* softer white */
+  letter-spacing: 1px;
+  animation: fadeIn 2s ease-in-out infinite alternate;
+}
+
+
+@keyframes shimmerText {
+  0% { background-position: 0% center; }
+  100% { background-position: 200% center; }
+}
+
+
+@keyframes fadeIn {
+  from { opacity: 0.6; }
+  to   { opacity: 1; }
+}

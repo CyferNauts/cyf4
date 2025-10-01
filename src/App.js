@@ -13,6 +13,7 @@ import Team from './components/Team/Team';
 import Events from './components/Events/Events';
 import Timeline from './components/Timeline/Timeline';
 import Links from './components/Links';
+import Register from './components/Register';
 import './App.css';
 import { TweenMax } from "gsap"; // gsap 2.x compatible import
 
@@ -20,6 +21,7 @@ function App() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [activeTab, setActiveTab] = useState('home');
   const [selectedEventIndex, setSelectedEventIndex] = useState(0);
+  const [showRegister, setShowRegister] = useState(false);
 
   const tabRef = useRef(null);
 
@@ -56,24 +58,28 @@ function App() {
 
       {/* Your app sections */}
       <CustomCursor />
-      <Navbar setActiveTab={setActiveTab} setSelectedEventIndex={setSelectedEventIndex} />
+      <Navbar setActiveTab={setActiveTab} setSelectedEventIndex={setSelectedEventIndex} setShowRegister={setShowRegister} />
+      <Register trigger={showRegister} setTrigger={setShowRegister} />
       {activeTab !== 'team' && activeTab !== 'events' && activeTab !== 'timeline' && (
         <>
-          <Home />
+          <Home setActiveTab={setActiveTab} setShowRegister={setShowRegister}/>
           <Links />
           <EventLineUp   onInfoClick={(index) => {
     setSelectedEventIndex(index);  // pass to Events.js
     setActiveTab("events");        // open Events page
   }}/>
-          <AboutUs />
-          <MoreAboutUs />
+          <AboutUs setActiveTab={setActiveTab}/>
+          <MoreAboutUs setActiveTab={setActiveTab} setShowRegister={setShowRegister}/>
           <MoreAboutUsTeaser />
         </>
       )}
       {activeTab === 'team' && <Team />}
       {activeTab === "events" && <Events initialIndex={selectedEventIndex} />}
       {activeTab === 'timeline' && <Timeline />}
-      {activeTab !== 'events' && <Footer />}
+      {activeTab !== 'events' && <Footer setActiveTab={setActiveTab} onInfoClick={(index) => {
+    setSelectedEventIndex(index);  // pass to Events.js
+    setActiveTab("events");        // open Events page
+  }}/>}
     </div>
   );
 }

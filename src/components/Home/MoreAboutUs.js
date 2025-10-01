@@ -155,7 +155,7 @@ const shuffleArray = (array) => {
 
 const sliderImages = shuffleArray([...allImages, ...allImages, ...allImages]);
 
-const MoreAboutUs = () => {
+const MoreAboutUs = ({setActiveTab, setShowRegister}) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isDragging, setIsDragging] = useState(false);
   const [dragStart, setDragStart] = useState(0);
@@ -270,7 +270,9 @@ const MoreAboutUs = () => {
           </div>
           <div className="card-text">
             <h3 className="card-titlefdfdfd">25+ SCHOOLS</h3>
-            <p>Your gateway to effortless crypto and fiat conversion.Your gateway to effortless crypto and fiat conversion.Your gateway to effortless crypto and fiat conversion.</p>
+            <p>
+              With participation from over 25 schools, our fest brought together 200+ enthusiastic students who showcased their talent, creativity, and passion across diverse events.
+              .</p>
             
  
           </div>
@@ -282,15 +284,19 @@ const MoreAboutUs = () => {
             <div className="animated-grid-background">
               <div className="grid-overlay"></div>
             </div>
-            <button className="gallery-button">
-              <span>View Gallery</span>
+            <button className="gallery-button" onClick={() => {
+              setActiveTab('timeline')
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+            }>
+              <span>View Timeline</span>
               
             </button>
           </div>
           <div className="registration-section">
             <p className="Registernowkatext">Register Now</p>
             <p className="Registernowkatextkades">Don't miss your chance secure your spot today.</p>
-            <button className="registernowkeliyebutton">
+            <button className="registernowkeliyebutton" onClick={() => setShowRegister(true)}>
               <span>Register</span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -316,7 +322,10 @@ const MoreAboutUs = () => {
           </div>
           <div className="teamkelogokiphotoschotiwali">
           <button className="registernowkeliyebutton teampejanekeliyebtn">
-  <span>Our team</span>
+  <span onClick={() => {
+    setActiveTab('team')
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    }}>Our team</span>
   <svg
     xmlns="http://www.w3.org/2000/svg"
     fill="none"

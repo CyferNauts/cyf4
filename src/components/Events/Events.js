@@ -165,8 +165,8 @@ const Events = ({ initialIndex = 0 }) => {
                 <section className="detail-section">
                   <h3>Registration</h3>
 <a
-  href={`/register/${activeEvent.eventName.replace(/\s+/g, '-').toLowerCase()}`}
-  className="register-btn"
+  href={activeEvent.link}
+  className="register-btn" target="_blank"
 >
   Register for {activeEvent.eventName}
 </a>

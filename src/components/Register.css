@@ -1,130 +1,166 @@
-
-
-
-.open-modal-btn {
-  padding: 0.55rem 1.1rem;
-  border-radius: 6px;
-  border: none;
-  background: #25cdeb;
-  color: #fff;
-  font-size: 0.95rem;
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.25s ease;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
-}
-.open-modal-btn:hover {
-  background: #2563eb;
-  transform: scale(1.05);
-}
-
-
-
-
+/* Overlay + glassy modal */
 .modal-overlay {
   position: fixed;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.85); 
+  background: rgba(0,0,0,0.65);
+  backdrop-filter: blur(8px);
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 1000;
+  font-family: "Syne", sans-serif;
 }
-
 
 .modal-content {
-  background: #0a0a0a; 
-  border-radius: 12px;
-  padding: 2rem;
-  width: 80%;
-  max-width: 900px;
+  background: rgba(15,15,15,0.85);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 2.5rem; /* more spacious */
+  width: min(950px, 88vw);
   max-height: 80vh;
-  overflow-y: auto;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5); 
-  animation: slideDown 0.3s ease forwards;
+  overflow: auto;
   position: relative;
-  color: #d0d0d0;
-  font-family: "Krona One", sans-serif;
+  color: #e5e5e5;
+  border: 1px solid rgba(255,255,255,0.08);
+  animation: slideDown 0.35s ease forwards;
 }
 
-
+/* Close */
 .close-btn {
   position: absolute;
-  top: 15px;
-  right: 20px;
-  font-size: 1.2rem;
+  top: 16px;
+  right: 22px;
+  font-size: 1.5rem;
   background: none;
-  border: none;
+  border: 0;
+  color: #bbb;
   cursor: pointer;
-  color: #fff;
-  transition: all 0.2s ease;
+  transition: transform 0.25s ease, color 0.25s ease;
 }
 .close-btn:hover {
   color: #25cdeb;
-  transform: scale(1.1);
+  transform: rotate(90deg) scale(1.2);
 }
 
-
+/* Title */
 .modal-title {
-  font-size: 1.8rem;
-  font-weight: 700;
-  margin-bottom: 1.5rem;
+  font-size: clamp(1.8rem, 2.5vw, 2.2rem);
+  text-align: center;
+  margin-bottom: 2rem;
   color: #fff;
+  font-weight: 800;
+  letter-spacing: 0.5px;
 }
 
-.event-grid {
+/* Grid */
+.revent-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.4rem; /* slightly more than before, but not huge */
 }
 
-
-.event-card {
-  border-radius: 8px;
-  padding: 1rem;
-  background: #121212; 
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
-  transition: transform 0.25s ease, background 0.25s ease;
+/* Card layout */
+.revent-card {
+  background: linear-gradient(145deg, #141414, #1c1c1c);
+  border-radius: 14px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 150px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+  border: 1px solid rgba(255,255,255,0.08);
 }
-.event-card:hover {
-  transform: translateY(-5px);
-  background: #1a1a1a;
+.revent-card:hover {
+  transform: translateY(-6px); /* subtle lift */
+  box-shadow: 0 8px 22px rgba(37,205,235,0.25); /* softer shadow */
+  border-color: rgba(37,205,235,0.35); /* accent border */
 }
 
-.event-name {
-  margin: 0 0 0.5rem;
-  font-size: 1.1rem;
-  font-weight: 600;
+/* Body */
+.revent-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.1rem; /* slightly more than 1rem, less than 1.5rem */
+  flex: 1;
+}
+
+/* Name */
+.revent-name {
+  font-size: 1.15rem;
+  font-weight: 700;
   color: #25cdeb;
+  margin: 0 0 0.6rem; /* small, consistent gap */
+  letter-spacing: 0.3px;
 }
 
-
-.register-btn {
-  margin-top: 0.75rem;
-  padding: 0.45rem 0.9rem;
-  border-radius: 6px;
-  border: none;
-  background: #25cdeb;
-  color: #fff;
-  font-weight: 500;
+/* Info block */
+.revent-info {
+  margin-bottom: 0.9rem; /* subtle breathing room */
+}
+.revent-info p {
   font-size: 0.9rem;
+  color: #c8c8c8;
+  line-height: 1.35;
+  margin: 0 0 0.45rem;
+}
+
+/* Button */
+.rregister-btn {
+  display: block;
+  align-self: stretch;
+  margin-top: auto;
+  padding: 0.7rem 1.6rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.2);
+  background: rgba(255,255,255,0.05);
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.4px;
   cursor: pointer;
-  transition: all 0.25s ease;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
-}
-.register-btn:hover {
-  background: #2563eb;
-  transform: scale(1.05);
+  backdrop-filter: blur(6px);
+  transition: all 0.35s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: none;
 }
 
+/* Shimmer sweep */
+.rregister-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,0.25),
+    transparent
+  );
+  transform: translateX(-100%);
+  transition: transform 0.6s ease;
+}
 
+.rregister-btn:hover::before {
+  transform: translateX(100%);
+}
+
+/* Hover: clean gradient fill */
+.rregister-btn:hover {
+  background: linear-gradient(135deg, #25cdeb, #2563eb);
+  border-color: #25cdeb;
+  color: #fff;
+  transform: translateY(-2px) scale(1.03);
+}
+
+/* Animations */
 @keyframes slideDown {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(-20px) scale(0.98); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* Mobile */
+@media (max-width: 520px) {
+  .revent-media { height: 120px; }
+  .modal-content { padding: 1.5rem; }
 }

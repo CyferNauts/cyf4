@@ -1,14 +1,13 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Spline from "@splinetool/react-spline";
 import "./AboutUs.css";
 import VanillaTilt from "vanilla-tilt";
 import Team from "../Team/Team";
-
 import dayum from "./PinDown.io_@eplerkirill_1756479385.mp4";
 import tagline from "./Tagline.svg";
 import iconimg from "./icon1.png"; // Assuming a CSS file will be created for styling
 
-const AboutUs = () => {
+const AboutUs = ({setActiveTab}) => {
   const tiltRef = useRef(null);
 
   useEffect(() => {
@@ -48,9 +47,7 @@ const AboutUs = () => {
           <div className="des">
             <img className="icon" src={iconimg} alt="About Us" />
             <p className="about-us-text">
-              We are a team of passionate individuals who are dedicated to making a positive impact on the world. 
-              Our mission is to create innovative solutions that address the challenges faced by society, and to use 
-              technology to improve people's lives.
+              Step into a space where ideas become impact. Our fest unites challenges in coding, design, film, and innovation — each built to spark creativity and push boundaries. From digital art to algorithms, every event is a chance to showcase talent and shape the future.
             </p>
           </div>
         </div>
@@ -59,7 +56,7 @@ const AboutUs = () => {
       <div className="featuresaboutus">
         <h2>Discover Our Events</h2>
         <p>Join us in exciting events that bring our community together. From workshops to hackathons, there's something for everyone.</p>
-        <button className="view-docs-btn">View Events</button>
+        <button className="view-docs-btn" onClick={() => {setActiveTab('events')}}>View Events</button>
       </div>
       <div className="featuresaboutus">
         <h2>Watch Our Teaser</h2>
@@ -69,7 +66,7 @@ const AboutUs = () => {
       <div className="featuresaboutus">
         <h2>Meet Our Team</h2>
         <p>Our diverse team of experts is dedicated to innovation and excellence.</p>
-        <button className="view-docs-btn">Our Team</button>
+        <button className="view-docs-btn" onClick={() => {setActiveTab('team')}}>Our Team</button>
       </div>
       </div>
 

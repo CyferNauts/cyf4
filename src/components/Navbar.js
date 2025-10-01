@@ -23,7 +23,7 @@ const events = [
 ];
 
 
-export default function Navbar({ setActiveTab, setSelectedEventIndex }) {
+export default function Navbar({ setActiveTab, setSelectedEventIndex , setShowRegister}) {
   const [showModal, setShowModal] = useState(false);
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
@@ -83,7 +83,7 @@ export default function Navbar({ setActiveTab, setSelectedEventIndex }) {
           {/* Right buttons */}
           <div className="navbar-right">
 
-            <button className="button type1 registerbtn">
+            <button className="button type1 registerbtn" onClick={() => setShowRegister(true)}>
               <span className="btn-txt">Register</span>
             </button>
 

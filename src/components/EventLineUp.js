@@ -2,15 +2,60 @@ import React, { useState, useEffect, useRef } from "react";
 import "./EventLineUp.css";
 // https://i.pinimg.com/1200x/db/e2/b6/dbe2b6eeb24a7718c0397f901138cf0d.jpg
 const events = [
-  { title: "Code Unlocked", description: "Algorithmic problem solving with human-focused challenge.", color: "#FF6B6B", image: "https://i.pinimg.com/736x/5d/c6/db/5dc6db4cc96ae17513dad05ec9ff62ee.jpg" },
-  { title: "Think. Build. Create.", description: "AI innovation solving real human challenges.", color: "#4ECDC4", image: "https://i.pinimg.com/1200x/06/c1/03/06c10303dffb586d5bac86f119dc781b.jpg" },
-  { title: "The Digital Playground", description: "Skill-based online gaming competition.", color: "#FFD93D", image: "https://i.pinimg.com/1200x/5c/45/a6/5c45a6b23447a2ad2755c0768fd9de46.jpg" },
-  { title: "Stories in Motion", description: "Short films with tech and humanity message.", color: "#6A5ACD", image: "https://i.pinimg.com/736x/eb/36/3f/eb363f9c05cdd3653c23da0980524092.jpg" },
-  { title: "Lens on Life", description: "Photo series exploring humanity and technology.", color: "#20B2AA", image: "https://i.pinimg.com/736x/82/cd/bd/82cdbd706b93b0afa7c5f7c19898a4b8.jpg" },
-  { title: "Design for Impact", description: "Digital posters sparking conversation on empathy.", color: "#FF8C00", image: "https://i.pinimg.com/1200x/2a/68/1d/2a681dc4a5e84e72d27cd5cd6b974bdb.jpg" },
-  { title: "Voices of Change", description: "Persuasive talks on tech and humanity.", color: "#FF1493", image: "https://i.pinimg.com/1200x/ec/86/3e/ec863e4edea157169949686e08507fc9.jpg" },
-  { title: "Human Dimensions", description: "Creative 3D models shaping human life.", color: "#32CD32", image: "https://i.pinimg.com/736x/70/86/28/7086285e30da4d224fb6f1d679f7d8db.jpg" },
-  { title: "AidBots", description: "Robots supporting education and inclusivity.", color: "#1E90FF", image: "https://i.pinimg.com/1200x/44/d3/14/44d314c021dd33630aba32fe93265065.jpg" },
+  { 
+    title: "Code Unlocked", 
+    description: "Cryptic programming challenge testing logic, coding, and problem-solving skills.", 
+    color: "#FF6B6B", 
+    image: "https://i.pinimg.com/736x/5d/c6/db/5dc6db4cc96ae17513dad05ec9ff62ee.jpg" 
+  },
+  { 
+    title: "Think. Build. Create.", 
+    description: "Two-stage hackathon with AI pitches, live finals, and surprise adaptability tests.", 
+    color: "#4ECDC4", 
+    image: "https://i.pinimg.com/1200x/06/c1/03/06c10303dffb586d5bac86f119dc781b.jpg" 
+  },
+  { 
+    title: "The Digital Playground", 
+    description: "Online knockout gaming tournament testing teamwork, adaptability, and skill.", 
+    color: "#FFD93D", 
+    image: "https://i.pinimg.com/1200x/5c/45/a6/5c45a6b23447a2ad2755c0768fd9de46.jpg" 
+  },
+  { 
+    title: "Stories in Motion", 
+    description: "Short film contest exploring tech and humanity with creative storytelling twists.", 
+    color: "#6A5ACD", 
+    image: "https://i.pinimg.com/736x/eb/36/3f/eb363f9c05cdd3653c23da0980524092.jpg" 
+  },
+  { 
+    title: "Lens on Life", 
+    description: "Photography series capturing humanity and technology’s future through visuals.", 
+    color: "#20B2AA", 
+    image: "https://i.pinimg.com/736x/82/cd/bd/82cdbd706b93b0afa7c5f7c19898a4b8.jpg" 
+  },
+  { 
+    title: "Design for Impact", 
+    description: "Poster design challenge sparking conversations on empathy and responsible tech.", 
+    color: "#FF8C00", 
+    image: "https://i.pinimg.com/1200x/2a/68/1d/2a681dc4a5e84e72d27cd5cd6b974bdb.jpg" 
+  },
+  { 
+    title: "Voices of Change", 
+    description: "On-the-spot talks blending tech, ethics, and creativity into persuasive speeches.", 
+    color: "#FF1493", 
+    image: "https://i.pinimg.com/1200x/ec/86/3e/ec863e4edea157169949686e08507fc9.jpg" 
+  },
+  { 
+    title: "Human Dimensions", 
+    description: "3D modeling contest showcasing tech’s role in shaping better human futures.", 
+    color: "#32CD32", 
+    image: "https://i.pinimg.com/736x/70/86/28/7086285e30da4d224fb6f1d679f7d8db.jpg" 
+  },
+  { 
+    title: "AidBots", 
+    description: "Robotics challenge building disaster relief or assistive healthcare innovations.", 
+    color: "#1E90FF", 
+    image: "https://i.pinimg.com/1200x/44/d3/14/44d314c021dd33630aba32fe93265065.jpg" 
+  },
 ];
 
 export default function EventLineUp({onInfoClick}) {
@@ -122,7 +167,7 @@ export default function EventLineUp({onInfoClick}) {
   return (
     <section className={`event-line-up${isHovered ? ' dark-background' : ''}`}>
       <h1 className="eventlineup-heading">EVENT LINE UP</h1>
-      <h5 className="eventlineup-des">The full lineup is waiting for you  <a>View Events</a></h5>
+      <h5 className="eventlineup-des">The complete line‑up at a glance</h5>
       <div className="slideshow-wrapper">
         <button className="arrow left-arrow" onClick={goToPrev}>
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

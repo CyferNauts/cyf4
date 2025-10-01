@@ -2,11 +2,9 @@ import React from "react";
 import { useState } from "react";
 import Spline from "@splinetool/react-spline";
 import "./Home.css";
-import Register from "../Register";
 import bgVideo from "./0829.mp4";
 
-const Home = () => {
-  const [showModal, setShowModal] = useState(false);
+const Home = ({setActiveTab, setShowRegister}) => {
   return (
     <div className="home" id="home">
       <div className="fadeoutdiv"> <div className="fadeoutdivactual"> </div></div>
@@ -61,7 +59,7 @@ const Home = () => {
                 <button class="button type1 sfsf">
                   <span class="btn-txt">Get Brochure</span>
                 </button>
-                <button class="button type1 sfdf">
+                <button class="button type1 sfdf" onClick={() => setActiveTab('timeline')}>
                   <span class="btn-txt">Event Timeline</span>
                 </button>
               </div>
@@ -69,14 +67,11 @@ const Home = () => {
 
               <button
                 className="button type1 registerbtnmobile"
-                onClick={() => setShowModal(true)}
               >
-                <span className="btn-txt">Register</span>
+                <span className="btn-txt" onClick={() => setShowRegister(true)}>Register</span>
               </button>
             </div>
 
-            {/* Register modal component */}
-            <Register trigger={showModal} />
 
 
         </div>

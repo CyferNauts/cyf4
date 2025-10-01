@@ -259,6 +259,27 @@ h1 {
   transform: translateY(-2px);
 }
 
+@media only screen and (max-width: 1343px) {
+  .featureswow {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1.5rem !important;
+    width: 100% !important;
+    padding: 1rem !important;
+    justify-content: space-around !important;
+    align-items: center !important;
+  }
+
+  .featuresaboutus {
+    width: 100% !important;
+    text-align: center !important;
+  }
+
+  .view-docs-btn {
+    margin-top: 0.8rem !important;
+  }
+}
+
 /* Large Tablets and Small Desktop (1024px - 1416px) */
 @media only screen and (min-width: 1024px) and (max-width: 1416px) {
   .about-us {
@@ -605,5 +626,149 @@ h1 {
 
   .tagline {
     image-rendering: -webkit-optimize-contrast;
+  }
+}
+
+
+/* ==========================
+   ABOUT US — Layout Overrides
+   Paste this at the END of AboutUs.css
+   ========================== */
+
+/* Parent: let content determine height (no 200vh) */
+.about-us {
+  height: auto !important;
+  padding: 4rem 2rem !important;
+  gap: 2rem !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-sizing: border-box !important;
+}
+
+/* Left animation/video column: shrink and stop stretching */
+.spline-overlayaboutus {
+  width: 35% !important;          /* smaller column */
+  max-width: 680px !important;    /* cap on large screens */
+  flex: 0 0 35% !important;       /* don't grow/shrink weirdly */
+  height: auto !important;
+  position: relative !important;
+  top: auto !important;
+  display: block !important;
+  overflow: hidden !important;
+}
+
+/* Neutralize the sticky / full-viewport video */
+.aboutus_wala_hai_ye {
+  height: auto !important;
+  position: relative !important;
+  top: auto !important;
+  align-self: flex-start !important;
+}
+
+/* Video size: keep ratio but limit height so it doesn't dominate */
+.aboutus-vid {
+  position: relative !important;
+  width: 100% !important;
+  height: auto !important;
+  max-height: 520px !important;   /* change this to taste */
+  object-fit: cover !important;
+  border-radius: 12px !important;
+  display: block !important;
+}
+
+/* Right content: expand to fill remaining space */
+.about-us-content {
+  width: calc(65% - 2rem) !important;
+  height: 100% !important;
+  max-width: 900px !important;
+  padding: 20px !important;
+  text-align: left !important;
+  line-height: 1.6 !important;
+  height: auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: flex-start !important;
+}
+
+.about-us-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;   /* centers inside the column */
+  align-items: flex-start;
+  gap: 2rem;
+  max-width: 700px;
+  text-align: left;
+}
+
+
+
+/* Tweak the small bits so text lines up nicely */
+.toppartlilbro {
+  align-items: center !important;
+  gap: 1.2rem !important;
+}
+
+.des {
+  border-left: 1px solid rgba(255,255,255,0.08) !important;
+  padding-left: 18px !important;
+  margin-left: 12px !important;
+}
+
+@media only screen and (max-width: 1400px) {
+  .spline-overlayaboutus {
+    display: none !important;
+  }
+}
+
+/* Hide spline overlay on smaller screens */
+@media only screen and (max-width: 1400px) {
+  .spline-overlayaboutus {
+    display: none !important;
+  }
+
+  .about-us {
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 2rem 1rem !important;
+    text-align: center !important;
+    min-height: 100vh !important; /* centers vertically */
+  }
+
+  .about-us-content {
+    width: 100% !important;
+    max-width: 700px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 2rem !important;
+  }
+
+  .toppartlilbro {
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .des {
+    border-left: none !important;
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+  }
+
+  .featureswow {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1.5rem !important;
+    align-items: center !important;
+    width: 100% !important;
+    margin-top: 2rem !important;
+  }
+
+  .featuresaboutus {
+    text-align: center !important;
+    max-width: 400px !important;
   }
 }

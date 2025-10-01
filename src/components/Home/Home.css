@@ -787,6 +787,42 @@ background-color: rgb(0, 0, 0);
 
 }
 
+@media only screen and (max-width: 865px) {
+.theme-description{
+  display: none;
+}
+.theme-title{
+  border-right: none;
+  padding: 0 10px 0 0px;
 
+  font-size: 26px;
+  text-align: center;
+
+  width: 100%;
+}
+.theme{
+  justify-content: center;
+  align-items: center;
+}
+}
+
+@media only screen and (max-width: 500px) {
+.theme-description{
+  display: none;
+}
+.theme-title{
+  border-right: none;
+  padding: 0 10px 0 0px;
+
+  font-size: 20px;
+  text-align: center;
+
+  width: 100%;
+}
+.theme{
+  justify-content: center;
+  align-items: center;
+}
+}
 
 
