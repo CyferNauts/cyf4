@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import "./MoreAboutUs.css";
+import Preloader from "../Preloader";
 
 // Use local images for the main carousel
 const carouselImages = [
@@ -162,6 +163,12 @@ const MoreAboutUs = ({setActiveTab, setShowRegister}) => {
   const [currentTranslate, setCurrentTranslate] = useState(0);
   const slideTrackRef1 = useRef(null);
   const slideTrackRef2 = useRef(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setLoading(false), 1000); 
+    return () => clearTimeout(timer);
+  }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -219,6 +226,8 @@ const MoreAboutUs = ({setActiveTab, setShowRegister}) => {
       slideTrackRef2.current.style.animationPlayState = 'paused';
     }
   };
+
+  if (loading) return <Preloader />;
 
   return (
     <div className="vulahuladula">

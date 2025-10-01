@@ -85,14 +85,18 @@ const Preloader = ({ onLoaded }) => {
         await Promise.all(loadPromises);
         setIsLoaded(true);
         setTimeout(() => {
-          onLoaded();
+          if (onLoaded && typeof onLoaded === 'function') {
+            onLoaded();
+          }
         }, 1000); // Small delay for smooth transition
       } catch (error) {
         console.error('Error loading assets:', error);
         // Still proceed even if some assets fail to load
         setIsLoaded(true);
         setTimeout(() => {
-          onLoaded();
+          if (onLoaded && typeof onLoaded === 'function') {
+            onLoaded();
+          }
         }, 1000);
       }
     };
