@@ -1,26 +1,4 @@
-# Team Page Redesign - Modern Dark Gradient Theme
+# TODO: Remove custom cursor on mobile view
 
-## Plan Implementation Steps:
-
-### 1. Update Team.css - Remove Glow Effects & Implement Dark Gradient Theme
-- [ ] Remove all glow-related CSS variables and effects
-- [ ] Implement dark gradient backgrounds for cards
-- [ ] Add soft shadows and rounded corners
-- [ ] Replace glow animations with subtle scale/fade/slide animations
-- [ ] Update typography styling for bold names and lighter skills
-
-### 2. Modify SocialIcons.js - Show Only Logos on Hover
-- [ ] Remove platform names from tooltips
-- [ ] Ensure social icons appear neatly on hover without covering name/skills
-- [ ] Position social icons unobtrusively (overlay on image area)
-
-### 3. Update TeamCard.js - Ensure Content Visibility
-- [ ] Ensure name and skills are always visible
-- [ ] Optimize layout to prevent hover effects from covering content
-- [ ] Add smooth transitions for modern feel
-
-### 4. Testing & Verification
-- [ ] Test the redesigned cards for visual consistency
-- [ ] Verify hover animations are smooth and not distracting
-- [ ] Ensure social icons appear neatly without covering content
-- [ ] Check responsive design across different screen sizes
+- [x] Modify src/App.css: Add `* { cursor: auto !important; }` in the `@media (max-width: 768px)` block to show default cursor on mobile.
+- [x] Modify src/components/CustomCursor.css: Add media query `@media (max-width: 768px) { .cursor, .cursor-inner { display: none; } }` to hide custom cursor elements on mobile.

@@ -826,3 +826,57 @@ background-color: rgb(0, 0, 0);
 }
 
 
+
+
+@media only screen and (max-width: 549px) {
+.theme-title{
+  margin: 0;
+  padding: 0;
+  text-align: center;
+
+  transform: translateX(10vw);
+}
+
+}
+
+
+@media only screen and (max-width: 499px) {
+.theme-title{
+  margin: 0;
+  padding: 0;
+  text-align: center;
+
+  transform: translateX(7vw);
+}
+
+}
+
+
+
+@media only screen and (max-width: 430px) {
+.theme-title{
+  margin: 0;
+  padding: 0;
+  text-align: center;
+
+  transform: translateX(4vw);
+}
+
+}
+
+
+
+
+
+
+
+@media only screen and (max-width: 384px) {
+.theme-title{
+  margin: 0;
+  padding: 0;
+  text-align: center;
+font-size: 18px;
+  transform: translateX(2vw);
+}
+
+}
