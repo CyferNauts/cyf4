@@ -4,6 +4,10 @@ import Spline from "@splinetool/react-spline";
 import "./Home.css";
 import bgVideo from "./0829.mp4";
 
+const handleOpenBrochure = () => {
+  window.open(process.env.PUBLIC_URL + '/brochure.pdf', '_blank');
+};
+
 const Home = ({setActiveTab, setShowRegister}) => {
   return (
     <div className="home" id="home">
@@ -56,9 +60,9 @@ const Home = ({setActiveTab, setShowRegister}) => {
 
 
               <div className="fdscdfsg">
-                <button class="button type1 sfsf">
-                  <span class="btn-txt">Get Brochure</span>
-                </button>
+    <button className="button type1 sfsf" onClick={handleOpenBrochure}>
+      <span className="btn-txt">Get Brochure</span>
+    </button>
                 <button class="button type1 sfdf" onClick={() => setActiveTab('timeline')}>
                   <span class="btn-txt">Event Timeline</span>
                 </button>
@@ -66,9 +70,9 @@ const Home = ({setActiveTab, setShowRegister}) => {
 
 
               <button
-                className="button type1 registerbtnmobile"
+                className="button type1 registerbtnmobile" onClick={() => setShowRegister(true)}
               >
-                <span className="btn-txt" onClick={() => setShowRegister(true)}>Register</span>
+                <span className="btn-txt">Register</span>
               </button>
             </div>
 
