@@ -14,6 +14,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "homepage": "https://cyfernauts.github.io/cyf4/",
   "dependencies": {
     "@splinetool/react-spline": "^4.1.0",
     "autoprefixer": "^10.4.21",
