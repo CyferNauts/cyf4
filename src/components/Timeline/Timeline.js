@@ -26,7 +26,7 @@ const Timeline = () => {
     {
       id: 3,
       year: '2025',
-      date: '30th October',
+      date: '29th October',
       title: 'Online Events & Submission',
       description: 'All online event participation and submissions must be completed by this date. Showcase your skills in the digital arena.',
       type: 'ACHIEVEMENT',
