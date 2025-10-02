@@ -5,7 +5,7 @@ import "./Home.css";
 import bgVideo from "./0829.mp4";
 
 const handleOpenBrochure = () => {
-  window.open(process.env.PUBLIC_URL + '/brochure.pdf', '_blank');
+  window.open('https://cyfernode.com/brochure.pdf', '_blank');
 };
 
 const Home = ({setActiveTab, setShowRegister}) => {
