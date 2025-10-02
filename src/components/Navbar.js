@@ -136,18 +136,22 @@ export default function Navbar({ setActiveTab, setSelectedEventIndex , setShowRe
             </button>
             {isMobileEventsOpen && (
               <div id="mobile-events-list" className="mobile-events-list">
-                {events.map((event) => (
-                  <a
-                    key={event.id}
-                    href="#"
-                    onClick={() => {
-                      setActiveTab(event.id);
-                      setIsEventsDropdownOpen(false);
-                    }}
-                  >
-                    {event.title}
-                  </a>
-                ))}
+{events.map((event, index) => (
+  <a
+    key={event.id}
+    href="#"
+    onClick={(e) => {
+      e.preventDefault();
+      setSelectedEventIndex(index);   // same as desktop
+      setActiveTab("events");         // force tab to "events"
+      setIsMobileMenuOpen(false); 
+      window.scrollTo({ top: 0, behavior: 'smooth' });    // close menu after click
+    }}
+  >
+    {event.title}
+  </a>
+))}
+
 
               </div>
             )}

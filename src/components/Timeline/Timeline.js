@@ -314,6 +314,9 @@ const Timeline = () => {
 
     /* Responsive Design */
     @media (max-width: 1024px) {
+      .timeline-page {
+          margin-top: 60px;
+      }
       .timeline-container {
         padding: 0 1.5rem;
       }

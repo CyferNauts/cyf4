@@ -394,6 +394,7 @@ body {
 @media (max-width: 1024px) {
   .team-page {
     padding: var(--spacing-2xl) var(--spacing-md);
+    margin-top: 60px;
   }
   
   .core-grid {
