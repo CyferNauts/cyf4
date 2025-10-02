@@ -66,9 +66,9 @@ const Home = ({setActiveTab, setShowRegister}) => {
 
 
               <button
-                className="button type1 registerbtnmobile" onClick={() => setShowRegister(true)}
+                className="button type1 registerbtnmobile"
               >
-                <span className="btn-txt">Register</span>
+                <span className="btn-txt" onClick={() => setShowRegister(true)}>Register</span>
               </button>
             </div>
 
