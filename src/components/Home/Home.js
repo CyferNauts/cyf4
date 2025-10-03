@@ -2,13 +2,11 @@ import React, { Suspense, lazy } from "react";
 import "./Home.css";
 import bgVideo from "./0829.mp4";
 
-<<<<<<< Updated upstream
+const Spline = lazy(() => import("@splinetool/react-spline"));
+
 const handleOpenBrochure = () => {
   window.open('https://cyfernode.com/brochure.pdf', '_blank');
 };
-=======
-const Spline = lazy(() => import("@splinetool/react-spline"));
->>>>>>> Stashed changes
 
 const Home = ({setActiveTab, setShowRegister}) => {
   return (
@@ -94,13 +92,16 @@ const Home = ({setActiveTab, setShowRegister}) => {
 
 
       </section >
-      
+
+
 
 
 
 
 
     </div >
+
+
 
     
     
