@@ -27,7 +27,7 @@ const YoutubeIcon = () => (
 
 const links = [
   { href: "https://github.com/cyfernauts", label: "GitHub", icon: <GithubIcon /> },
-  { href: "https://www.instagram.com/cyfernode_3.0/", label: "Instagram", icon: <InstagramIcon /> },
+  { href: "https://www.instagram.com/cyfernode_4.0/", label: "Instagram", icon: <InstagramIcon /> },
   { href: "https://discord.gg/wMXaVmpk95", label: "Discord", icon: <DiscordIcon /> },
   { href: "https://www.youtube.com/@cyfernauts", label: "YouTube", icon: <YoutubeIcon /> },
 ];
