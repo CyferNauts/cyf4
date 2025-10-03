@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, memo } from "react";
 import PropTypes from "prop-types";
 import teamData from "../../data/team.json";
 import {
@@ -11,6 +11,9 @@ import {
 } from "react-icons/fa";
 import "./Team.css";
 
+// Cleaned up: Consolidated TeamCard, SocialIcons, and SkeletonCard components into this single file
+// Added React.memo for TeamCard performance optimization
+
 const Team = () => {
   const { core } = teamData;
 
@@ -19,7 +22,7 @@ const Team = () => {
       <h2 className="team-section-title">Team CyferNauts</h2>
       <div className="core-grid">
         {core.map((member) => (
-          <TeamCard key={member.id} member={member} />
+          <MemoizedTeamCard key={member.id} member={member} />
         ))}
       </div>
     </section>
@@ -42,7 +45,7 @@ const TeamCard = ({ member }) => {
           />
         ) : (
           <div className="image-error-fallback">
-            <div className="fallback-avatar">{member.name.charAt(0)}</div>
+            <div className="fallback-avatar">{member.name.charAt(0).toUpperCase()}</div>
           </div>
         )}
         <div className="team-role">{member.role}</div>
@@ -68,6 +71,8 @@ TeamCard.propTypes = {
     socials: PropTypes.object.isRequired,
   }).isRequired,
 };
+
+const MemoizedTeamCard = memo(TeamCard);
 
 const SocialIcons = ({ socials }) => {
   const links = [

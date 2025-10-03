@@ -1,4 +1,7 @@
-# TODO: Remove custom cursor on mobile view
-
-- [x] Modify src/App.css: Add `* { cursor: auto !important; }` in the `@media (max-width: 768px)` block to show default cursor on mobile.
-- [x] Modify src/components/CustomCursor.css: Add media query `@media (max-width: 768px) { .cursor, .cursor-inner { display: none; } }` to hide custom cursor elements on mobile.
+- [ ] Remove unused directories: src/utils, src/components/Gallery
+- [ ] Remove unused files: src/imageLinks.js, app.py, loader.html, .qodo/, all TODO_*.md except this one
+- [ ] Remove unused assets: src/Group 21.png
+- [ ] Clean up commented code and unused imports in components
+- [ ] Optimize images and videos for web (webp, compression) preserving quality
+- [ ] Add minimal comments explaining optimizations
+- [ ] Test application and build for production

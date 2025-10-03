@@ -1,8 +1,8 @@
-import React from "react";
-import { useState } from "react";
-import Spline from "@splinetool/react-spline";
+import React, { Suspense, lazy } from "react";
 import "./Home.css";
 import bgVideo from "./0829.mp4";
+
+const Spline = lazy(() => import("@splinetool/react-spline"));
 
 const handleOpenBrochure = () => {
   window.open('https://cyfernode.com/brochure.pdf', '_blank');
@@ -84,19 +84,24 @@ const Home = ({setActiveTab, setShowRegister}) => {
     </div>
               {/* Foreground Spline overlay */ }
   <div className="spline-overlay">
-    <Spline scene="https://prod.spline.design/JSjRqCtovBqau7Fq/scene.splinecode" />
+    <Suspense fallback={<div>Loading 3D scene...</div>}>
+      <Spline scene="https://prod.spline.design/JSjRqCtovBqau7Fq/scene.splinecode" />
+    </Suspense>
   </div>
 
 
 
       </section >
-      
+
+
 
 
 
 
 
     </div >
+
+
 
     
     
