@@ -128,14 +128,6 @@
   width: 100%;
   height: 100%;
   object-fit: contain;
-  mask-image: url('../Group 21.png');
-  -webkit-mask-image: url('../Group 21.png');
-  mask-repeat: no-repeat;
-  -webkit-mask-repeat: no-repeat;
-  mask-position: center;
-  -webkit-mask-position: center;
-  mask-size: contain;
-  -webkit-mask-size: contain;
   background: transparent;
   position: relative;
   z-index: 1;

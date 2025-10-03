@@ -90,8 +90,8 @@ const Preloader = ({ onLoaded }) => {
           }
         }, 1000); // Small delay for smooth transition
       } catch (error) {
-        console.error('Error loading assets:', error);
         // Still proceed even if some assets fail to load
+        // Cleaned up: Removed console.error for production-ready code
         setIsLoaded(true);
         setTimeout(() => {
           if (onLoaded && typeof onLoaded === 'function') {
