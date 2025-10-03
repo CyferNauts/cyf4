@@ -1,6 +1,7 @@
 import React, { Suspense, lazy } from "react";
 import "./Home.css";
 import bgVideo from "./0829.mp4";
+import Preloader from "../Preloader";
 
 const Spline = lazy(() => import("@splinetool/react-spline"));
 
@@ -84,7 +85,7 @@ const Home = ({setActiveTab, setShowRegister}) => {
     </div>
               {/* Foreground Spline overlay */ }
   <div className="spline-overlay">
-    <Suspense fallback={<div>Loading 3D scene...</div>}>
+    <Suspense fallback={<Preloader simple />}>
       <Spline scene="https://prod.spline.design/JSjRqCtovBqau7Fq/scene.splinecode" />
     </Suspense>
   </div>

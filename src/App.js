@@ -1,8 +1,7 @@
 import React, { useEffect, useState, useRef, Suspense, lazy } from 'react';
 import './App.css';
 import gsap from "gsap";
-
-const Preloader = lazy(() => import('./components/Preloader'));
+import Preloader from './components/Preloader';
 const Navbar = lazy(() => import('./components/Navbar'));
 const Home = lazy(() => import('./components/Home/Home'));
 const SpacerSection = lazy(() => import('./components/Home/SpacerSection'));
@@ -37,15 +36,11 @@ function App() {
   };
 
   if (!isLoaded) {
-    return (
-      <Suspense fallback={<div>Loading...</div>}>
-        <Preloader onLoaded={handleLoaded} />
-      </Suspense>
-    );
+    return <Preloader onLoaded={handleLoaded} />;
   }
 
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense fallback={<Preloader simple />}>
       <div className="App dark">
         {/* Gooey filter */}
         <svg xmlns="http://www.w3.org/2000/svg" style={{ position: "absolute", width: 0, height: 0 }}>

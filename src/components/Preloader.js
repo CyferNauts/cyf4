@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import './Preloader.css';
 
-const Preloader = ({ onLoaded }) => {
+const Preloader = ({ onLoaded, simple = false }) => {
   const [progress, setProgress] = useState(0);
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
+    if (simple) return; // Skip asset loading for simple mode
+
     const loadAssets = async () => {
       const assets = [
         // Videos
@@ -102,7 +104,7 @@ const Preloader = ({ onLoaded }) => {
     };
 
     loadAssets();
-  }, [onLoaded]);
+  }, [onLoaded, simple]);
 
   return (
     <div className={`preloader ${isLoaded ? 'fade-out' : ''}`}>
