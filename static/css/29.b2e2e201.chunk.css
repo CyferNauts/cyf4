@@ -1,0 +1,2 @@
+.cursor,.cursor-inner{border-radius:50%;left:0;pointer-events:none;position:fixed;top:0;transform:translateZ(0);z-index:9999}.cursor{background-color:#fff;border:2px solid #fff;height:40px;margin-left:-20px;margin-top:-20px;mix-blend-mode:exclusion;transition:all .2s ease-out;width:40px}.cursor-inner{background-color:#fff;height:8px;margin-left:-4px;margin-top:-4px;width:8px}@media (max-width:768px){.cursor,.cursor-inner{display:none}}
+/*# sourceMappingURL=29.b2e2e201.chunk.css.map*/
