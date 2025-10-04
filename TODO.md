@@ -1,7 +1,0 @@
-- [ ] Remove unused directories: src/utils, src/components/Gallery
-- [ ] Remove unused files: src/imageLinks.js, app.py, loader.html, .qodo/, all TODO_*.md except this one
-- [ ] Remove unused assets: src/Group 21.png
-- [ ] Clean up commented code and unused imports in components
-- [ ] Optimize images and videos for web (webp, compression) preserving quality
-- [ ] Add minimal comments explaining optimizations
-- [ ] Test application and build for production
