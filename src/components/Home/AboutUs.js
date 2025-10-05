@@ -56,7 +56,10 @@ const AboutUs = ({setActiveTab}) => {
       <div className="featuresaboutus">
         <h2>Discover Our Events</h2>
         <p>Join us in exciting events that bring our community together. From workshops to hackathons, there's something for everyone.</p>
-        <button className="view-docs-btn" onClick={() => {setActiveTab('events')}}>View Events</button>
+        <button className="view-docs-btn" onClick={() => {
+          setActiveTab('events')
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }}>View Events</button>
       </div>
       <div className="featuresaboutus">
         <h2>Watch Our Teaser</h2>
@@ -66,7 +69,10 @@ const AboutUs = ({setActiveTab}) => {
       <div className="featuresaboutus">
         <h2>Meet Our Team</h2>
         <p>Our diverse team of experts is dedicated to innovation and excellence.</p>
-        <button className="view-docs-btn" onClick={() => {setActiveTab('team')}}>Our Team</button>
+        <button className="view-docs-btn" onClick={() => {
+          setActiveTab('team')
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+          }}>Our Team</button>
       </div>
       </div>
 

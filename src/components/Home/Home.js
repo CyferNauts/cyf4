@@ -64,7 +64,10 @@ const Home = ({setActiveTab, setShowRegister}) => {
     <button className="button type1 sfsf" onClick={handleOpenBrochure}>
       <span className="btn-txt">Get Brochure</span>
     </button>
-                <button class="button type1 sfdf" onClick={() => setActiveTab('timeline')}>
+                <button class="button type1 sfdf" onClick={() => {
+                  setActiveTab('timeline')
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                  }}>
                   <span class="btn-txt">Event Timeline</span>
                 </button>
               </div>
