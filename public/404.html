@@ -5,7 +5,7 @@
   <title>404 – Page Not Found | CyferNode 4.0</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Fonts -->
+  
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Krona+One&display=swap" rel="stylesheet">
 
   <style>
@@ -109,10 +109,9 @@
 }
 
 .notfound-btn:active {
-  transform: translateY(0); /* no bounce, just reset */
+  transform: translateY(0);
 }
 
-    /* Background animations */
     @keyframes bgShift {
       from { background-position: 0 0; }
       to { background-position: 200px 200px; }
@@ -123,7 +122,6 @@
       to { opacity: 0.6; }
     }
 
-    /* Glitch animations */
     @keyframes glitchTop {
       0% { clip: rect(0, 9999px, 0, 0); }
       10% { clip: rect(10px, 9999px, 50px, 0); transform: translate(-5px, -5px); }
@@ -140,7 +138,6 @@
       100% { clip: rect(0, 9999px, 0, 0); transform: none; }
     }
 
-    /* Subtle button animation (no neon glow) */
     @keyframes buttonSlide {
       from { transform: translateY(0); }
       to { transform: translateY(-2px); }

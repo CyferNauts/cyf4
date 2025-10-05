@@ -52,7 +52,10 @@ export default function Navbar({ setActiveTab, setSelectedEventIndex , setShowRe
                   onMouseEnter={() => setIsEventsDropdownOpen(true)}
                   onMouseLeave={() => setIsEventsDropdownOpen(false)}
                 >
-                  <a href="#" onClick={() => handleNavClick(link.id)}>{link.label}</a>
+                  <a href="#" onClick={() => {
+                    handleNavClick(link.id)
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                  }}>{link.label}</a>
                   {isEventsDropdownOpen && (
                     <div className="dropdown-content">
                       {events.map((event, index) => (
@@ -64,6 +67,7 @@ export default function Navbar({ setActiveTab, setSelectedEventIndex , setShowRe
     e.preventDefault();
     setSelectedEventIndex(index);
     setActiveTab("events");
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }}
 >
   {event.title}
