@@ -8,10 +8,10 @@ const Timeline = () => {
     {
       id: 1,
       year: '2025',
-      date: '3rd October',
+      date: '6th October',
       title: 'Registration Begins',
       description: 'Event details go live. Participants can start registering for all competitions and activities. Join the exciting journey of CYFERNODE 2025.',
-      type: 'MILESTONE',
+      type: 'REGISTRATION',
       icon: '01'
     },
     {
@@ -20,7 +20,7 @@ const Timeline = () => {
       date: '24th October',
       title: 'Registration Deadline',
       description: 'Last chance to register for the event. Ensure all team entries and participant details are submitted before this date.',
-      type: 'EVENT',
+      type: 'REGISTRATION',
       icon: '02'
     },
     {
@@ -29,7 +29,7 @@ const Timeline = () => {
       date: '29th October',
       title: 'Online Events & Submission',
       description: 'All online event participation and submissions must be completed by this date. Showcase your skills in the digital arena.',
-      type: 'ACHIEVEMENT',
+      type: 'PRELIMS',
       icon: '03'
     },
     {
@@ -38,7 +38,7 @@ const Timeline = () => {
       date: '3rd November',
       title: 'Offline Main Event & Valedictory',
       description: 'Grand finale conducted offline. Includes main events, prize distribution, and closing valedictory ceremony.',
-      type: 'MILESTONE',
+      type: 'FINALE',
       icon: '04'
     }
   ];

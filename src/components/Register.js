@@ -6,15 +6,8 @@ export default function Register({ trigger, setTrigger }) {
   if (!trigger) return null;
 
   const handleRequestInvite = () => {
-    // Customize this action:
-    // 1. Open email client
-    // window.location.href = `mailto:events@example.com?subject=Request Event Invite`;
-    
-    // 2. Show alert (temporary solution)
-    alert('Invite request sent! We\'ll contact you soon.');
-    
-    // 3. Or integrate with your backend API
     // fetch('/api/request-invite', { method: 'POST' });
+    window.open("https://forms.gle/HGPSNdbetpg6rN6T8", "_blank");
   };
 
   return (
