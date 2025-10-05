@@ -98,25 +98,6 @@
     },
     {
       "id": 6,
-      "name": "Ashutosh Kumar",
-      "role": "Member",
-      "skills": [
-        "Cybersecurity",
-        "Programming",
-        "UI/UX Design"
-      ],
-      "img": "https://cyfernode.netlify.app/team/ashutosh.jpg",
-      "socials": {
-        "github": "",
-        "linkedin": "",
-        "twitter": "",
-        "whatsapp": "https://wa.me/+918882854288",
-        "instagram": "https://www.instagram.com/itss_me_digital_ashu/",
-        "discord": "https://discord.com/users/890192992462319616"
-      }
-    },
-    {
-      "id": 7,
       "name": "Vinamrata Chawla",
       "role": "Member",
       "skills": [
@@ -135,7 +116,7 @@
       }
     },
     {
-      "id": 8,
+      "id": 7,
       "name": "Bravish Seth",
       "role": "Member",
       "skills": [
@@ -155,26 +136,7 @@
       }
     },
     {
-      "id": 9,
-      "name": "Nakul Tomar",
-      "role": "Member",
-      "skills": [
-        "Animation",
-        "Cinematography",
-        "3D Artist"
-      ],
-      "img": "https://cyfernode.netlify.app/team/nakul.jpg",
-      "socials": {
-        "github": "",
-        "linkedin": "",
-        "twitter": "",
-        "whatsapp": "",
-        "instagram": "https://www.instagram.com/nakultomar_00/",
-        "discord": "https://discordapp.com/users/770255406193967155"
-      }
-    },
-    {
-      "id": 10,
+      "id": 8,
       "name": "Namish Dawar",
       "role": "Member",
       "skills": [
@@ -193,7 +155,7 @@
       }
     },
     {
-      "id": 11,
+      "id": 9,
       "name": "Ayera Chhatwal",
       "role": "Member",
       "skills": [
@@ -212,7 +174,7 @@
       }
     },
     {
-      "id": 12,
+      "id": 10,
       "name": "Pranjal Sharma",
       "role": "Member",
       "skills": [
@@ -231,7 +193,7 @@
       }
     },
     {
-      "id": 13,
+      "id": 11,
       "name": "Sampada Bhatia",
       "role": "Member",
       "skills": [
@@ -250,26 +212,7 @@
       }
     },
     {
-      "id": 14,
-      "name": "Manas",
-      "role": "Member",
-      "skills": [
-        "Video Editing",
-        "Poster Making",
-        "Public Speaking"
-      ],
-      "img": "https://cyfernode.netlify.app/team/manas.jpg",
-      "socials": {
-        "github": "",
-        "linkedin": "",
-        "twitter": "",
-        "whatsapp": "https://wa.me/qr/53SKQPTXNHS6L1",
-        "instagram": "https://www.instagram.com/manasmads1",
-        "discord": "https://discord.com/users/1419366129964421285"
-      }
-    },
-    {
-      "id": 15,
+      "id": 12,
       "name": "Yuvraj Sharma",
       "role": "Member",
       "skills": [
@@ -289,7 +232,7 @@
       }
     },
     {
-      "id": 16,
+      "id": 13,
       "name": "Yashvardhan Singh",
       "role": "Member",
       "skills": [
@@ -308,45 +251,7 @@
       }
     },
     {
-      "id": 17,
-      "name": "Yugank Kumar",
-      "role": "Member",
-      "skills": [
-        "Gaming",
-        "Designing",
-        "Sports"
-      ],
-      "img": "https://cyfernode.netlify.app/team/yugank.jpg",
-      "socials": {
-        "github": "",
-        "linkedin": "",
-        "twitter": "",
-        "whatsapp": "",
-        "instagram": "https://www.instagram.com/kumar_yugank001",
-        "discord": "https://discord.com/users/1127869119216222249"
-      }
-    },
-    {
-      "id": 18,
-      "name": "Navneet",
-      "role": "Member",
-      "skills": [
-        "Photography",
-        "Melophile",
-        "Gearhead"
-      ],
-      "img": "https://cyfernode.netlify.app/team/navneet.jpg",
-      "socials": {
-        "github": "",
-        "linkedin": "",
-        "twitter": "https://x.com/nxvneeet?s=21",
-        "whatsapp": "",
-        "instagram": "https://www.instagram.com/nxvneeet?igsh=MWdkcjJoZmk1ZDVoNA%3D%3D&utm_source=qr",
-        "discord": "https://discord.com/users/871012247084892170"
-      }
-    },
-    {
-      "id": 19,
+      "id": 14,
       "name": "Kumaran",
       "role": "Member",
       "skills": [
