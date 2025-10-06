@@ -8,6 +8,7 @@ import {
   FaWhatsapp,
   FaInstagram,
   FaDiscord,
+  FaSpotify, 
 } from "react-icons/fa";
 import "./Team.css";
 
@@ -82,6 +83,7 @@ const SocialIcons = ({ socials }) => {
     { key: "whatsapp", Icon: FaWhatsapp, href: socials.whatsapp },
     { key: "instagram", Icon: FaInstagram, href: socials.instagram },
     { key: "discord", Icon: FaDiscord, href: socials.discord },
+    { key: "spotify", Icon: FaSpotify, href: socials.spotify },
   ];
 
   return (
