@@ -64,7 +64,9 @@ const AboutUs = ({setActiveTab}) => {
       <div className="featuresaboutus">
         <h2>Watch Our Teaser</h2>
         <p>Get a glimpse of our vision and mission through our engaging teaser video.</p>
-        <button className="view-docs-btn">Watch Now</button>
+        <button className="view-docs-btn" onClick={() => {
+          window.open("https://youtu.be/9aah1N1ZSS4?si=MLx6VmIdASkf_QXR", "_blank");
+          }}>Watch Now</button>
       </div>
       <div className="featuresaboutus">
         <h2>Meet Our Team</h2>
