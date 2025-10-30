@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Footer.css';
 
 const events = [
@@ -78,6 +79,7 @@ const Footer = ({setActiveTab, onInfoClick}) => {
   setActiveTab('gallery');
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }}>Gallery</a></li>
+              <li><Link to="/resources">Resources</Link></li>
             </ul>
           </div>
 
