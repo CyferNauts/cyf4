@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useRef, Suspense, lazy } from 'react';
+import { Routes, Route } from 'react-router-dom';
 import './App.css';
 import gsap from "gsap";
 import Preloader from './components/Preloader';
@@ -16,6 +17,7 @@ const Events = lazy(() => import('./components/Events/Events'));
 const Timeline = lazy(() => import('./components/Timeline/Timeline'));
 const Links = lazy(() => import('./components/Links'));
 const Register = lazy(() => import('./components/Register'));
+const Resources = lazy(() => import('./components/Resources'));
 
 function App() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -41,47 +43,57 @@ function App() {
 
   return (
     <Suspense fallback={<Preloader simple />}>
-      <div className="App dark">
-        {/* Gooey filter */}
-        <svg xmlns="http://www.w3.org/2000/svg" style={{ position: "absolute", width: 0, height: 0 }}>
-          <defs>
-            <filter id="goo">
-              <feGaussianBlur in="SourceGraphic" stdDeviation="6" result="blur" />
-              <feColorMatrix in="blur" mode="matrix"
-                values="1 0 0 0 0
-                        0 1 0 0 0
-                        0 0 1 0 0
-                        0 0 0 35 -15" result="goo" />
-              <feComposite in="SourceGraphic" in2="goo" operator="atop" />
-            </filter>
-          </defs>
-        </svg>
+      <Routes>
+        <Route path="/" element={
+          <div className="App dark">
+            {/* Gooey filter */}
+            <svg xmlns="http://www.w3.org/2000/svg" style={{ position: "absolute", width: 0, height: 0 }}>
+              <defs>
+                <filter id="goo">
+                  <feGaussianBlur in="SourceGraphic" stdDeviation="6" result="blur" />
+                  <feColorMatrix in="blur" mode="matrix"
+                    values="1 0 0 0 0
+                            0 1 0 0 0
+                            0 0 1 0 0
+                            0 0 0 35 -15" result="goo" />
+                  <feComposite in="SourceGraphic" in2="goo" operator="atop" />
+                </filter>
+              </defs>
+            </svg>
 
-        {/* Your app sections */}
-        <CustomCursor />
-        <Navbar setActiveTab={setActiveTab} setSelectedEventIndex={setSelectedEventIndex} setShowRegister={setShowRegister} />
-        <Register trigger={showRegister} setTrigger={setShowRegister} />
-        {activeTab !== 'team' && activeTab !== 'events' && activeTab !== 'timeline' && (
-          <>
-            <Home setActiveTab={setActiveTab} setShowRegister={setShowRegister} />
-            <Links />
-            <EventLineUp onInfoClick={(index) => {
+            {/* Your app sections */}
+            <CustomCursor />
+            <Navbar setActiveTab={setActiveTab} setSelectedEventIndex={setSelectedEventIndex} setShowRegister={setShowRegister} />
+            <Register trigger={showRegister} setTrigger={setShowRegister} />
+            {activeTab !== 'team' && activeTab !== 'events' && activeTab !== 'timeline' && (
+              <>
+                <Home setActiveTab={setActiveTab} setShowRegister={setShowRegister} />
+                <Links />
+                <EventLineUp onInfoClick={(index) => {
+                  setSelectedEventIndex(index);  // pass to Events.js
+                  setActiveTab("events");        // open Events page
+                }} />
+                <AboutUs setActiveTab={setActiveTab} />
+                <MoreAboutUs setActiveTab={setActiveTab} setShowRegister={setShowRegister} />
+                <MoreAboutUsTeaser />
+              </>
+            )}
+            {activeTab === 'team' && <Team />}
+            {activeTab === "events" && <Events initialIndex={selectedEventIndex} />}
+            {activeTab === 'timeline' && <Timeline />}
+            {activeTab !== 'events' && <Footer setActiveTab={setActiveTab} onInfoClick={(index) => {
               setSelectedEventIndex(index);  // pass to Events.js
               setActiveTab("events");        // open Events page
-            }} />
-            <AboutUs setActiveTab={setActiveTab} />
-            <MoreAboutUs setActiveTab={setActiveTab} setShowRegister={setShowRegister} />
-            <MoreAboutUsTeaser />
-          </>
-        )}
-        {activeTab === 'team' && <Team />}
-        {activeTab === "events" && <Events initialIndex={selectedEventIndex} />}
-        {activeTab === 'timeline' && <Timeline />}
-        {activeTab !== 'events' && <Footer setActiveTab={setActiveTab} onInfoClick={(index) => {
-          setSelectedEventIndex(index);  // pass to Events.js
-          setActiveTab("events");        // open Events page
-        }} />}
-      </div>
+            }} />}
+          </div>
+        } />
+        <Route path="/resources" element={
+          <div className="App dark">
+            <CustomCursor />
+            <Resources />
+          </div>
+        } />
+      </Routes>
     </Suspense>
   );
 }
