@@ -18,6 +18,16 @@ const Timeline = lazy(() => import('./components/Timeline/Timeline'));
 const Links = lazy(() => import('./components/Links'));
 const Register = lazy(() => import('./components/Register'));
 const Resources = lazy(() => import('./components/Resources'));
+const Programming = lazy(() => import('./components/ResourcePages/Programming'));
+const Hackathon = lazy(() => import('./components/ResourcePages/Hackathon'));
+const MachineLearning = lazy(() => import('./components/ResourcePages/MachineLearning'));
+const UiUxDesign = lazy(() => import('./components/ResourcePages/UiUxDesign'));
+const Hardware = lazy(() => import('./components/ResourcePages/Hardware'));
+const ThreeDModeling = lazy(() => import('./components/ResourcePages/ThreeDModeling'));
+const GroupDiscussion = lazy(() => import('./components/ResourcePages/GroupDiscussion'));
+const VideoEditing = lazy(() => import('./components/ResourcePages/VideoEditing'));
+const GraphicDesign = lazy(() => import('./components/ResourcePages/GraphicDesign'));
+const Photography = lazy(() => import('./components/ResourcePages/Photography'));
 
 function App() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -91,6 +101,66 @@ function App() {
           <div className="App dark">
             <CustomCursor />
             <Resources />
+          </div>
+        } />
+        <Route path="/resources/programming" element={
+          <div className="App dark">
+            <CustomCursor />
+            <Programming />
+          </div>
+        } />
+        <Route path="/resources/hackathon" element={
+          <div className="App dark">
+            <CustomCursor />
+            <Hackathon />
+          </div>
+        } />
+        <Route path="/resources/machine-learning" element={
+          <div className="App dark">
+            <CustomCursor />
+            <MachineLearning />
+          </div>
+        } />
+        <Route path="/resources/ui-ux-design" element={
+          <div className="App dark">
+            <CustomCursor />
+            <UiUxDesign />
+          </div>
+        } />
+        <Route path="/resources/hardware" element={
+          <div className="App dark">
+            <CustomCursor />
+            <Hardware />
+          </div>
+        } />
+        <Route path="/resources/3d-modeling" element={
+          <div className="App dark">
+            <CustomCursor />
+            <ThreeDModeling />
+          </div>
+        } />
+        <Route path="/resources/group-discussion" element={
+          <div className="App dark">
+            <CustomCursor />
+            <GroupDiscussion />
+          </div>
+        } />
+        <Route path="/resources/video-editing" element={
+          <div className="App dark">
+            <CustomCursor />
+            <VideoEditing />
+          </div>
+        } />
+        <Route path="/resources/graphic-design" element={
+          <div className="App dark">
+            <CustomCursor />
+            <GraphicDesign />
+          </div>
+        } />
+        <Route path="/resources/photography" element={
+          <div className="App dark">
+            <CustomCursor />
+            <Photography />
           </div>
         } />
       </Routes>

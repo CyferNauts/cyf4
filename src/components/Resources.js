@@ -1,12 +1,21 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, Code, Trophy, Brain, Palette, Cpu, Box, MessageCircle, Video, Pen, Camera } from 'lucide-react';
+import { isAuthenticated, setAuthenticated } from '../utils/auth';
 
 const Resources = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [code, setCode] = useState('');
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
+
+  // Check for existing authentication on component mount
+  useEffect(() => {
+    const authStatus = localStorage.getItem('resources_authenticated');
+    if (authStatus === 'true') {
+      setIsAuthenticated(true);
+    }
+  }, []);
 
   const resources = [
     { 
@@ -112,6 +121,7 @@ const Resources = () => {
     setTimeout(() => {
       if (code === 'demo123' || code === 'access') {
         setIsAuthenticated(true);
+        localStorage.setItem('resources_authenticated', 'true');
       } else {
         setError('Invalid access code');
       }
@@ -123,6 +133,7 @@ const Resources = () => {
     setIsAuthenticated(false);
     setCode('');
     setError('');
+    localStorage.removeItem('resources_authenticated');
   };
 
   const PatternOverlay = ({ pattern, darkText }) => {
@@ -285,7 +296,7 @@ const Resources = () => {
             transition={{ duration: 0.4, ease: [0.4, 0, 0.2, 1] }}
             className="min-h-screen bg-black"
           >
-            {/* Header */}
+        
             <div className="border-b border-[#1f1f1f]">
               <div className="max-w-[1400px] mx-auto px-6 py-6">
                 <div className="flex justify-between items-center">
@@ -312,7 +323,7 @@ const Resources = () => {
               </div>
             </div>
 
-            {/* Vibrant Grid Layout */}
+
             <div className="max-w-[1400px] mx-auto px-6 py-8">
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 auto-rows-fr">
                 
@@ -321,11 +332,11 @@ const Resources = () => {
                   return (
                     <motion.a
                       key={resource.id}
-                      href="#"
+                      href={`/resources/${resource.title.toLowerCase().replace(/\s+/g, '-').replace('3d', '3d').replace('ui/ux', 'ui-ux')}`}
                       initial={{ opacity: 0, y: 30 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.5, delay: 0.05 * index }}
-                      whileHover={{ 
+                      whileHover={{
                         y: -6,
                         transition: { duration: 0.3, ease: [0.4, 0, 0.2, 1] }
                       }}
@@ -333,18 +344,18 @@ const Resources = () => {
                       className={`${resource.span} bg-gradient-to-br ${resource.gradient} rounded-2xl overflow-hidden cursor-pointer transition-all duration-300 hover:shadow-2xl hover:shadow-black/50 group relative`}
                       style={{ minHeight: '200px' }}
                     >
-                      {/* Pattern Overlay */}
+                    
                       <PatternOverlay pattern={resource.pattern} darkText={resource.darkText} />
                       
-                      {/* Hover Glow Effect */}
+       
                       <motion.div 
                         className="absolute inset-0 bg-white/0 group-hover:bg-white/10 transition-all duration-300"
                         initial={false}
                       />
 
-                      {/* Content */}
+               
                       <div className="relative h-full p-6 flex flex-col justify-between">
-                        {/* Icon Badge */}
+                   
                         <motion.div 
                           className={`inline-flex items-center justify-center w-12 h-12 ${resource.darkText ? 'bg-black/10' : 'bg-white/10'} backdrop-blur-sm rounded-full self-start`}
                           whileHover={{ scale: 1.1, rotate: 5 }}
@@ -353,7 +364,7 @@ const Resources = () => {
                           <Icon className={`w-6 h-6 ${resource.darkText ? 'text-black/70' : 'text-white/90'}`} />
                         </motion.div>
 
-                        {/* Text Content */}
+                     
                         <div>
                           <h3 className={`text-xl font-bold mb-2 ${resource.darkText ? 'text-black' : 'text-white'}`}>
                             {resource.title}
@@ -362,7 +373,7 @@ const Resources = () => {
                             {resource.description}
                           </p>
                           
-                          {/* Arrow Button */}
+                        
                           <motion.div 
                             className={`inline-flex items-center gap-2 ${resource.darkText ? 'text-black/80' : 'text-white/90'} text-sm font-medium`}
                             initial={{ x: 0 }}
@@ -396,7 +407,7 @@ const Resources = () => {
 
               </div>
 
-              {/* Footer Info */}
+
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}

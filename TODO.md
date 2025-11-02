@@ -1,36 +1,45 @@
-# TODO: Build Secure /resources Page with Authentication
+# Resource Authentication & Navigation Implementation
 
-## Step 1: Install Dependencies
-- [x] Install react-router-dom for routing
-- [x] Install js-cookie for cookie handling
-- [x] Install express, cors, dotenv for backend API
+## Current Status
+- Authentication only exists on main /resources page
+- Individual resource pages are directly accessible without code verification
+- No persistent authentication state
+- No back navigation buttons on individual pages
 
-## Step 2: Set Up Backend API
-- [x] Create backend/ folder
-- [x] Create backend/server.js with Express server
-- [x] Create backend/routes/verifyCode.js for /api/verify-code endpoint
-- [x] Set up .env file with RESOURCE_ACCESS_CODE
-- [x] Add scripts to package.json for running backend
+## Tasks to Complete
 
-## Step 3: Update React App for Routing
-- [x] Modify src/index.js to wrap App with BrowserRouter
-- [x] Modify src/App.js to use Routes and Route for /resources
-- [x] Create src/components/Resources.js component
+### 1. Persistent Authentication State
+- [ ] Modify Resources.js to store authentication in localStorage
+- [ ] Add authentication persistence across page refreshes
+- [ ] Create authentication utility functions
 
-## Step 4: Implement Authentication Logic in Resources Component
-- [x] Check for resourceAuth cookie on load
-- [x] If not present, show password prompt
-- [x] Handle form submission to verify code via API
-- [x] Set cookie on success, show resources page
-- [x] Add logout button to clear cookie
+### 2. Individual Page Authentication
+- [ ] Add authentication checks to all individual resource pages
+- [ ] Redirect unauthenticated users to /resources for code entry
+- [ ] Ensure internal navigation bypasses code verification
 
-## Step 5: Style the UI
-- [x] Style password prompt with fade-in animation
-- [x] Style resources page with header and grid of cards (mock data)
-- [x] Ensure professional, minimal design using Tailwind
+### 3. Navigation Buttons
+- [ ] Add "Go Back to Resource Menu" button to Programming.js
+- [ ] Add "Go Back to Resource Menu" button to Hackathon.js
+- [ ] Add "Go Back to Resource Menu" button to MachineLearning.js
+- [ ] Add "Go Back to Resource Menu" button to UiUxDesign.js
+- [ ] Add "Go Back to Resource Menu" button to Hardware.js
+- [ ] Add "Go Back to Resource Menu" button to ThreeDModeling.js
+- [ ] Add "Go Back to Resource Menu" button to GroupDiscussion.js
+- [ ] Add "Go Back to Resource Menu" button to VideoEditing.js
+- [ ] Add "Go Back to Resource Menu" button to GraphicDesign.js
+- [ ] Add "Go Back to Resource Menu" button to Photography.js
 
-## Step 6: Test Functionality
-- [x] Test direct access to /resources
-- [x] Test authentication flow
-- [x] Test cookie persistence
-- [x] Test logout
+### 4. Testing & Verification
+- [ ] Test direct access to /resources (should require code)
+- [ ] Test internal navigation from /resources to individual pages (should bypass code)
+- [ ] Test direct access to individual pages (should redirect to /resources)
+- [ ] Test page refresh behavior on authenticated pages
+- [ ] Test logout functionality
+
+## Implementation Notes
+- Use localStorage for authentication persistence
+- Authentication key: 'resources_authenticated'
+- Individual pages should check authentication on mount
+- Back buttons should use React Router's Link component
+- Maintain consistent styling with existing design
