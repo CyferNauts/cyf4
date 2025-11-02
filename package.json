@@ -11,7 +11,8 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "server": "node backend/server.js",
-    "dev": "concurrently \"npm run server\" \"npm start\""
+    "dev": "concurrently \"npm run server\" \"npm start\"",
+    "postbuild": "cp build/index.html build/404.html"
   },
   "keywords": [],
   "author": "",
