@@ -1,0 +1,142 @@
+.notfound-container {
+  margin: 0;
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #000;
+  overflow: hidden;
+  font-family: "Syne", sans-serif;
+  color: #fff;
+  position: relative;
+}
+
+
+.notfound-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.03) 0px,
+    rgba(255, 255, 255, 0.03) 2px,
+    transparent 2px,
+    transparent 6px
+  );
+  animation: bgShift 6s linear infinite;
+  z-index: 0;
+}
+
+.notfound-container::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.05), transparent 70%);
+  animation: pulse 8s ease-in-out infinite alternate;
+  z-index: 0;
+}
+
+
+.notfound-title {
+  font-family: "Krona One", sans-serif;
+  font-size: clamp(6rem, 14vw, 12rem);
+  font-weight: 800;
+  margin: 0;
+  color: #fff;
+  position: relative;
+  z-index: 1; 
+}
+
+.notfound-title::before,
+.notfound-title::after {
+  content: "404";
+  position: absolute;
+  left: 0;
+  right: 0;
+  color: #fff;
+  overflow: hidden;
+  clip: rect(0, 900px, 0, 0);
+}
+
+.notfound-title::before {
+  animation: glitchTop 2s infinite linear alternate-reverse;
+  opacity: 0.6;
+}
+
+.notfound-title::after {
+  animation: glitchBottom 1.5s infinite linear alternate-reverse;
+  opacity: 0.3;
+}
+
+.notfound-text {
+  font-size: 1.2rem;
+  margin: 1.5rem 0 3rem;
+  color: #aaa;
+  max-width: 700px;
+  line-height: 1.6;
+  z-index: 1;
+}
+
+.notfound-btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #0072ff, #04a3ff);
+  border-radius: 10px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  border: none;
+  transition: background 0.4s ease, transform 0.2s ease;
+  z-index: 1;
+}
+
+.notfound-btn:hover {
+  background: linear-gradient(135deg, #005ad4, #0380d4);
+  transform: translateY(-2px);
+}
+
+.notfound-btn:active {
+  transform: translateY(0);
+}
+
+
+@keyframes bgShift {
+  from { background-position: 0 0; }
+  to { background-position: 200px 200px; }
+}
+
+@keyframes pulse {
+  from { opacity: 0.2; }
+  to { opacity: 0.6; }
+}
+
+@keyframes glitchTop {
+  0% { clip: rect(0, 9999px, 0, 0); }
+  10% { clip: rect(10px, 9999px, 50px, 0); transform: translate(-5px, -5px); }
+  20% { clip: rect(85px, 9999px, 140px, 0); transform: translate(5px, 5px); }
+  30% { clip: rect(20px, 9999px, 80px, 0); transform: translate(-3px, 3px); }
+  100% { clip: rect(0, 9999px, 0, 0); transform: none; }
+}
+
+@keyframes glitchBottom {
+  0% { clip: rect(0, 9999px, 0, 0); }
+  10% { clip: rect(60px, 9999px, 120px, 0); transform: translate(5px, -5px); }
+  20% { clip: rect(30px, 9999px, 90px, 0); transform: translate(-5px, 5px); }
+  30% { clip: rect(70px, 9999px, 130px, 0); transform: translate(3px, -3px); }
+  100% { clip: rect(0, 9999px, 0, 0); transform: none; }
+}
+
+
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #04a3ff;
+  pointer-events: none;
+  z-index: 9999;
+}

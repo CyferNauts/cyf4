@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import './App.css';
 import gsap from "gsap";
 import Preloader from './components/Preloader';
+import NotFound from "./NotFound";
 const Navbar = lazy(() => import('./components/Navbar'));
 const Home = lazy(() => import('./components/Home/Home'));
 const SpacerSection = lazy(() => import('./components/Home/SpacerSection'));
@@ -28,7 +29,6 @@ const GroupDiscussion = lazy(() => import('./components/ResourcePages/GroupDiscu
 const VideoEditing = lazy(() => import('./components/ResourcePages/VideoEditing'));
 const GraphicDesign = lazy(() => import('./components/ResourcePages/GraphicDesign'));
 const Photography = lazy(() => import('./components/ResourcePages/Photography'));
-
 function App() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [activeTab, setActiveTab] = useState('home');
@@ -163,6 +163,13 @@ function App() {
             <Photography />
           </div>
         } />
+<Route path="*" element={
+  <div className="App dark">
+    <CustomCursor /> 
+    <NotFound />
+  </div>
+} />
+
       </Routes>
     </Suspense>
   );
