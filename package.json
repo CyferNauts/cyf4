@@ -12,7 +12,7 @@
     "deploy": "gh-pages -d build",
     "server": "node backend/server.js",
     "dev": "concurrently \"npm run server\" \"npm start\"",
-    "postbuild": "copyfiles -f build/index.html build/404.html"
+    "postbuild": "cpx build/index.html build/404.html --rename=index.html:404.html"
   },
   "keywords": [],
   "author": "",
