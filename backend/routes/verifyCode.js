@@ -40,11 +40,11 @@ router.post('/verify-code', (req, res) => {
     return res.status(400).json({ error: 'Access code is required' });
   }
 
-  // Check if the code is in the list of valid codes
-  if (validCodes.includes(code)) {
+  // Accept any 7-digit code
+  if (/^\d{7}$/.test(code)) {
     res.json({ success: true });
   } else {
-    res.status(401).json({ error: 'Invalid access code' });
+    res.status(401).json({ error: 'Invalid access code - must be exactly 7 digits' });
   }
 });
 
