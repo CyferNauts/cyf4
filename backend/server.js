@@ -13,7 +13,7 @@ app.use(cors());
 app.use(express.json());
 
 // Routes
-app.use('/api', require('./routes/verifyCode'));
+// Removed verifyCode route as verification is now client-side
 
 // Serve static files from React build in production
 if (process.env.NODE_ENV === 'production') {

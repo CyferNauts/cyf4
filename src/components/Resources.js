@@ -113,33 +113,16 @@ const Resources = () => {
     },
   ];
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
     setError('');
 
-    try {
-      const response = await fetch('/api/verify-code', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ code }),
-      });
+    // Accept any input
+    setIsAuthenticated(true);
+    localStorage.setItem('resources_authenticated', 'true');
 
-      const data = await response.json();
-
-      if (response.ok && data.success) {
-        setIsAuthenticated(true);
-        localStorage.setItem('resources_authenticated', 'true');
-      } else {
-        setError(data.error || 'Invalid access code');
-      }
-    } catch (error) {
-      setError('Network error. Please try again.');
-    } finally {
-      setLoading(false);
-    }
+    setLoading(false);
   };
 
   const handleLogout = () => {
