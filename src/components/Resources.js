@@ -113,20 +113,33 @@ const Resources = () => {
     },
   ];
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
     setError('');
 
-    setTimeout(() => {
-      if (code === 'demo123' || code === 'access') {
+    try {
+      const response = await fetch('/api/verify-code', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ code }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok && data.success) {
         setIsAuthenticated(true);
         localStorage.setItem('resources_authenticated', 'true');
       } else {
-        setError('Invalid access code');
+        setError(data.error || 'Invalid access code');
       }
+    } catch (error) {
+      setError('Network error. Please try again.');
+    } finally {
       setLoading(false);
-    }, 800);
+    }
   };
 
   const handleLogout = () => {
@@ -277,14 +290,7 @@ const Resources = () => {
                 </motion.button>
               </div>
 
-              <motion.p
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.6 }}
-                className="text-xs text-[#5a5a5a] text-center mt-6"
-              >
-                Demo codes: <span className="text-[#7a7a7a]">demo123</span> or <span className="text-[#7a7a7a]">access</span>
-              </motion.p>
+
             </motion.div>
           </motion.div>
         ) : (
