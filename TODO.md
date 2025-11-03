@@ -1,6 +1,7 @@
-# TODO: Remove Demo Authentication and Make Resources Freely Accessible
+# TODO: Add Resources Notification Button to Homepage Hero Section
 
-- [ ] Edit src/components/Resources.js to remove authentication checks and always display the resources grid
-- [ ] Delete src/utils/auth.js as it's no longer needed
-- [ ] Delete backend/routes/verifyCode.js as it's demo-specific
-- [ ] Test the application to ensure resources load without authentication
+- [ ] Edit `src/components/Home/Home.js` to import `useNavigate` from `react-router-dom` and `Trophy` from `lucide-react`
+- [ ] Edit `src/components/Home/Home.js` to add the notification button JSX inside the hero section with absolute positioning
+- [ ] Edit `src/components/Home/Home.js` to add onClick handler for navigation to `/resources`
+- [ ] Edit `src/components/Home/Home.css` to add sleek, dark, sophisticated styles for the notification button
+- [ ] Test the button appearance and navigation functionality

@@ -1,4 +1,6 @@
 import React, { Suspense, lazy } from "react";
+import { useNavigate } from "react-router-dom";
+import { Trophy } from "lucide-react";
 import "./Home.css";
 import bgVideo from "./0829.mp4";
 import Preloader from "../Preloader";
@@ -10,6 +12,8 @@ const handleOpenBrochure = () => {
 };
 
 const Home = ({setActiveTab, setShowRegister}) => {
+  const navigate = useNavigate();
+
   return (
     <div className="home" id="home">
       <div className="fadeoutdiv"> <div className="fadeoutdivactual"> </div></div>
@@ -28,6 +32,14 @@ const Home = ({setActiveTab, setShowRegister}) => {
 
       {/* UI (underneath) */}
       <section className="hero">
+        {/* Resources Notification Button */}
+        <button
+          className="resources-notification-btn"
+          onClick={() => navigate('/resources')}
+        >
+          <Trophy size={16} />
+          <span>Resources</span>
+        </button>
 
         <div className="hero-container">
           <div className="hero-content">
